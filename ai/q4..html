@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question 4 | AI Assignment</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <h1>Artificial Intelligence</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="assignment.html" class="active">Assignment</a>
+      <a href="syllabus.html">Syllabus</a>
+    <a href="notes.html">Notes</a>
+    <a href="references.html">References</a>
+    <a href="exam.html">Exam Questions</a>
+  </nav>
+</header>
+
+<main>
+<p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="assignment.html">Assignment</a> &rsaquo; Question 4</p>
+<section id="q4">
+  <p class="qno">Question 4</p>
+  <h2>Explain informed search techniques. Discuss Greedy Best-First Search and A* Search with a suitable example. Also explain the role of the heuristic function in A* Search.</h2>
+
+  <h3>Informed Search</h3>
+  <div class="box">
+    <p>Informed search, also called heuristic search, uses additional knowledge about the problem to guide the search toward the goal.</p>
+    <p>This additional knowledge is represented by a heuristic function h(n).</p>
+    <p>A heuristic function estimates the cost of reaching the goal from the current node.</p>
+    <p><strong>Example:</strong> In a road map, the straight-line distance between a city and the destination can be used as a heuristic.</p>
+  </div>
+
+  <h3>Greedy Best-First Search</h3>
+  <div class="box">
+    <p>Greedy Best-First Search selects the node that appears to be closest to the goal.</p>
+    <p>It uses the evaluation function:</p>
+    <p><strong>f(n) = h(n)</strong></p>
+    <p>where h(n) = estimated cost from node n to the goal.</p>
+    <p>The algorithm always chooses the node with the smallest heuristic value.</p>
+  </div>
+
+  <p style="margin-top:18px"><strong>Example</strong></p>
+  <p>Suppose a route search has the following estimated distances to the goal:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Node</th><th>h(n)</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>10</td></tr>
+        <tr><td>B</td><td>6</td></tr>
+        <tr><td>C</td><td>4</td></tr>
+        <tr><td>D</td><td>2</td></tr>
+        <tr><td>Goal</td><td>0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:14px">Greedy Best-First Search will generally prefer the node with the smallest h(n).</p>
+
+  <div class="box">
+    <p><strong>Advantages:</strong></p>
+    <ul>
+      <li>Often faster than uninformed search.</li>
+      <li>Can quickly reach the goal when the heuristic is good.</li>
+    </ul>
+    <p><strong>Disadvantages:</strong></p>
+    <ul>
+      <li>Not always optimal.</li>
+      <li>Can be misled by an inaccurate heuristic.</li>
+      <li>May not be complete in some search spaces.</li>
+    </ul>
+  </div>
+
+  <h3>A* Search</h3>
+  <div class="box">
+    <p>A* is one of the most important informed search algorithms. It combines the actual cost of reaching a node with an estimate of the remaining cost.</p>
+    <p>Its evaluation function is:</p>
+    <p><strong>f(n) = g(n) + h(n)</strong></p>
+    <p>where:</p>
+    <ul>
+      <li>g(n) = actual cost from the initial state to node n.</li>
+      <li>h(n) = estimated cost from node n to the goal.</li>
+      <li>f(n) = estimated total cost of a solution through node n.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:18px"><strong>Suitable Example</strong></p>
+  <p>Suppose there are two possible nodes:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Node</th><th>g(n)</th><th>h(n)</th><th>f(n) = g(n)+h(n)</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>4</td><td>6</td><td>10</td></tr>
+        <tr><td>B</td><td>7</td><td>2</td><td>9</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:14px">A* will select B because its total estimated cost is smaller:</p>
+  <p>f(B) = 7 + 2 = 9<br>while<br>f(A) = 4 + 6 = 10</p>
+  <p>Therefore, A* considers both the cost already spent and the estimated cost remaining.</p>
+
+  <h3>Role of Heuristic Function in A* Search</h3>
+  <div class="box">
+    <p>The heuristic function h(n) is very important because it helps A* decide which nodes are more promising.</p>
+    <p><strong>A good heuristic:</strong></p>
+    <ul>
+      <li>Guides the search toward the goal.</li>
+      <li>Reduces unnecessary exploration.</li>
+      <li>Can make the search much faster.</li>
+      <li>Provides an estimate of the remaining cost.</li>
+    </ul>
+    <p>For A* to guarantee an optimal solution under the standard conditions, the heuristic should be <strong>admissible</strong>, meaning it never overestimates the actual minimum cost from node n to the goal.</p>
+    <p><strong>Example:</strong> In a road-navigation problem, the straight-line distance between two locations is often an admissible heuristic when road distance cannot be shorter than the straight-line distance.</p>
+  </div>
+
+  <h3>Greedy Best-First Search vs A*</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>Greedy Best-First Search</th><th>A* Search</th></tr></thead>
+      <tbody>
+        <tr><td>Evaluation Function</td><td>f(n) = h(n)</td><td>f(n) = g(n) + h(n)</td></tr>
+        <tr><td>Considers path cost</td><td>No</td><td>Yes</td></tr>
+        <tr><td>Uses heuristic</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Optimal</td><td>Not guaranteed</td><td>Yes, with appropriate conditions</td></tr>
+        <tr><td>Main idea</td><td>Get closer to goal</td><td>Balance cost so far and estimated cost</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Conclusion</h3>
+  <div class="box">
+    <p>Informed search techniques use heuristic knowledge to improve search efficiency. Greedy Best-First Search focuses mainly on the estimated distance to the goal, while A* considers both the actual path cost and the estimated remaining cost. Therefore, A* is generally more reliable when an appropriate heuristic is available.</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a class="btn" href="q3.html">&larr; Previous</a>
+  <a class="btn" href="assignment.html">All questions</a>
+  <span></span>
+</div>
+</main>
+
+<footer>
+  <p>  &nbsp;|&nbsp; Subject: Artificial Intelligence  &nbsp;|&nbsp;  </p>
+  <p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 3 Notes | AI Assignment</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <h1>Artificial Intelligence</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="assignment.html">Assignment</a>
+      <a href="syllabus.html">Syllabus</a>
+    <a href="notes.html" class="active">Notes</a>
+    <a href="references.html">References</a>
+    <a href="exam.html">Exam Questions</a>
+  </nav>
+</header>
+
+<main>
+<p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="notes.html">Notes</a> &rsaquo; Unit 3</p>
+<section class="unit" id="u3">
+<p class="qno">Unit 3 &middot; 8 hrs</p>
+<h2>Knowledge Representation and Reasoning</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul><li>Knowledge representation issues, propositional logic</li><li>Resolution in propositional logic</li><li>First-order predicate logic</li><li>Forward chaining, backward chaining, resolution (concept)</li><li>Semantic networks and frames</li><li>Rule-based (production) systems</li></ul>
+<h3>Propositional logic</h3>
+<div class="box"><p>A <strong>proposition</strong> is a statement that is true or false. Connectives: &not; (not), &and; (and), &or; (or), &rarr; (implies), &harr; (if and only if).</p><p><strong>Semantics:</strong> truth tables. P &rarr; Q is false only when P is true and Q is false. P &rarr; Q is equivalent to &not;P &or; Q.</p></div><ul><li>Example: "If it rains, the road is wet" is R &rarr; W.</li><li>A sentence is valid (tautology), satisfiable, or unsatisfiable.</li></ul>
+<h3>Resolution (proof by refutation)</h3>
+<ul><li>Convert all sentences to <strong>CNF</strong> (remove &harr; and &rarr;, push &not; inward, distribute &or; over &and;).</li><li>Add the <strong>negation of the goal</strong> to the knowledge base.</li><li>Resolve pairs of clauses with complementary literals: (A &or; B) and (&not;B &or; C) give (A &or; C).</li><li>If the <strong>empty clause</strong> is produced, the goal is proved.</li></ul>
+<h3>First-order predicate logic</h3>
+<ul><li>Elements: constants, variables, functions, predicates, connectives and quantifiers.</li><li><strong>&forall;x</strong> (for all) and <strong>&exist;x</strong> (there exists).</li><li>Example: "All students are smart" = &forall;x (Student(x) &rarr; Smart(x)). "Some student is smart" = &exist;x (Student(x) &and; Smart(x)).</li><li>Common mistake: using &and; with &forall; or &rarr; with &exist;.</li></ul>
+<h3>Forward and backward chaining</h3>
+<div class="table-wrap"><table><thead><tr><th>Point</th><th>Forward chaining</th><th>Backward chaining</th></tr></thead><tbody><tr><td>Direction</td><td>From known facts towards the goal</td><td>From the goal back to the facts</td></tr><tr><td>Type</td><td>Data-driven</td><td>Goal-driven</td></tr><tr><td>Works on</td><td>Definite clauses (Horn clauses)</td><td>Definite clauses (Horn clauses)</td></tr><tr><td>Good for</td><td>Monitoring, deriving all conclusions</td><td>Answering a specific query, diagnosis</td></tr></tbody></table></div><p style="margin-top:12px">Resolution in first-order logic also needs <strong>unification</strong> to match variables with constants.</p>
+<h3>Semantic networks and frames</h3>
+<ul><li><strong>Semantic network:</strong> a graph with nodes for objects or concepts and labelled edges for relations such as <em>is-a</em> and <em>has-part</em>. Supports inheritance.</li><li><strong>Frame:</strong> a record with <em>slots</em> (attributes) and values, default values and procedures. Frames are linked in a hierarchy, so child frames inherit slots.</li></ul>
+<h3>Rule-based (production) systems</h3>
+<div class="box"><p>Parts: <strong>rule base</strong> (IF-THEN rules), <strong>working memory</strong> (current facts) and an <strong>inference engine</strong> (match rules, pick one by conflict resolution, fire it, repeat).</p><p>Design steps: choose the domain, collect knowledge, write rules, choose forward or backward chaining, test.</p></div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit3">Practice exam questions for Unit 3</a></p>
+</section>
+<div class="pager">
+  <a class="btn" href="notes-unit2.html">&larr; Previous unit</a>
+  <a class="btn" href="notes.html">All units</a>
+  <a class="btn" href="notes-unit4.html">Next unit &rarr;</a>
+</div>
+</main>
+
+<footer>
+  <p>  &nbsp;|&nbsp; Subject: Artificial Intelligence  &nbsp;|&nbsp;  </p>
+  <p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+
+</body>
+</html>

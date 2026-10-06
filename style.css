@@ -1,0 +1,357 @@
+/* ===== Colour palette (olive, green, off-white, coral, charcoal) ===== */
+:root {
+  --bg: #fcfbf6;          /* page background (off-white) */
+  --surface: #f0ede8;     /* cards / boxes (light grey-beige) */
+  --line: #dcd8d1;        /* thin borders */
+  --olive: #c8c96f;       /* olive yellow accent */
+  --green: #508f58;       /* main green */
+  --green-dark: #3f7547;  /* buttons, table header, headings */
+  --coral: #fc9a7b;       /* coral accent */
+  --text: #4f4b48;        /* charcoal text */
+  --muted: #6f6a66;       /* small text */
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ===== Header and navigation ===== */
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 3px solid var(--coral);
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--green-dark);
+}
+
+nav a {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  color: var(--green-dark);
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  color: var(--white);
+  outline: none;
+}
+
+/* ===== Layout ===== */
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.qno {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 3px 12px;
+  background: var(--coral);
+  color: var(--text);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: var(--green-dark);
+}
+
+h3 {
+  margin: 32px 0 12px;
+  font-size: 1.2rem;
+  color: var(--green-dark);
+  border-left: 5px solid var(--olive);
+  padding-left: 10px;
+}
+
+p { margin: 0 0 12px; }
+
+/* ===== Boxes ===== */
+.box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--green);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.box p:last-child { margin-bottom: 0; }
+
+/* ===== Timeline ===== */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 22px;
+  border-left: 3px solid var(--olive);
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border-radius: 8px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background: var(--coral);
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+}
+
+.year {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--green-dark);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* ===== Foundation cards ===== */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.cards li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--coral);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.cards strong { color: var(--green-dark); }
+
+/* ===== Table ===== */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  background: var(--green-dark);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+}
+
+tbody tr:nth-child(even) { background: var(--surface); }
+tbody tr:last-child td { border-bottom: none; }
+td:first-child { color: var(--green-dark); font-weight: bold; }
+
+/* ===== Footer ===== */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--surface);
+  border-top: 3px solid var(--olive);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer p { margin: 0; }
+
+footer .credit {
+  margin-top: 8px;
+  color: var(--green-dark);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* ===== Home page: question cards ===== */
+.intro { border-bottom: none; padding-bottom: 10px; }
+.intro h2 { margin-bottom: 6px; }
+.intro p { color: var(--muted); margin: 0; }
+
+.qlist { display: grid; gap: 16px; padding-bottom: 40px; }
+
+.qcard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--green);
+  border-radius: 10px;
+  padding: 20px 22px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.qcard:hover,
+.qcard:focus-visible {
+  background: #e8e4dd;
+  border-left-color: var(--coral);
+  outline: none;
+}
+
+.qcard h2 { font-size: 1.1rem; margin: 8px 0 12px; }
+
+.qcard .open {
+  color: var(--green-dark);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ===== Answer pages: pager buttons ===== */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 28px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--green-dark);
+  color: var(--white);
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.btn:hover,
+.btn:focus-visible { background: var(--text); outline: none; }
+
+/* ===== Small screens ===== */
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  h2 { font-size: 1.25rem; }
+  .top { flex-direction: column; align-items: flex-start; }
+  nav a { margin: 0 6px 0 0; }
+}
+
+/* ===== New sections: home, notes, references, exam ===== */
+.crumb { margin: 0 0 6px; font-family: Arial, sans-serif; font-size: 0.85rem; color: var(--muted); }
+.crumb a { color: var(--green-dark); }
+.muted { color: var(--muted); }
+.qlist.two { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.qcard .muted { margin: 0 0 12px; }
+
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.note { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--coral); border-radius: 10px; padding: 6px 20px 14px; }
+.note h3 { margin-top: 16px; }
+.note ul { margin: 0; padding-left: 20px; }
+.note li { margin-bottom: 8px; }
+
+.books { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; padding-bottom: 30px; }
+.book { display: flex; flex-direction: column; gap: 12px; }
+.cover { min-height: 190px; padding: 22px 18px 22px 26px; border-radius: 4px 10px 10px 4px; display: flex; align-items: flex-end;
+  box-shadow: 4px 4px 0 var(--line); border-left: 12px solid rgba(0,0,0,0.18); }
+.cover span { font-family: Arial, sans-serif; font-weight: bold; font-size: 1.1rem; line-height: 1.3; }
+.c0 { background: var(--green-dark); color: var(--white); }
+.c1 { background: var(--coral); color: var(--text); }
+.c2 { background: var(--olive); color: var(--text); }
+.c3 { background: var(--text); color: var(--white); }
+.book .info { font-size: 0.95rem; }
+.book .info em { color: var(--muted); }
+
+.qs { list-style: none; margin: 0; padding: 0; }
+.qs li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; }
+.qs label { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.qs input { margin-top: 6px; width: 18px; height: 18px; accent-color: var(--green-dark); flex-shrink: 0; }
+.qs li.checked .qtext { text-decoration: line-through; color: var(--muted); }
+.qs a { display: inline-block; margin: 6px 0 0 30px; color: var(--green-dark); font-family: Arial, sans-serif; font-size: 0.9rem; font-weight: bold; }
+.qs .none { display: inline-block; margin: 6px 0 0 30px; color: var(--muted); font-family: Arial, sans-serif; font-size: 0.85rem; }
+.progress { margin-top: 10px; color: var(--green-dark); font-family: Arial, sans-serif; font-weight: bold; }
+
+/* ===== Unit notes, PDF buttons, exam jump links ===== */
+.btn-sm { padding: 6px 12px; font-size: 0.8rem; margin-top: 8px; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; }
+.jump .btn-sm { margin-top: 0; }
+.unit ul { padding-left: 22px; }
+.unit li { margin-bottom: 6px; }
+.unit .box ul { margin-top: 8px; }
+.unit .table-wrap { margin: 12px 0; }
+.book .info .btn { color: var(--white); }
+.qs a.btn, .unit a.btn { margin-left: 0; color: var(--white); }
+sub { font-size: 0.75em; }
+
+/* Unit notes: sub-headings and timeline spacing */
+.unit h4 { margin: 22px 0 8px; font-size: 1.05rem; color: var(--green-dark); font-family: Arial, sans-serif; }
+.unit .timeline li { margin-bottom: 18px; }
+.unit .box ul { margin: 0; }
+
+/* Unit 2 notes: diagrams and code blocks */
+pre.tree { background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--olive); border-radius: 8px; padding: 14px 18px; overflow-x: auto; font-family: "Courier New", monospace; font-size: 0.95rem; line-height: 1.4; margin: 12px 0; }
+.box.extra { border-left-color: var(--coral); margin-top: 28px; }
+.unit ol ol { margin-top: 6px; }
+
+/* Unit 2 notes: trees, side-by-side boxes */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 14px 0; }
+.grid2 .box ul { margin: 6px 0 0; padding-left: 20px; }
+.unit .timeline { padding-left: 22px; }
+sup { font-size: 0.75em; }
+
+/* ===== Semester home and subject hubs ===== */
+.qcard.disabled { opacity: 0.6; cursor: default; border-left-color: var(--line); }
+.qcard.disabled:hover { background: var(--surface); border-left-color: var(--line); }
+.soon { color: var(--muted); font-family: Arial, sans-serif; font-size: 0.85rem; font-weight: bold; }
+.ready { margin: 0 0 12px; color: var(--green-dark); font-size: 0.9rem; }

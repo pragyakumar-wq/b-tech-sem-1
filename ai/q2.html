@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question 2 | AI Assignment</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <h1>Artificial Intelligence</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="assignment.html" class="active">Assignment</a>
+    <a href="syllabus.html">Syllabus</a>
+    <a href="notes.html">Notes</a>
+    <a href="references.html">References</a>
+    <a href="exam.html">Exam Questions</a>
+  </nav>
+</header>
+
+<main>
+<p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="assignment.html">Assignment</a> &rsaquo; Question 2</p>
+<section id="q2">
+  <p class="qno">Question 2</p>
+  <h2>What is an Intelligent Agent? Explain the PEAS framework with a suitable example. Also differentiate between simple reflex, model-based, goal-based, utility-based and learning agents.</h2>
+
+  <h3>Intelligent Agent</h3>
+  <div class="box">
+    <p>An intelligent agent is a system that perceives its environment through sensors and acts upon that environment through actuators to achieve a particular objective.</p>
+    <p>The basic working of an agent is:</p>
+    <p><strong>Environment → Sensors → Agent → Actuators → Environment</strong></p>
+    <p><strong>Example:</strong> A self-driving car uses cameras and other sensors to observe roads and traffic and uses steering, brakes, and acceleration to act.</p>
+  </div>
+
+  <h3>PEAS Framework</h3>
+  <p>PEAS stands for:</p>
+  <ul class="cards">
+    <li><strong>P – Performance Measure</strong></li>
+    <li><strong>E – Environment</strong></li>
+    <li><strong>A – Actuators</strong></li>
+    <li><strong>S – Sensors</strong></li>
+  </ul>
+  <p style="margin-top:14px">PEAS is used to describe the task environment of an intelligent agent.</p>
+
+  <p><strong>Example: Self-Driving Car</strong></p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>PEAS Component</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Performance Measure</td><td>Safety, reaching destination, minimum travel time, passenger comfort</td></tr>
+        <tr><td>Environment</td><td>Roads, traffic, pedestrians, traffic signals, weather</td></tr>
+        <tr><td>Actuators</td><td>Steering, brakes, accelerator, horn</td></tr>
+        <tr><td>Sensors</td><td>Cameras, GPS, radar, ultrasonic sensors</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:14px">Thus, PEAS provides a clear description of what an intelligent agent needs to observe, how it acts, and how its performance is evaluated.</p>
+
+  <h3>Types of Intelligent Agents</h3>
+  <ol class="timeline">
+    <li><span class="year">1. Simple Reflex Agent</span>A simple reflex agent selects an action based only on the current percept.<br><strong>Rule:</strong> "If condition occurs → perform action."<br><strong>Example:</strong> A thermostat turns the heater ON when the temperature becomes too low.<br><strong>Limitation:</strong> It does not remember previous situations.</li>
+    <li><span class="year">2. Model-Based Agent</span>A model-based agent maintains an internal model or internal state of the environment. It uses previous information along with the current percept.<br><strong>Example:</strong> A robot remembers the locations it has already visited while navigating a room.</li>
+    <li><span class="year">3. Goal-Based Agent</span>A goal-based agent selects actions that help it achieve a specific goal.<br><strong>Example:</strong> A navigation system chooses a route to reach a particular destination.</li>
+    <li><span class="year">4. Utility-Based Agent</span>A utility-based agent chooses an action based on how useful or desirable the resulting state is.<br><strong>Example:</strong> A navigation system may choose a route that balances travel time, distance, safety, and traffic.</li>
+    <li><span class="year">5. Learning Agent</span>A learning agent improves its performance by learning from experience and feedback.<br>A learning agent generally consists of:
+      <ul>
+        <li>Learning element</li>
+        <li>Performance element</li>
+        <li>Critic</li>
+        <li>Problem generator</li>
+      </ul>
+      <strong>Example:</strong> A recommendation system learns from a user's previous choices and improves its future recommendations.</li>
+  </ol>
+
+  <h3>Difference Between Types of Agents</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Agent</th><th>Main Idea</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Simple Reflex</td><td>Current percept → action</td><td>Thermostat</td></tr>
+        <tr><td>Model-Based</td><td>Uses internal state/model</td><td>Navigation robot</td></tr>
+        <tr><td>Goal-Based</td><td>Works toward a goal</td><td>Route planner</td></tr>
+        <tr><td>Utility-Based</td><td>Chooses the most useful outcome</td><td>Smart route selection</td></tr>
+        <tr><td>Learning</td><td>Improves through experience</td><td>Recommendation system</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Conclusion</h3>
+  <div class="box">
+    <p>Intelligent agents are an important concept in AI because they allow systems to perceive their environment, make decisions, and perform actions. Different agent types provide increasing levels of intelligence and adaptability.</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a class="btn" href="q1.html">&larr; Previous</a>
+  <a class="btn" href="assignment.html">All questions</a>
+  <a class="btn" href="q3.html">Next &rarr;</a>
+</div>
+</main>
+
+<footer>
+  <p>  &nbsp;|&nbsp; Subject: Artificial Intelligence  &nbsp;|&nbsp;  </p>
+  <p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+
+</body>
+</html>
