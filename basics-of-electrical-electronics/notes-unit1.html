@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEEE Unit 1 Notes | 100111</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.7
+        }
+
+        header {
+            background: linear-gradient(135deg, #111827, #2563eb);
+            color: white;
+            padding: 45px 20px;
+            text-align: center
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 10px
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: .95
+        }
+
+        nav {
+            background: white;
+            padding: 12px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .08)
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+            margin: 0 12px
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 30px auto
+        }
+
+        .info,
+        section {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .07)
+        }
+
+        .info span {
+            display: inline-block;
+            background: #e8f0ff;
+            color: #1d4ed8;
+            padding: 7px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-bottom: 18px;
+            border-left: 5px solid #2563eb;
+            padding-left: 12px
+        }
+
+        h3 {
+            color: #111827;
+            margin-top: 22px;
+            margin-bottom: 10px
+        }
+
+        p {
+            margin-bottom: 12px
+        }
+
+        ul,
+        ol {
+            margin-left: 25px;
+            margin-bottom: 15px
+        }
+
+        li {
+            margin-bottom: 7px
+        }
+
+        .formula {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            overflow-x: auto
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 8px
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 8px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0
+        }
+
+        th,
+        td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left
+        }
+
+        th {
+            background: #2563eb;
+            color: white
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc
+        }
+
+        .back {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 5px;
+            font-weight: bold
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px
+        }
+
+        @media(max-width:700px) {
+            header h1 {
+                font-size: 25px
+            }
+
+            section,
+            .info {
+                padding: 20px
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px
+            }
+
+            table {
+                font-size: 14px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Basic Electrical &amp; Electronics Engineering</h1>
+        <p>Unit 1 – Basic Electrical Circuits</p>
+        <p>Course Code: 100111 | B.Tech 1st Semester</p>
+    </header>
+
+    <nav>
+        <a href="#elements">Circuit Elements</a>
+        <a href="#laws">Ohm &amp; Kirchhoff Laws</a>
+        <a href="#circuits">Series &amp; Parallel</a>
+        <a href="#sources">Sources</a>
+        <a href="#analysis">Circuit Analysis</a>
+        <a href="#divider">Divider Rules</a>
+        <a href="#star-delta">Star-Delta</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="info">
+            <h2>Unit 1 Overview</h2>
+            <span>Course Code: 100111</span><span>Unit: 1</span><span>Basic Electrical Circuits</span><span>3
+                Credits</span>
+            <p>This unit introduces the fundamental concepts required to analyse electrical circuits. It covers circuit
+                elements, electrical laws, circuit connections, sources, network analysis and network transformation
+                techniques.</p>
+        </div>
+
+        <section id="elements">
+            <h2>1. Circuit Elements</h2>
+            <p>An electrical circuit consists of different components through which electric current flows. These
+                components are called <b>circuit elements</b>.</p>
+
+            <h3>1.1 Resistance</h3>
+            <p>Resistance is the property of an electrical material that opposes the flow of electric current. It is
+                represented by <b>R</b> and its SI unit is <b>Ohm (Ω)</b>.</p>
+            <div class="formula">V = IR</div>
+            <p>Resistance of a conductor is given by:</p>
+            <div class="formula">R = ρL / A</div>
+            <ul>
+                <li>R = Resistance in ohms</li>
+                <li>ρ = Resistivity of material</li>
+                <li>L = Length of conductor</li>
+                <li>A = Cross-sectional area</li>
+            </ul>
+            <h3>Power Dissipated by a Resistor</h3>
+            <div class="formula">P = VI = I²R = V²/R</div>
+
+            <h3>1.2 Inductance</h3>
+            <p>Inductance is the property of an electrical circuit by which it opposes any change in current flowing
+                through it. The element possessing inductance is called an <b>inductor</b>. Inductance is represented by
+                <b>L</b> and its SI unit is <b>Henry (H)</b>.</p>
+            <div class="formula">v(t) = L di(t)/dt</div>
+            <p>An inductor stores electrical energy in the form of a magnetic field.</p>
+            <div class="formula">Energy stored = ½LI²</div>
+
+            <h3>1.3 Capacitance</h3>
+            <p>Capacitance is the ability of a capacitor to store electric charge. It is represented by <b>C</b> and its
+                SI unit is <b>Farad (F)</b>.</p>
+            <div class="formula">Q = CV</div>
+            <p>Current through a capacitor is:</p>
+            <div class="formula">i(t) = C dv(t)/dt</div>
+            <p>Energy stored in a capacitor is:</p>
+            <div class="formula">Energy = ½CV²</div>
+
+            <h3>Comparison of R, L and C</h3>
+            <table>
+                <tr>
+                    <th>Element</th>
+                    <th>Symbol</th>
+                    <th>Unit</th>
+                    <th>Main Property</th>
+                </tr>
+                <tr>
+                    <td>Resistance</td>
+                    <td>R</td>
+                    <td>Ohm (Ω)</td>
+                    <td>Opposes current</td>
+                </tr>
+                <tr>
+                    <td>Inductance</td>
+                    <td>L</td>
+                    <td>Henry (H)</td>
+                    <td>Opposes change in current</td>
+                </tr>
+                <tr>
+                    <td>Capacitance</td>
+                    <td>C</td>
+                    <td>Farad (F)</td>
+                    <td>Stores electric charge</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>2. Classification of Circuit Elements</h2>
+            <h3>2.1 Active Elements</h3>
+            <p>Active elements are electrical elements that can supply energy to a circuit or provide power
+                gain/control.</p>
+            <p><b>Examples:</b> Independent voltage source, independent current source and controlled sources.</p>
+            <h3>2.2 Passive Elements</h3>
+            <p>Passive elements cannot generate net energy. They absorb or store energy.</p>
+            <p><b>Examples:</b> Resistor, inductor and capacitor.</p>
+            <h3>2.3 Unilateral Elements</h3>
+            <p>A unilateral element behaves differently when the direction of current or voltage is reversed.</p>
+            <p><b>Example:</b> Diode.</p>
+            <h3>2.4 Bilateral Elements</h3>
+            <p>A bilateral element has approximately the same electrical characteristics when the direction of current
+                is reversed.</p>
+            <p><b>Example:</b> Ideal resistor.</p>
+            <h3>2.5 Linear Elements</h3>
+            <p>A linear element has a proportional relationship between voltage and current and obeys the principle of
+                superposition under the applicable conditions.</p>
+            <p><b>Example:</b> Constant resistance resistor.</p>
+            <h3>2.6 Non-Linear Elements</h3>
+            <p>A non-linear element does not have a proportional relationship between voltage and current.</p>
+            <p><b>Example:</b> Semiconductor diode.</p>
+            <table>
+                <tr>
+                    <th>Classification</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Active</td>
+                    <td>Can supply energy</td>
+                    <td>Voltage source</td>
+                </tr>
+                <tr>
+                    <td>Passive</td>
+                    <td>Absorbs or stores energy</td>
+                    <td>R, L, C</td>
+                </tr>
+                <tr>
+                    <td>Unilateral</td>
+                    <td>Behaviour depends on direction</td>
+                    <td>Diode</td>
+                </tr>
+                <tr>
+                    <td>Bilateral</td>
+                    <td>Similar behaviour in both directions</td>
+                    <td>Resistor</td>
+                </tr>
+                <tr>
+                    <td>Linear</td>
+                    <td>Proportional V-I relationship</td>
+                    <td>Constant resistor</td>
+                </tr>
+                <tr>
+                    <td>Non-linear</td>
+                    <td>Non-proportional V-I relationship</td>
+                    <td>Diode</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="laws">
+            <h2>3. Ohm's Law</h2>
+            <p>Ohm's law states that, at constant physical conditions such as temperature, the current flowing through a
+                conductor is directly proportional to the voltage applied across it.</p>
+            <div class="formula">V = IR</div>
+            <div class="formula">I = V/R &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; R = V/I</div>
+            <div class="example"><b>Example:</b><br>If a voltage of 20 V is applied across a 10 Ω resistor:<br><br>I =
+                V/R = 20/10 = <b>2 A</b></div>
+
+            <h2>4. Kirchhoff's Laws</h2>
+            <h3>4.1 Kirchhoff's Current Law (KCL)</h3>
+            <p>KCL is based on the conservation of electric charge. It states that the algebraic sum of currents at a
+                node is zero.</p>
+            <div class="formula">ΣI = 0</div>
+            <div class="formula">Current entering a node = Current leaving the node</div>
+            <div class="example"><b>Example:</b><br>If 5 A enters a node and 2 A leaves through one branch, the
+                remaining outgoing current is 5 − 2 = <b>3 A</b>.</div>
+
+            <h3>4.2 Kirchhoff's Voltage Law (KVL)</h3>
+            <p>KVL is based on conservation of energy. It states that the algebraic sum of all voltages around any
+                closed loop is zero.</p>
+            <div class="formula">ΣV = 0</div>
+            <p>The sum of voltage rises is equal to the sum of voltage drops.</p>
+        </section>
+
+        <section id="circuits">
+            <h2>5. Series and Parallel Circuits</h2>
+            <h3>5.1 Series Circuit</h3>
+            <p>In a series circuit, components are connected one after another so that the same current flows through
+                every element.</p>
+            <div class="formula">Rtotal = R₁ + R₂ + R₃ + ... + Rn</div>
+            <p>The total voltage is divided among the resistors.</p>
+            <h3>5.2 Parallel Circuit</h3>
+            <p>In a parallel circuit, components are connected across the same two nodes. Therefore, the voltage across
+                each parallel branch is the same.</p>
+            <div class="formula">1/Rtotal = 1/R₁ + 1/R₂ + 1/R₃ + ...</div>
+            <p>For two resistors in parallel:</p>
+            <div class="formula">Rtotal = (R₁R₂)/(R₁ + R₂)</div>
+            <div class="example"><b>Example:</b><br>For R₁ = 6 Ω and R₂ = 3 Ω in parallel:<br><br>R = (6 × 3)/(6 + 3) =
+                18/9 = <b>2 Ω</b></div>
+        </section>
+
+        <section id="sources">
+            <h2>6. Voltage and Current Sources</h2>
+            <h3>6.1 Voltage Source</h3>
+            <p>A voltage source maintains a specified voltage across its terminals irrespective of the current drawn by
+                the circuit, in the ideal source model.</p>
+            <p>Examples include batteries and ideal voltage sources.</p>
+            <h3>6.2 Current Source</h3>
+            <p>A current source maintains a specified current through its branch, independent of the voltage across it,
+                in the ideal source model.</p>
+            <h3>Ideal and Practical Sources</h3>
+            <table>
+                <tr>
+                    <th>Source</th>
+                    <th>Ideal Characteristic</th>
+                    <th>Practical Model</th>
+                </tr>
+                <tr>
+                    <td>Voltage Source</td>
+                    <td>Internal resistance = 0</td>
+                    <td>Small series resistance</td>
+                </tr>
+                <tr>
+                    <td>Current Source</td>
+                    <td>Internal resistance = ∞</td>
+                    <td>Large parallel resistance</td>
+                </tr>
+            </table>
+
+            <h2>7. Source Transformation</h2>
+            <p>Source transformation is the process of converting a practical voltage source into an equivalent
+                practical current source, or vice versa.</p>
+            <h3>Voltage Source → Current Source</h3>
+            <p>A voltage source Vs in series with resistance R can be converted into a current source Is in parallel
+                with the same resistance.</p>
+            <div class="formula">Is = Vs/R</div>
+            <h3>Current Source → Voltage Source</h3>
+            <div class="formula">Vs = Is × R</div>
+            <div class="important"><b>Important:</b> The resistance remains the same during source transformation, but
+                its connection changes from series to parallel or vice versa.</div>
+        </section>
+
+        <section id="analysis">
+            <h2>8. Mesh Analysis</h2>
+            <p>Mesh analysis is a systematic method used to determine currents in a planar electrical circuit. It is
+                based on Kirchhoff's Voltage Law (KVL).</p>
+            <h3>Steps of Mesh Analysis</h3>
+            <ol>
+                <li>Identify all independent meshes in the circuit.</li>
+                <li>Assign a mesh current to each mesh, usually clockwise.</li>
+                <li>Apply KVL to every mesh.</li>
+                <li>Write voltage drops in terms of mesh currents.</li>
+                <li>Solve the simultaneous equations.</li>
+                <li>Determine the required branch currents or voltages.</li>
+            </ol>
+            <div class="formula">For a resistor shared by two meshes: Voltage drop = R(I₁ − I₂)</div>
+
+            <h2>9. Nodal Analysis</h2>
+            <p>Nodal analysis is a systematic method for finding unknown node voltages in an electrical circuit. It is
+                based on Kirchhoff's Current Law (KCL).</p>
+            <h3>Steps of Nodal Analysis</h3>
+            <ol>
+                <li>Select a reference node (ground).</li>
+                <li>Assign voltage variables to the remaining nodes.</li>
+                <li>Apply KCL at each unknown node.</li>
+                <li>Express branch currents using Ohm's law.</li>
+                <li>Solve the resulting simultaneous equations.</li>
+                <li>Calculate required currents or voltages.</li>
+            </ol>
+            <div class="formula">Current through a resistor between nodes Va and Vb: I = (Va − Vb)/R</div>
+            <div class="important"><b>Remember:</b><br>Mesh Analysis → KVL → Mesh currents<br>Nodal Analysis → KCL →
+                Node voltages</div>
+        </section>
+
+        <section id="divider">
+            <h2>10. Voltage Divider Rule</h2>
+            <p>The voltage divider rule is used in a series circuit to determine the voltage across an individual
+                resistor.</p>
+            <p>For two resistors R₁ and R₂ connected in series across a voltage V:</p>
+            <div class="formula">V₂ = V × R₂/(R₁ + R₂)</div>
+            <div class="formula">V₁ = V × R₁/(R₁ + R₂)</div>
+            <div class="example"><b>Example:</b><br>V = 12 V, R₁ = 2 Ω and R₂ = 4 Ω.<br><br>V₂ = 12 × 4/(2 + 4) = 48/6 =
+                <b>8 V</b></div>
+
+            <h2>11. Current Divider Rule</h2>
+            <p>Current divider rule is used to determine current through individual branches of a parallel circuit.</p>
+            <div class="formula">I₁ = I × R₂/(R₁ + R₂)</div>
+            <div class="formula">I₂ = I × R₁/(R₁ + R₂)</div>
+            <div class="important"><b>Important concept:</b> In a parallel circuit, the branch having lower resistance
+                carries higher current.</div>
+        </section>
+
+        <section id="star-delta">
+            <h2>12. Star-Delta Transformation</h2>
+            <p>Star-Delta transformation is used to simplify electrical networks that cannot be reduced directly using
+                ordinary series and parallel combinations.</p>
+            <h3>12.1 Star (Y) Network</h3>
+            <p>In a star connection, three resistors have one common junction. The resistances are represented as
+                R<sub>A</sub>, R<sub>B</sub> and R<sub>C</sub>.</p>
+            <h3>12.2 Star to Delta Conversion</h3>
+            <div class="formula">RAB = RA + RB + (RA × RB)/RC</div>
+            <div class="formula">RBC = RB + RC + (RB × RC)/RA</div>
+            <div class="formula">RCA = RC + RA + (RC × RA)/RB</div>
+            <h3>12.3 Delta to Star Conversion</h3>
+            <p>Let the delta resistances be RAB, RBC and RCA. Then:</p>
+            <div class="formula">RA = (RAB × RCA)/(RAB + RBC + RCA)</div>
+            <div class="formula">RB = (RAB × RBC)/(RAB + RBC + RCA)</div>
+            <div class="formula">RC = (RBC × RCA)/(RAB + RBC + RCA)</div>
+            <div class="important"><b>Exam Tip:</b><br>Star → Delta: Each delta resistance is equal to the sum of the
+                two adjacent star resistances plus their product divided by the opposite star resistance.<br><br>Delta →
+                Star: Each star resistance is the product of the two adjacent delta resistances divided by the sum of
+                all three delta resistances.</div>
+        </section>
+
+        <section>
+            <h2>13. Quick Revision – Important Formulas</h2>
+            <table>
+                <tr>
+                    <th>Topic</th>
+                    <th>Formula</th>
+                </tr>
+                <tr>
+                    <td>Ohm's Law</td>
+                    <td>V = IR</td>
+                </tr>
+                <tr>
+                    <td>Resistance</td>
+                    <td>R = ρL/A</td>
+                </tr>
+                <tr>
+                    <td>Resistor Power</td>
+                    <td>P = VI = I²R = V²/R</td>
+                </tr>
+                <tr>
+                    <td>Inductor</td>
+                    <td>v = L di/dt</td>
+                </tr>
+                <tr>
+                    <td>Inductor Energy</td>
+                    <td>½LI²</td>
+                </tr>
+                <tr>
+                    <td>Capacitor</td>
+                    <td>Q = CV</td>
+                </tr>
+                <tr>
+                    <td>Capacitor Current</td>
+                    <td>i = C dv/dt</td>
+                </tr>
+                <tr>
+                    <td>Capacitor Energy</td>
+                    <td>½CV²</td>
+                </tr>
+                <tr>
+                    <td>KCL</td>
+                    <td>ΣI = 0</td>
+                </tr>
+                <tr>
+                    <td>KVL</td>
+                    <td>ΣV = 0</td>
+                </tr>
+                <tr>
+                    <td>Series Resistance</td>
+                    <td>R = R₁ + R₂ + ...</td>
+                </tr>
+                <tr>
+                    <td>Parallel Resistance</td>
+                    <td>1/R = 1/R₁ + 1/R₂ + ...</td>
+                </tr>
+                <tr>
+                    <td>Source Transformation</td>
+                    <td>Is = Vs/R</td>
+                </tr>
+                <tr>
+                    <td>Voltage Divider</td>
+                    <td>V₂ = V R₂/(R₁+R₂)</td>
+                </tr>
+                <tr>
+                    <td>Current Divider</td>
+                    <td>I₁ = I R₂/(R₁+R₂)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>14. Exam Important Questions</h2>
+            <ol>
+                <li>Define resistance, inductance and capacitance.</li>
+                <li>Differentiate active and passive elements.</li>
+                <li>Explain unilateral and bilateral elements with examples.</li>
+                <li>Differentiate linear and non-linear circuit elements.</li>
+                <li>State and explain Ohm's Law.</li>
+                <li>State and explain Kirchhoff's Current Law.</li>
+                <li>State and explain Kirchhoff's Voltage Law.</li>
+                <li>Explain series and parallel circuits.</li>
+                <li>Explain voltage and current sources.</li>
+                <li>Explain source transformation with equations.</li>
+                <li>Explain mesh analysis and its procedure.</li>
+                <li>Explain nodal analysis and its procedure.</li>
+                <li>Derive the voltage divider rule.</li>
+                <li>Explain current divider rule with an example.</li>
+                <li>Explain Star-to-Delta transformation.</li>
+                <li>Explain Delta-to-Star transformation.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>15. Unit 1 Summary</h2>
+            <p>Unit 1 provides the foundation for electrical circuit analysis. The student first learns the basic
+                circuit elements such as resistance, inductance and capacitance and their classifications. Ohm's law and
+                Kirchhoff's laws are then used to analyse electrical circuits.</p>
+            <p>Series and parallel combinations simplify circuits, while source transformation, mesh analysis and nodal
+                analysis provide systematic methods for solving more complex networks. Voltage divider, current divider
+                and Star-Delta transformations are important techniques for circuit simplification and analysis.</p>
+            <div class="important"><b>Remember:</b><br>KCL → Node → Current<br>KVL → Loop → Voltage<br>Mesh →
+                KVL<br>Nodal → KCL<br>Series → Same Current<br>Parallel → Same Voltage</div>
+        </section>
+
+        <div style="text-align:center;margin:30px 0">
+            <a class="back" href="index.html">← Back to Subject</a>
+            <a class="back" href="syllabus.html">View Syllabus →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p><b>LNJPIT Study Hub</b></p>
+        <p>Basics of Electrical &amp; Electronics Engineering | Unit 1</p>
+        <p>Course Code: 100111</p>
+    </footer>
+</body>
+
+</html>
