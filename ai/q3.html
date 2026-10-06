@@ -1,154 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Question 3 | AI Assignment</title>
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js" defer></script>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
 </head>
-<body>
-
+<body class="subject-page">
 <header class="top">
-  <h1>Artificial Intelligence</h1>
-  <nav>
-    <a href="../index.html">All Subjects</a>
-    <a href="index.html">AI Home</a>
-    <a href="assignment.html" class="active">Assignment</a>
-    <a href="syllabus.html">Syllabus</a>
-    <a href="notes.html">Notes</a>
-    <a href="references.html">References</a>
-    <a href="exam.html">Exam Questions</a>
-  </nav>
+<h1>Artificial Intelligence</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>AI Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
 </header>
-
 <main>
-<p class="crumb"><a href="../index.html">Subjects</a> &rsaquo; <a href="index.html">Intro to AI</a> &rsaquo; <a href="assignment.html">Assignment</a> &rsaquo; Question 3</p>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Intro to AI</a> › <a href="assignment.html">Assignment</a> › Question 3</p>
 <section id="q3">
-  <p class="qno">Question 3</p>
-  <h2>What is a State-Space Search Problem? Explain BFS, DFS, UCS, Depth-Limited Search and Iterative Deepening Search. Compare their completeness and optimality.</h2>
-
-  <h3>State-Space Search Problem</h3>
-  <div class="box">
-    <p>A state-space search problem represents a problem as a collection of possible states and actions that move the system from one state to another.</p>
-    <p>A search problem generally contains:</p>
-    <ol>
-      <li><strong>Initial State</strong> – The state from which the problem starts.</li>
-      <li><strong>Actions/Operators</strong> – The possible actions available.</li>
-      <li><strong>Transition Model</strong> – Describes the result of applying an action.</li>
-      <li><strong>Goal State/Test</strong> – Determines whether the desired state has been reached.</li>
-      <li><strong>Path Cost</strong> – The cost of reaching a state from the initial state.</li>
-    </ol>
-    <p><strong>Example:</strong> In a route-finding problem, cities can be considered states and roads can be considered actions.</p>
-  </div>
-
-  <h3>1. Breadth First Search (BFS)</h3>
-  <div class="box">
-    <p>BFS explores nodes level by level. It first explores all nodes at depth 1, then depth 2, and so on.</p>
-    <p>It uses a FIFO (First-In, First-Out) queue.</p>
-    <p><strong>Working:</strong></p>
-    <ol>
-      <li>Start from the initial node.</li>
-      <li>Add its children to a queue.</li>
-      <li>Remove the first node from the queue.</li>
-      <li>Expand it and add its unvisited children.</li>
-      <li>Continue until the goal is found.</li>
-    </ol>
-    <p><strong>Advantages:</strong></p>
-    <ul>
-      <li>Complete when the branching factor is finite.</li>
-      <li>Optimal when all step costs are equal.</li>
-    </ul>
-    <p><strong>Disadvantage:</strong> Requires large memory.</p>
-  </div>
-
-  <h3>2. Depth First Search (DFS)</h3>
-  <div class="box">
-    <p>DFS explores the deepest node first before backtracking.</p>
-    <p>It uses a stack or recursion.</p>
-    <p><strong>Working:</strong></p>
-    <ol>
-      <li>Start from the initial node.</li>
-      <li>Select one child.</li>
-      <li>Continue deeper until a leaf or dead end is reached.</li>
-      <li>Backtrack and explore another branch.</li>
-    </ol>
-    <p><strong>Advantages:</strong></p>
-    <ul>
-      <li>Requires less memory than BFS.</li>
-      <li>Can find a solution quickly if the correct path is explored early.</li>
-    </ul>
-    <p><strong>Disadvantage:</strong> May get stuck exploring a very deep or infinite path.</p>
-  </div>
-
-  <h3>3. Uniform Cost Search (UCS)</h3>
-  <div class="box">
-    <p>UCS expands the node with the lowest path cost from the initial state.</p>
-    <p>It uses a priority queue.</p>
-    <p>If the path costs are:</p>
-    <ul>
-      <li>A → B = 2</li>
-      <li>A → C = 5</li>
-      <li>A → D = 3</li>
-    </ul>
-    <p>UCS will select B first because its path cost is lowest.</p>
-    <p><strong>Advantage:</strong> UCS is optimal when step costs are positive.</p>
-  </div>
-
-  <h3>4. Depth-Limited Search (DLS)</h3>
-  <div class="box">
-    <p>Depth-Limited Search is a modified version of DFS in which a maximum depth limit is specified.</p>
-    <p>For example, if the depth limit is 3, the algorithm does not explore nodes beyond depth 3.</p>
-    <p><strong>Advantage:</strong> Prevents infinite exploration.</p>
-    <p><strong>Disadvantage:</strong> It may fail to find a solution located beyond the depth limit.</p>
-  </div>
-
-  <h3>5. Iterative Deepening Search (IDS)</h3>
-  <div class="box">
-    <p>Iterative Deepening Search repeatedly performs Depth-Limited Search with increasing depth limits.</p>
-    <p>For example: Limit 0 → Limit 1 → Limit 2 → Limit 3 → ...</p>
-    <p>It combines some advantages of BFS and DFS.</p>
-    <p><strong>Advantages:</strong></p>
-    <ul>
-      <li>Complete for finite branching factor.</li>
-      <li>Optimal when all step costs are equal.</li>
-      <li>Uses relatively low memory.</li>
-    </ul>
-  </div>
-
-  <h3>Comparison of Search Algorithms</h3>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Algorithm</th><th>Complete?</th><th>Optimal?</th><th>Main Data Structure</th></tr></thead>
-      <tbody>
-        <tr><td>BFS</td><td>Yes*</td><td>Yes*</td><td>Queue</td></tr>
-        <tr><td>DFS</td><td>No</td><td>No</td><td>Stack</td></tr>
-        <tr><td>UCS</td><td>Yes*</td><td>Yes</td><td>Priority Queue</td></tr>
-        <tr><td>DLS</td><td>No**</td><td>No</td><td>Stack</td></tr>
-        <tr><td>IDS</td><td>Yes*</td><td>Yes*</td><td>Stack</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p style="margin-top:14px"><small>* Under standard conditions: finite branching factor; BFS/IDS optimal when all step costs are equal; UCS is optimal with positive step costs.<br>
+<p class="qno">Question 3</p>
+<h2>What is a State-Space Search Problem? Explain BFS, DFS, UCS, Depth-Limited Search and Iterative Deepening Search. Compare their completeness and optimality.</h2>
+<h3>State-Space Search Problem</h3>
+<div class="box">
+<p>A state-space search problem represents a problem as a collection of possible states and actions that move the system from one state to another.</p>
+<p>A search problem generally contains:</p>
+<ol>
+<li><strong>Initial State</strong> – The state from which the problem starts.</li>
+<li><strong>Actions/Operators</strong> – The possible actions available.</li>
+<li><strong>Transition Model</strong> – Describes the result of applying an action.</li>
+<li><strong>Goal State/Test</strong> – Determines whether the desired state has been reached.</li>
+<li><strong>Path Cost</strong> – The cost of reaching a state from the initial state.</li>
+</ol>
+<p><strong>Example:</strong> In a route-finding problem, cities can be considered states and roads can be considered actions.</p>
+</div>
+<h3>1. Breadth First Search (BFS)</h3>
+<div class="box">
+<p>BFS explores nodes level by level. It first explores all nodes at depth 1, then depth 2, and so on.</p>
+<p>It uses a FIFO (First-In, First-Out) queue.</p>
+<p><strong>Working:</strong></p>
+<ol>
+<li>Start from the initial node.</li>
+<li>Add its children to a queue.</li>
+<li>Remove the first node from the queue.</li>
+<li>Expand it and add its unvisited children.</li>
+<li>Continue until the goal is found.</li>
+</ol>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Complete when the branching factor is finite.</li>
+<li>Optimal when all step costs are equal.</li>
+</ul>
+<p><strong>Disadvantage:</strong> Requires large memory.</p>
+</div>
+<h3>2. Depth First Search (DFS)</h3>
+<div class="box">
+<p>DFS explores the deepest node first before backtracking.</p>
+<p>It uses a stack or recursion.</p>
+<p><strong>Working:</strong></p>
+<ol>
+<li>Start from the initial node.</li>
+<li>Select one child.</li>
+<li>Continue deeper until a leaf or dead end is reached.</li>
+<li>Backtrack and explore another branch.</li>
+</ol>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Requires less memory than BFS.</li>
+<li>Can find a solution quickly if the correct path is explored early.</li>
+</ul>
+<p><strong>Disadvantage:</strong> May get stuck exploring a very deep or infinite path.</p>
+</div>
+<h3>3. Uniform Cost Search (UCS)</h3>
+<div class="box">
+<p>UCS expands the node with the lowest path cost from the initial state.</p>
+<p>It uses a priority queue.</p>
+<p>If the path costs are:</p>
+<ul>
+<li>A → B = 2</li>
+<li>A → C = 5</li>
+<li>A → D = 3</li>
+</ul>
+<p>UCS will select B first because its path cost is lowest.</p>
+<p><strong>Advantage:</strong> UCS is optimal when step costs are positive.</p>
+</div>
+<h3>4. Depth-Limited Search (DLS)</h3>
+<div class="box">
+<p>Depth-Limited Search is a modified version of DFS in which a maximum depth limit is specified.</p>
+<p>For example, if the depth limit is 3, the algorithm does not explore nodes beyond depth 3.</p>
+<p><strong>Advantage:</strong> Prevents infinite exploration.</p>
+<p><strong>Disadvantage:</strong> It may fail to find a solution located beyond the depth limit.</p>
+</div>
+<h3>5. Iterative Deepening Search (IDS)</h3>
+<div class="box">
+<p>Iterative Deepening Search repeatedly performs Depth-Limited Search with increasing depth limits.</p>
+<p>For example: Limit 0 → Limit 1 → Limit 2 → Limit 3 → ...</p>
+<p>It combines some advantages of BFS and DFS.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Complete for finite branching factor.</li>
+<li>Optimal when all step costs are equal.</li>
+<li>Uses relatively low memory.</li>
+</ul>
+</div>
+<h3>Comparison of Search Algorithms</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Algorithm</th><th>Complete?</th><th>Optimal?</th><th>Main Data Structure</th></tr></thead>
+<tbody>
+<tr><td>BFS</td><td>Yes*</td><td>Yes*</td><td>Queue</td></tr>
+<tr><td>DFS</td><td>No</td><td>No</td><td>Stack</td></tr>
+<tr><td>UCS</td><td>Yes*</td><td>Yes</td><td>Priority Queue</td></tr>
+<tr><td>DLS</td><td>No**</td><td>No</td><td>Stack</td></tr>
+<tr><td>IDS</td><td>Yes*</td><td>Yes*</td><td>Stack</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin-top:14px"><small>* Under standard conditions: finite branching factor; BFS/IDS optimal when all step costs are equal; UCS is optimal with positive step costs.<br/>
   ** DLS is complete only if the depth limit is at least the depth of a solution (under appropriate finite-branching assumptions).</small></p>
-
-  <h3>Conclusion</h3>
-  <div class="box">
-    <p>State-space search provides a systematic way of solving AI problems. BFS, DFS, UCS, DLS, and IDS are important uninformed search techniques because they do not use domain-specific heuristic information.</p>
-  </div>
+<h3>Conclusion</h3>
+<div class="box">
+<p>State-space search provides a systematic way of solving AI problems. BFS, DFS, UCS, DLS, and IDS are important uninformed search techniques because they do not use domain-specific heuristic information.</p>
+</div>
 </section>
-
 <div class="pager">
-  <a class="btn" href="q2.html">&larr; Previous</a>
-  <a class="btn" href="assignment.html">All questions</a>
-  <a class="btn" href="q4.html">Next &rarr;</a>
+<a class="btn" href="q2.html">← Previous</a>
+<a class="btn" href="assignment.html">All questions</a>
+<a class="btn" href="q4.html">Next →</a>
 </div>
 </main>
-
 <footer>
-  <p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Artificial Intelligence</p>
-  <p class="credit">Developed by Pragya Kumar M&amp;C</p>
+<p>Name: ________  |  Roll No: ________  |  Subject: Artificial Intelligence</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
 </footer>
-
 </body>
 </html>

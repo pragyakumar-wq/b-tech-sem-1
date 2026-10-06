@@ -1,31 +1,30 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Unit 1 Notes | AI Assignment</title>
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js" defer></script>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
 </head>
-<body>
-
+<body class="subject-page">
 <header class="top">
-  <h1>Artificial Intelligence</h1>
-  <nav>
-    <a href="../index.html">All Subjects</a>
-    <a href="index.html">AI Home</a>
-    <a href="assignment.html">Assignment</a>
-    <a href="syllabus.html">Syllabus</a>
-    <a href="notes.html" class="active">Notes</a>
-    <a href="references.html">References</a>
-    <a href="exam.html">Exam Questions</a>
-  </nav>
+<h1>Artificial Intelligence</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>AI Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
 </header>
-
 <main>
-<p class="crumb"><a href="../index.html">Subjects</a> &rsaquo; <a href="index.html">Intro to AI</a> &rsaquo; <a href="notes.html">Notes</a> &rsaquo; Unit 1</p>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Intro to AI</a> › <a href="notes.html">Notes</a> › Unit 1</p>
 <section class="unit" id="u1">
-<p class="qno">Unit 1 &middot; 8 hrs</p>
+<p class="qno">Unit 1 · 8 hrs</p>
 <h2>Introduction to Artificial Intelligence</h2>
 <p><strong>Syllabus topics:</strong></p>
 <ul><li>What is AI? History and evolution of AI</li><li>Foundations of AI: philosophy, mathematics, cognitive science</li><li>Intelligent agents, PEAS</li><li>Types of environments</li><li>Types of agents</li><li>AI application domains across engineering disciplines</li></ul>
@@ -36,7 +35,7 @@
 <h3>History and Evolution Timeline</h3>
 <ol class="timeline"><li><span class="year">1950 (The Turing Test)</span>Alan Turing introduced the Turing Test in his paper "Computing Machinery and Intelligence" to evaluate whether a machine can exhibit human-like intelligence.</li><li><span class="year">1956 (Dartmouth Conference)</span>Organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. John McCarthy coined the term "Artificial Intelligence" and is known as the <strong>Father of AI</strong>.</li><li><span class="year">1966 (ELIZA)</span>Joseph Weizenbaum created ELIZA, an early natural language processing chatbot operating on pattern matching.</li><li><span class="year">1974-1980 (First AI Winter)</span>Research stalled due to severe hardware constraints, low computational memory, and reduced government funding.</li><li><span class="year">1980s (Expert Systems Era)</span>Expert systems like MYCIN (medical diagnosis) and XCON (hardware configuration) introduced rule-based decision engines using IF-THEN structures.</li><li><span class="year">1987-1993 (Second AI Winter)</span>High maintenance costs of expert systems and the failure of specialized hardware caused another period of funding cuts.</li><li><span class="year">1997 (IBM Deep Blue)</span>Deep Blue defeated world chess champion Garry Kasparov using high-speed parallel processing and game-tree search algorithms.</li><li><span class="year">2012-Present (Deep Learning and Modern Era)</span>AlexNet won the ImageNet competition using Convolutional Neural Networks (CNNs) on GPUs, starting the deep learning and modern Transformer/LLM era.</li></ol>
 <h3>Foundations of Artificial Intelligence</h3>
-<p>AI is built upon concepts derived from several foundational disciplines:</p><ul><li><strong>Philosophy:</strong> Explores formal logic (Aristotle's syllogisms), rules of rational thought, mind-body dualism, and how physical brains execute logical operations.</li><li><strong>Mathematics:</strong> Provides formal logic, probability theory (handling uncertainty via Bayes' Theorem), linear algebra, continuous calculus, and gradient descent optimization algorithms.</li><li><strong>Cognitive Science:</strong> Studies human thought mechanisms, perception models, memory organization, and functional models of human problem-solving.</li></ul><div class="box"><p><strong>Bayes' Theorem:</strong> P(A|B) = P(B|A) &times; P(A) / P(B)</p></div>
+<p>AI is built upon concepts derived from several foundational disciplines:</p><ul><li><strong>Philosophy:</strong> Explores formal logic (Aristotle's syllogisms), rules of rational thought, mind-body dualism, and how physical brains execute logical operations.</li><li><strong>Mathematics:</strong> Provides formal logic, probability theory (handling uncertainty via Bayes' Theorem), linear algebra, continuous calculus, and gradient descent optimization algorithms.</li><li><strong>Cognitive Science:</strong> Studies human thought mechanisms, perception models, memory organization, and functional models of human problem-solving.</li></ul><div class="box"><p><strong>Bayes' Theorem:</strong> P(A|B) = P(B|A) × P(A) / P(B)</p></div>
 <h3>Basic Terms</h3>
 <ul><li><strong>Agent:</strong> An entity that perceives its environment through sensors and acts upon that environment using actuators.</li><li><strong>Percept:</strong> The current perceptual input collected by the agent's sensors at any given instant.</li><li><strong>Percept Sequence:</strong> The complete history of all percepts perceived by an agent till date.</li></ul>
 <h3>PEAS Framework</h3>
@@ -47,20 +46,17 @@
 <p>Agents are categorized into five structural architectures based on their decision mechanisms:</p><h4>1. Simple Reflex Agent</h4><div class="box"><ul><li>Selects actions based exclusively on the current percept, completely ignoring past percept history.</li><li>Operates using static Condition-Action Rules (IF condition THEN action).</li><li>Fails in partially observable environments because it lacks memory.</li></ul></div><h4>2. Model-Based Reflex Agent</h4><div class="box"><ul><li>Maintains an internal state (world model) to track unobserved features of a partially observable environment.</li><li>Evaluates "How the world evolves" and "How my actions affect the world".</li></ul></div><h4>3. Goal-Based Agent</h4><div class="box"><ul><li>Combines state information with explicit Goal Information.</li><li>Uses search and planning algorithms (such as BFS, DFS, or A*) to find action sequences that reach target goal states.</li></ul></div><h4>4. Utility-Based Agent</h4><div class="box"><ul><li>Uses a quantitative Utility Function to measure how desirable a state or outcome is.</li><li>Evaluates trade-offs (e.g., speed, safety, cost) to select paths that maximize expected performance.</li></ul></div><h4>5. Learning Agent</h4><div class="box"><p>Designed to operate in unfamiliar environments and adaptively improve performance over time through feedback.</p><p><strong>Four Core Components:</strong></p><ul><li><strong>Critic:</strong> Evaluates agent behavior against a fixed performance standard.</li><li><strong>Learning Element:</strong> Learns from feedback to update internal decision rules.</li><li><strong>Performance Element:</strong> Selects external actions.</li><li><strong>Problem Generator:</strong> Proposes exploratory actions to discover improved strategies.</li></ul></div>
 <h3>Overview of AI Application Domains Across Engineering Disciplines</h3>
 <div class="table-wrap"><table><thead><tr><th>Discipline</th><th>AI applications</th></tr></thead><tbody><tr><td>Computer Science &amp; Software Engineering</td><td>Intelligent code completion, automated software test generation, dynamic malware detection, and real-time network intrusion detection.</td></tr><tr><td>Mechanical &amp; Automotive Engineering</td><td>Predictive maintenance of machinery, kinematic motion planning in robotics, and Advanced Driver Assistance Systems (ADAS).</td></tr><tr><td>Electrical &amp; Power Engineering</td><td>Smart grid load forecasting using neural networks, automated VLSI microchip floor planning, and automated fault detection in power lines.</td></tr><tr><td>Civil &amp; Environmental Engineering</td><td>Computer-vision-based structural health monitoring (detecting micro-cracks in bridges), dynamic traffic signal routing, and disaster risk prediction.</td></tr><tr><td>Biomedical Engineering</td><td>Automated CT/MRI medical image segmentation, protein structure folding prediction, and robotic surgical tool guidance.</td></tr></tbody></table></div>
-
 <p style="margin-top:22px"><a class="btn" href="exam.html#unit1">Practice exam questions for Unit 1</a></p>
 </section>
 <div class="pager">
-  <span></span>
-  <a class="btn" href="notes.html">All units</a>
-  <a class="btn" href="notes-unit2.html">Next unit &rarr;</a>
+<span></span>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit2.html">Next unit →</a>
 </div>
 </main>
-
 <footer>
-  <p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Artificial Intelligence</p>
-  <p class="credit">Developed by Pragya Kumar M&amp;C</p>
+<p>Name: ________  |  Roll No: ________  |  Subject: Artificial Intelligence</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
 </footer>
-
 </body>
 </html>

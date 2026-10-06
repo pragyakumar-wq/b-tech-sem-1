@@ -1,58 +1,54 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Unit 4 Notes | AI Assignment</title>
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js" defer></script>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
 </head>
-<body>
-
+<body class="subject-page">
 <header class="top">
-  <h1>Artificial Intelligence</h1>
-  <nav>
-    <a href="../index.html">All Subjects</a>
-    <a href="index.html">AI Home</a>
-    <a href="assignment.html">Assignment</a>
-    <a href="syllabus.html">Syllabus</a>
-    <a href="notes.html" class="active">Notes</a>
-    <a href="references.html">References</a>
-    <a href="exam.html">Exam Questions</a>
-  </nav>
+<h1>Artificial Intelligence</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>AI Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
 </header>
-
 <main>
-<p class="crumb"><a href="../index.html">Subjects</a> &rsaquo; <a href="index.html">Intro to AI</a> &rsaquo; <a href="notes.html">Notes</a> &rsaquo; Unit 4</p>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Intro to AI</a> › <a href="notes.html">Notes</a> › Unit 4</p>
 <section class="unit" id="u4">
-<p class="qno">Unit 4 &middot; 7 hrs</p>
+<p class="qno">Unit 4 · 7 hrs</p>
 <h2>Reasoning Under Uncertainty</h2>
 <p><strong>Syllabus topics:</strong></p>
 <ul><li>Sources of uncertainty, basic probability</li><li>Bayes' theorem</li><li>Bayesian networks</li><li>Fuzzy logic and fuzzy sets</li><li>Certainty factors and rule-based uncertainty</li></ul>
 <h3>Need for probabilistic reasoning</h3>
-<ul><li>Real agents have <strong>incomplete or noisy information</strong>: sensor errors, partial observability, unpredictable events.</li><li>Logic gives only true or false. Probability gives a degree of belief between 0 and 1.</li><li>Basic rules: 0 &le; P(A) &le; 1, P(A) + P(&not;A) = 1, P(A|B) = P(A &and; B) / P(B).</li></ul>
+<ul><li>Real agents have <strong>incomplete or noisy information</strong>: sensor errors, partial observability, unpredictable events.</li><li>Logic gives only true or false. Probability gives a degree of belief between 0 and 1.</li><li>Basic rules: 0 ≤ P(A) ≤ 1, P(A) + P(¬A) = 1, P(A|B) = P(A ∧ B) / P(B).</li></ul>
 <h3>Bayes' theorem</h3>
-<div class="box"><p><strong>P(H|E) = P(E|H) &times; P(H) / P(E)</strong></p><p>H = hypothesis, E = evidence, P(H) = prior, P(E|H) = likelihood, P(H|E) = posterior. P(E) = P(E|H)P(H) + P(E|&not;H)P(&not;H).</p><p><strong>Example:</strong> P(disease) = 0.01, P(positive | disease) = 0.9, P(positive | no disease) = 0.05. P(positive) = 0.9&times;0.01 + 0.05&times;0.99 = 0.0585. P(disease | positive) = 0.009 / 0.0585 &asymp; 0.154, about 15.4%.</p></div>
+<div class="box"><p><strong>P(H|E) = P(E|H) × P(H) / P(E)</strong></p><p>H = hypothesis, E = evidence, P(H) = prior, P(E|H) = likelihood, P(H|E) = posterior. P(E) = P(E|H)P(H) + P(E|¬H)P(¬H).</p><p><strong>Example:</strong> P(disease) = 0.01, P(positive | disease) = 0.9, P(positive | no disease) = 0.05. P(positive) = 0.9×0.01 + 0.05×0.99 = 0.0585. P(disease | positive) = 0.009 / 0.0585 ≈ 0.154, about 15.4%.</p></div>
 <h3>Bayesian networks</h3>
-<ul><li>A <strong>directed acyclic graph</strong>: each node is a random variable, each arrow shows direct influence.</li><li>Each node has a <strong>conditional probability table (CPT)</strong> given its parents.</li><li>Joint probability = product of P(X<sub>i</sub> | parents(X<sub>i</sub>)).</li><li>Classic example: Burglary and Earthquake &rarr; Alarm &rarr; JohnCalls, MaryCalls.</li><li>Steps to construct: choose variables, add arrows for direct causes, fill CPTs, then compute queries by multiplying and summing probabilities.</li></ul>
+<ul><li>A <strong>directed acyclic graph</strong>: each node is a random variable, each arrow shows direct influence.</li><li>Each node has a <strong>conditional probability table (CPT)</strong> given its parents.</li><li>Joint probability = product of P(X<sub>i</sub> | parents(X<sub>i</sub>)).</li><li>Classic example: Burglary and Earthquake → Alarm → JohnCalls, MaryCalls.</li><li>Steps to construct: choose variables, add arrows for direct causes, fill CPTs, then compute queries by multiplying and summing probabilities.</li></ul>
 <h3>Fuzzy logic and fuzzy sets</h3>
-<div class="box"><p>In a <strong>crisp set</strong> an element is in or out. In a <strong>fuzzy set</strong> each element has a membership value &mu;(x) between 0 and 1 (example: "tall", "warm").</p></div><div class="table-wrap"><table><thead><tr><th>Operation</th><th>Formula</th></tr></thead><tbody><tr><td>Union</td><td>&mu;<sub>A&cup;B</sub>(x) = max(&mu;<sub>A</sub>(x), &mu;<sub>B</sub>(x))</td></tr><tr><td>Intersection</td><td>&mu;<sub>A&cap;B</sub>(x) = min(&mu;<sub>A</sub>(x), &mu;<sub>B</sub>(x))</td></tr><tr><td>Complement</td><td>&mu;<sub>A'</sub>(x) = 1 &minus; &mu;<sub>A</sub>(x)</td></tr></tbody></table></div><p style="margin-top:12px">Fuzzy control steps: fuzzification, rule evaluation, aggregation, defuzzification (example: washing machine, air conditioner).</p>
+<div class="box"><p>In a <strong>crisp set</strong> an element is in or out. In a <strong>fuzzy set</strong> each element has a membership value μ(x) between 0 and 1 (example: "tall", "warm").</p></div><div class="table-wrap"><table><thead><tr><th>Operation</th><th>Formula</th></tr></thead><tbody><tr><td>Union</td><td>μ<sub>A∪B</sub>(x) = max(μ<sub>A</sub>(x), μ<sub>B</sub>(x))</td></tr><tr><td>Intersection</td><td>μ<sub>A∩B</sub>(x) = min(μ<sub>A</sub>(x), μ<sub>B</sub>(x))</td></tr><tr><td>Complement</td><td>μ<sub>A'</sub>(x) = 1 − μ<sub>A</sub>(x)</td></tr></tbody></table></div><p style="margin-top:12px">Fuzzy control steps: fuzzification, rule evaluation, aggregation, defuzzification (example: washing machine, air conditioner).</p>
 <h3>Certainty factors</h3>
-<ul><li>A <strong>certainty factor (CF)</strong> ranges from &minus;1 (certainly false) to +1 (certainly true). Used in rule-based systems such as MYCIN.</li><li>Rule CF: CF(conclusion) = CF(rule) &times; CF(evidence).</li><li>Two rules supporting the same conclusion (both positive): CF = CF1 + CF2 &times; (1 &minus; CF1).</li></ul>
-
+<ul><li>A <strong>certainty factor (CF)</strong> ranges from −1 (certainly false) to +1 (certainly true). Used in rule-based systems such as MYCIN.</li><li>Rule CF: CF(conclusion) = CF(rule) × CF(evidence).</li><li>Two rules supporting the same conclusion (both positive): CF = CF1 + CF2 × (1 − CF1).</li></ul>
 <p style="margin-top:22px"><a class="btn" href="exam.html#unit4">Practice exam questions for Unit 4</a></p>
 </section>
 <div class="pager">
-  <a class="btn" href="notes-unit3.html">&larr; Previous unit</a>
-  <a class="btn" href="notes.html">All units</a>
-  <a class="btn" href="notes-unit5.html">Next unit &rarr;</a>
+<a class="btn" href="notes-unit3.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit5.html">Next unit →</a>
 </div>
 </main>
-
 <footer>
-  <p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Artificial Intelligence</p>
-  <p class="credit">Developed by Pragya Kumar M&amp;C</p>
+<p>Name: ________  |  Roll No: ________  |  Subject: Artificial Intelligence</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
 </footer>
-
 </body>
 </html>
