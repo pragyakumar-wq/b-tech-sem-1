@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.Tech Sem-1 Study Portal | Group-A (2026–2030)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="badge">Batch 2026–2030 • Group-A</span>
+        <h1>B.Tech 1st Semester Academic Portal</h1>
+        <p>Complete Syllabus, Unit-Wise Notes, Reference Books &amp; Lab Manuals (20 Credits)</p>
+      </div>
+      <div class="hero-actions">
+        <button id="themeToggle" class="btn-secondary" type="button">🌗 Toggle Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- FIXED QUICK ACCESS & QUICK ACCESS NOTES HUB -->
+    <section class="quick-access-panel">
+      <div class="qa-header">
+        <div>
+          <h2>⚡ Quick Access &amp; Unit Notes</h2>
+          <p>Select a subject below to open its exact Syllabus, Unit 1–5 Notes, or References (no forced redirect to AI).</p>
+        </div>
+        <div class="qa-selector-wrap">
+          <label for="qaSubjectSelect">Active Subject:</label>
+          <select id="qaSubjectSelect" aria-label="Select Subject for Quick Access">
+            <option value="engineering-mathematics-1" data-type="theory">100102 — Engineering Mathematics - I</option>
+            <option value="engineering-physics" data-type="theory">100104 — Engineering Physics</option>
+            <option value="ai" data-type="theory">100105 — Introduction to AI</option>
+            <option value="computer-fundamentals" data-type="theory">100108 — Computer Fundamentals &amp; Emerging Tech</option>
+            <option value="universal-human-values" data-type="theory">100109 — Universal Human Values</option>
+            <option value="indian-constitution" data-type="theory">100110 — Essence of Indian Constitution</option>
+            <option value="basics-of-electrical-electronics" data-type="theory">100111 — Basics of Electrical &amp; Electronics Engg</option>
+            <option value="engineering-physics-lab" data-type="lab">100104P — Engineering Physics Lab</option>
+            <option value="electrical-electronics-lab" data-type="lab">100111P — Basics of Electrical &amp; Electronics Lab</option>
+            <option value="programming-lab" data-type="lab">100112P — Programming for Problem Solving Lab</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Quick Access Main Links -->
+      <div class="qa-links-grid">
+        <a id="qaOverview" class="qa-chip" href="engineering-mathematics-1/index.html">🏠 Subject Hub</a>
+        <a id="qaSyllabus" class="qa-chip" href="engineering-mathematics-1/syllabus.html">📋 Official Syllabus</a>
+        <a id="qaAllNotes" class="qa-chip" href="engineering-mathematics-1/notes.html">📚 All Notes / Lab Manual</a>
+        <a id="qaReferences" class="qa-chip" href="engineering-mathematics-1/references.html">📖 Reference Books</a>
+      </div>
+
+      <!-- Quick Access Unit Notes (Unit 1 to Unit 5) -->
+      <div id="qaUnitsBar" class="qa-units-bar">
+        <span class="qa-unit-label">Quick Access Notes:</span>
+        <a id="qaUnit1" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit1.html">Unit 1</a>
+        <a id="qaUnit2" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit2.html">Unit 2</a>
+        <a id="qaUnit3" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit3.html">Unit 3</a>
+        <a id="qaUnit4" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit4.html">Unit 4</a>
+        <a id="qaUnit5" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit5.html">Unit 5</a>
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER CONTROLS -->
+    <section class="controls-bar">
+      <input
+        type="search"
+        id="subjectSearch"
+        placeholder="Search courses by name, code (e.g., 100108), or topic (e.g., Matrices, Lasers, C++, IoT)..."
+      />
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All (10)</button>
+        <button class="filter-btn" data-filter="theory">Theory (7)</button>
+        <button class="filter-btn" data-filter="lab">Practical Labs (3)</button>
+      </div>
+    </section>
+
+    <!-- SUBJECT CARDS GRID -->
+    <section id="subjectsGrid" class="subjects-grid"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>B.Tech Semester-1 Group-A Portal (Batch 2026–2030) • Mathematics &amp; Computing / CSE &amp; Allied Branches</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
