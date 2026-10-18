@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 7 (Assignment-1) | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="assignment.html">Assignment</a> › <a href="assignment-1.html">Assignment-1</a> › Question 7</p>
+<section id="q7">
+<p class="qno">Assignment-1 · Question 7 (Sub-BEEE · Submission: 21/10/2026)</p>
+<h2>Determine the value of the current through the diode circuit given below. Assume V<sub>γ</sub> = 0.7 V.</h2>
+
+<h3>1. Given Circuit Diagram (From Assignment-1 Sheet)</h3>
+<div class="box" style="text-align:center">
+<svg viewBox="0 0 560 245" style="max-width:100%;height:auto;background:#fff;border:1px solid #dcd8d1;border-radius:8px;padding:8px" xmlns="http://www.w3.org/2000/svg">
+  <text x="280" y="24" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#3f7547">Given Silicon Diode Series Circuit</text>
+  <!-- Left wire & 6V DC Source -->
+  <line x1="120" y1="60" x2="120" y2="115" stroke="#4f4b48" stroke-width="2.3"/>
+  <circle cx="120" cy="138" r="23" fill="#fcfbf6" stroke="#3f7547" stroke-width="2.3"/>
+  <text x="120" y="132" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#3f7547">+</text>
+  <text x="120" y="152" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#3f7547">−</text>
+  <text x="72" y="143" font-family="Arial" font-size="14" font-weight="bold" fill="#4f4b48">DC</text>
+  <text x="155" y="143" font-family="Arial" font-size="14" font-weight="bold" fill="#3f7547">6 V</text>
+  <line x1="120" y1="161" x2="120" y2="210" stroke="#4f4b48" stroke-width="2.3"/>
+  <!-- Top wire & 10 kOhm Resistor -->
+  <line x1="120" y1="60" x2="225" y2="60" stroke="#4f4b48" stroke-width="2.3"/>
+  <polygon points="180,54 194,60 180,66" fill="#fc9a7b"/>
+  <text x="172" y="46" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">Current I</text>
+  <polyline points="225,60 235,45 250,75 265,45 280,75 295,45 310,75 320,60" fill="none" stroke="#3f7547" stroke-width="2.6"/>
+  <text x="272" y="95" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#3f7547">10 kΩ</text>
+  <line x1="320" y1="60" x2="430" y2="60" stroke="#4f4b48" stroke-width="2.3"/>
+  <!-- Right wire & Silicon Diode pointing DOWN -->
+  <line x1="430" y1="60" x2="430" y2="120" stroke="#4f4b48" stroke-width="2.3"/>
+  <polygon points="412,120 448,120 430,152" fill="#e4f2e5" stroke="#3f7547" stroke-width="2.3"/>
+  <line x1="412" y1="152" x2="448" y2="152" stroke="#3f7547" stroke-width="2.6"/>
+  <text x="392" y="142" font-family="Arial" font-size="14" font-weight="bold" fill="#3f7547">Si</text>
+  <text x="458" y="142" font-family="Arial" font-size="13" font-weight="bold" fill="#d9534f">V_γ = 0.7 V</text>
+  <line x1="430" y1="152" x2="430" y2="210" stroke="#4f4b48" stroke-width="2.3"/>
+  <!-- Bottom wire -->
+  <line x1="120" y1="210" x2="430" y2="210" stroke="#4f4b48" stroke-width="2.3"/>
+</svg>
+</div>
+
+<h3>2. Step-by-Step Numerical Solution</h3>
+<div class="box">
+<p><strong>Given Data:</strong></p>
+<ul>
+<li>DC Supply Voltage, <strong>V = 6 V</strong></li>
+<li>Series Resistance, <strong>R = 10 kΩ = 10 × 10<sup>3</sup> Ω = 10,000 Ω</strong></li>
+<li>Cut-in (Knee / Barrier) Voltage of Silicon Diode, <strong>V<sub>γ</sub> = 0.7 V</strong></li>
+</ul>
+
+<p><strong>Step 1 — Check the Biasing Condition of the Silicon Diode:</strong><br/>
+The positive (+) terminal of the 6 V DC source is connected (via the 10 kΩ resistor) to the <strong>p-side (anode)</strong> of the Silicon diode, and the negative (−) terminal is connected to the <strong>n-side (cathode)</strong>. Since the applied voltage <strong>V = 6 V &gt; V<sub>γ</sub> = 0.7 V</strong>, the Silicon diode is <strong>Forward Biased (ON)</strong> and conducts current clockwise around the loop.</p>
+
+<p><strong>Step 2 — Apply Kirchhoff's Voltage Law (KVL) Around the Closed Loop:</strong><br/>
+Replacing the conducting Silicon diode with its barrier potential drop <em>V<sub>γ</sub> = 0.7 V</em> and applying KVL clockwise:</p>
+<p><strong>+V − (I × R) − V<sub>γ</sub> = 0</strong></p>
+<p><strong>6 − I × (10 × 10<sup>3</sup>) − 0.7 = 0</strong></p>
+<p><strong>I × (10 × 10<sup>3</sup>) = 6 − 0.7 = 5.3 V</strong></p>
+
+<p><strong>Step 3 — Calculate the Diode Current (I):</strong></p>
+<p><strong>I = 5.3 / (10 × 10<sup>3</sup>) A = 0.53 × 10<sup>−3</sup> A = 0.53 mA (or 530 μA)</strong></p>
+
+<p style="font-size:1.15rem;color:#3f7547;margin-top:12px"><strong>Final Answer:</strong><br/>
+• <strong>Current through the diode circuit, I = 0.53 mA (5.3 × 10<sup>−4</sup> A)</strong><br/>
+• Voltage drop across the 10 kΩ resistor, <strong>V<sub>R</sub> = I × R = 0.53 mA × 10 kΩ = 5.3 V</strong><br/>
+• Power dissipated across the Silicon diode, <strong>P<sub>D</sub> = V<sub>γ</sub> × I = 0.7 V × 0.53 mA = 0.371 mW</strong></p>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="q6.html">← Previous question (Q6)</a>
+<a class="btn" href="assignment-1.html">Assignment-1</a>
+<a class="btn" href="q8.html">Next question (Q8) →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

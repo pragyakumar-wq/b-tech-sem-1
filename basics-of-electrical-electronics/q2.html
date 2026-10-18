@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 2 (Assignment-1) | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="assignment.html">Assignment</a> › <a href="assignment-1.html">Assignment-1</a> › Question 2</p>
+<section id="q2">
+<p class="qno">Assignment-1 · Question 2 (Sub-BEEE · Submission: 21/10/2026)</p>
+<h2>Describe the three configurations of BJT (CE, CB, CC) and their applications.</h2>
+
+<h3>1. Overview of BJT Configurations</h3>
+<div class="box">
+<p>A <strong>Bipolar Junction Transistor (BJT)</strong> is a three-terminal device (<strong>Emitter E, Base B, Collector C</strong>), whereas an amplifier or circuit requires four terminals (two for input and two for output). Therefore, one of the three terminals is made <strong>common to both input and output signals</strong>, giving rise to three configurations:</p>
+<ol>
+<li><strong>Common Base (CB) Configuration</strong></li>
+<li><strong>Common Emitter (CE) Configuration</strong></li>
+<li><strong>Common Collector (CC) / Emitter Follower Configuration</strong></li>
+</ol>
+</div>
+
+<h3>2. Neat Circuit Diagrams of CB, CE, and CC Configurations</h3>
+<div class="box" style="text-align:center">
+<svg viewBox="0 0 760 230" style="max-width:100%;height:auto;background:#fff;border:1px solid #dcd8d1;border-radius:8px;padding:8px" xmlns="http://www.w3.org/2000/svg">
+  <!-- 1. Common Base -->
+  <rect x="12" y="12" width="235" height="205" rx="8" fill="#fcfbf6" stroke="#dcd8d1"/>
+  <text x="130" y="34" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">1. Common Base (CB)</text>
+  <circle cx="130" cy="105" r="28" fill="#fff" stroke="#3f7547" stroke-width="2"/>
+  <line x1="115" y1="120" x2="145" y2="120" stroke="#3f7547" stroke-width="3"/>
+  <line x1="122" y1="120" x2="108" y2="95" stroke="#3f7547" stroke-width="2"/>
+  <line x1="138" y1="120" x2="152" y2="95" stroke="#3f7547" stroke-width="2"/>
+  <line x1="130" y1="120" x2="130" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="45" y1="95" x2="108" y2="95" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="152" y1="95" x2="215" y2="95" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="45" y1="175" x2="215" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <text x="95" y="90" font-family="Arial" font-size="11" font-weight="bold">E</text>
+  <text x="158" y="90" font-family="Arial" font-size="11" font-weight="bold">C</text>
+  <text x="136" y="152" font-family="Arial" font-size="11" font-weight="bold">B (Common)</text>
+  <text x="48" y="140" font-family="Arial" font-size="11" fill="#3f7547">Input (E-B)</text>
+  <text x="160" y="140" font-family="Arial" font-size="11" fill="#3f7547">Output (C-B)</text>
+  <text x="130" y="202" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#4f4b48">Gain: α = ΔI_C / ΔI_E &lt; 1</text>
+
+  <!-- 2. Common Emitter -->
+  <rect x="262" y="12" width="235" height="205" rx="8" fill="#fcfbf6" stroke="#dcd8d1"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">2. Common Emitter (CE)</text>
+  <circle cx="380" cy="105" r="28" fill="#fff" stroke="#3f7547" stroke-width="2"/>
+  <line x1="368" y1="90" x2="368" y2="120" stroke="#3f7547" stroke-width="3"/>
+  <line x1="368" y1="98" x2="392" y2="83" stroke="#3f7547" stroke-width="2"/>
+  <line x1="368" y1="112" x2="392" y2="127" stroke="#3f7547" stroke-width="2"/>
+  <line x1="295" y1="105" x2="368" y2="105" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="392" y1="83" x2="465" y2="83" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="392" y1="127" x2="392" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="295" y1="175" x2="465" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <text x="345" y="100" font-family="Arial" font-size="11" font-weight="bold">B</text>
+  <text x="400" y="78" font-family="Arial" font-size="11" font-weight="bold">C</text>
+  <text x="398" y="155" font-family="Arial" font-size="11" font-weight="bold">E (Common)</text>
+  <text x="296" y="145" font-family="Arial" font-size="11" fill="#3f7547">Input (B-E)</text>
+  <text x="415" y="120" font-family="Arial" font-size="11" fill="#3f7547">Output (C-E)</text>
+  <text x="380" y="202" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#4f4b48">Gain: β = ΔI_C / ΔI_B (50–300)</text>
+
+  <!-- 3. Common Collector -->
+  <rect x="512" y="12" width="235" height="205" rx="8" fill="#fcfbf6" stroke="#dcd8d1"/>
+  <text x="630" y="34" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">3. Common Collector (CC)</text>
+  <circle cx="630" cy="105" r="28" fill="#fff" stroke="#3f7547" stroke-width="2"/>
+  <line x1="618" y1="90" x2="618" y2="120" stroke="#3f7547" stroke-width="3"/>
+  <line x1="618" y1="98" x2="642" y2="83" stroke="#3f7547" stroke-width="2"/>
+  <line x1="618" y1="112" x2="642" y2="127" stroke="#3f7547" stroke-width="2"/>
+  <line x1="545" y1="105" x2="618" y2="105" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="642" y1="83" x2="715" y2="83" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="642" y1="127" x2="642" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="545" y1="175" x2="715" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <text x="595" y="100" font-family="Arial" font-size="11" font-weight="bold">B</text>
+  <text x="650" y="78" font-family="Arial" font-size="11" font-weight="bold">E</text>
+  <text x="648" y="155" font-family="Arial" font-size="11" font-weight="bold">C (Common)</text>
+  <text x="546" y="145" font-family="Arial" font-size="11" fill="#3f7547">Input (B-C)</text>
+  <text x="665" y="120" font-family="Arial" font-size="11" fill="#3f7547">Output (E-C)</text>
+  <text x="630" y="202" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#4f4b48">Gain: γ = ΔI_E / ΔI_B = β + 1</text>
+</svg>
+</div>
+
+<h3>3. Detailed Description &amp; Current Gain Relations</h3>
+<div class="box">
+<ul>
+<li><strong>1. Common Base (CB) Configuration:</strong> The Base terminal is common to both input (applied between Emitter and Base) and output (taken between Collector and Base).<br/>
+• <strong>Current Amplification Factor (α):</strong> <strong>α = ΔI<sub>C</sub> / ΔI<sub>E</sub></strong> (at constant V<sub>CB</sub>). Since <em>I<sub>C</sub> &lt; I<sub>E</sub></em>, <strong>α is always slightly less than 1</strong> (typically 0.95 to 0.99).<br/>
+• <strong>Collector Current Equation:</strong> <strong>I<sub>C</sub> = α I<sub>E</sub> + I<sub>CBO</sub></strong>.</li>
+<li><strong>2. Common Emitter (CE) Configuration:</strong> The Emitter terminal is common to both input (applied between Base and Emitter) and output (taken between Collector and Emitter).<br/>
+• <strong>Base Current Amplification Factor (β):</strong> <strong>β = ΔI<sub>C</sub> / ΔI<sub>B</sub></strong> (at constant V<sub>CE</sub>). Typically ranges from <strong>50 to 300</strong>.<br/>
+• <strong>Relation between α and β:</strong> Since <em>I<sub>E</sub> = I<sub>B</sub> + I<sub>C</sub> ⇒ ΔI<sub>E</sub> = ΔI<sub>B</sub> + ΔI<sub>C</sub></em>, dividing by <em>ΔI<sub>C</sub></em> gives <em>1/α = 1/β + 1</em>:<br/>
+<strong>β = α / (1 − α) &nbsp;&nbsp; and &nbsp;&nbsp; α = β / (β + 1)</strong>.<br/>
+• <strong>Collector Current Equation:</strong> <strong>I<sub>C</sub> = β I<sub>B</sub> + (1 + β)I<sub>CBO</sub> = β I<sub>B</sub> + I<sub>CEO</sub></strong>.</li>
+<li><strong>3. Common Collector (CC) Configuration (Emitter Follower):</strong> The Collector terminal is grounded for AC signals; input is applied between Base and Collector and output is taken across Emitter and Collector.<br/>
+• <strong>Current Gain (γ):</strong> <strong>γ = ΔI<sub>E</sub> / ΔI<sub>B</sub> = 1 + β = 1 / (1 − α)</strong>.</li>
+</ul>
+</div>
+
+<h3>4. Master Comparison &amp; Applications of CB, CE, and CC Configurations</h3>
+<div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Common Base (CB)</th><th>Common Emitter (CE)</th><th>Common Collector (CC)</th></tr></thead><tbody>
+<tr><td><strong>Common Terminal</strong></td><td>Base (B)</td><td>Emitter (E)</td><td>Collector (C)</td></tr>
+<tr><td><strong>Input Terminals</strong></td><td>Emitter and Base</td><td>Base and Emitter</td><td>Base and Collector</td></tr>
+<tr><td><strong>Output Terminals</strong></td><td>Collector and Base</td><td>Collector and Emitter</td><td>Emitter and Collector</td></tr>
+<tr><td><strong>Input Resistance (R<sub>i</sub>)</strong></td><td>Very Low (20 Ω – 100 Ω)</td><td>Moderate (1 kΩ – 2 kΩ)</td><td>Very High (100 kΩ – 500 kΩ)</td></tr>
+<tr><td><strong>Output Resistance (R<sub>o</sub>)</strong></td><td>Very High (500 kΩ – 1 MΩ)</td><td>Moderate (40 kΩ – 50 kΩ)</td><td>Very Low (50 Ω – 500 Ω)</td></tr>
+<tr><td><strong>Current Gain (A<sub>i</sub>)</strong></td><td>Less than 1 (α ≈ 0.95 – 0.99)</td><td>High (β ≈ 50 – 300)</td><td>Highest (γ = β + 1 ≈ 51 – 301)</td></tr>
+<tr><td><strong>Voltage Gain (A<sub>v</sub>)</strong></td><td>High (≈ 150)</td><td>High (≈ 150 – 500)</td><td>Slightly less than 1 (≈ 1)</td></tr>
+<tr><td><strong>Power Gain (A<sub>p</sub>)</strong></td><td>Moderate</td><td><strong>Highest</strong> (up to 10,000)</td><td>Low to Moderate</td></tr>
+<tr><td><strong>Phase Shift (Input to Output)</strong></td><td><strong>0°</strong> (In-phase)</td><td><strong>180°</strong> (Phase inversion)</td><td><strong>0°</strong> (In-phase)</td></tr>
+<tr><td><strong>Leakage Current</strong></td><td>Very small (I<sub>CBO</sub> ≈ μA / nA)</td><td>Large (I<sub>CEO</sub> = (1+β)I<sub>CBO</sub>)</td><td>Large ((1+β)I<sub>CBO</sub>)</td></tr>
+<tr><td><strong>Major Engineering Applications</strong></td><td>• High-frequency RF amplifiers<br/>• Matching a low-impedance source to a high-impedance load<br/>• Constant-current source</td><td>• Audio &amp; general-purpose voltage/power amplifiers<br/>• Digital logic gates &amp; transistor switches<br/>• Oscillators &amp; signal processing</td><td>• <strong>Impedance matching buffer</strong> (connecting high-impedance source to low-impedance load)<br/>• Voltage follower / output driver stage</td></tr>
+</tbody></table></div>
+</section>
+<div class="pager">
+<a class="btn" href="q1.html">← Previous question (Q1)</a>
+<a class="btn" href="assignment-1.html">Assignment-1</a>
+<a class="btn" href="q3.html">Next question (Q3) →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

@@ -1,8 +1,138 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unit 2 Notes</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#172033;line-height:1.7}header{background:#1e40af;color:white;padding:35px 7%;text-align:center}header h1{margin:0;font-size:32px}nav{position:sticky;top:0;background:white;padding:10px;text-align:center;box-shadow:0 2px 8px #0002}nav a{color:#1d4ed8;text-decoration:none;font-weight:bold;margin:5px 8px}.container{max-width:1050px;margin:auto;padding:18px}.info,section{background:white;border:1px solid #dbe3ef;border-radius:12px;padding:25px;margin:20px 0}.info span{display:inline-block;background:#eef4ff;color:#1e40af;padding:5px 10px;border-radius:20px;margin:3px}.formula{background:#eef4ff;border-left:5px solid #2563eb;padding:13px;margin:15px 0;font-weight:bold;overflow:auto}.example{background:#f0fdf4;border-left:5px solid #16a34a;padding:14px;margin:15px 0}.important{background:#fff7ed;border-left:5px solid #f97316;padding:14px;margin:15px 0}h2{color:#1e40af;border-bottom:2px solid #e5edff;padding-bottom:7px}h3{margin-top:24px}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #cbd5e1;padding:9px;text-align:left;vertical-align:top}th{background:#2563eb;color:white}footer{background:#111827;color:white;text-align:center;padding:20px}@media(max-width:700px){header h1{font-size:25px}.info,section{padding:18px}nav a{font-size:13px}}</style></head><body><header><h1>Basics of Electrical &amp; Electronics Engineering</h1><p>Unit 2 – A.C. Circuits</p><p>Course Code: 100111 | B.Tech 1st Semester | Batch 2026–2030</p></header><nav><a href="#signals">Signals</a> <a href="#quantities">AC Quantities</a> <a href="#factors">Factors</a> <a href="#phasors">Phasors</a> <a href="#parameters">AC Parameters</a> <a href="#three">Three-Phase</a> <a href="#revision">Revision</a></nav><main class="container"><div class="info"><h2>Unit 2 — A.C. Circuits</h2><span>8 Hours</span><p>This unit covers AC signals, RMS/average values, waveform factors, phase and phasors, impedance, admittance, power factor, power triangle and three-phase systems.</p></div>
-<section id="signals"><h2>2.1 Signals and Waveforms</h2><p>An electrical signal is a time-varying voltage or current. Common waveforms are sinusoidal, square, triangular and saw-tooth. Sinusoidal AC is fundamental in power systems.</p><div class="formula">v(t)=Vₘ sin(ωt+φ), &nbsp; ω=2πf, &nbsp; T=1/f</div><ul><li>Vₘ = peak value</li><li>ω = angular frequency</li><li>f = frequency in Hz</li><li>φ = phase angle</li></ul></section>
-<section id="quantities"><h2>2.2 AC Quantities</h2><h3>Instantaneous and peak value</h3><p>Instantaneous value is the value at a particular time; peak value is the maximum magnitude.</p><h3>Average value</h3><p>For a complete symmetrical sine cycle the average is zero. For a rectified sine wave:</p><div class="formula">Vavg=2Vₘ/π=0.637Vₘ</div><h3>RMS value</h3><p>RMS is the equivalent DC value producing the same heating effect in a resistor.</p><div class="formula">Vrms=Vₘ/√2=0.707Vₘ; &nbsp; Irms=Iₘ/√2</div><div class="example">For Vₘ=325 V, Vrms≈230 V.</div></section>
-<section id="factors"><h2>2.3 Peak Factor and Form Factor</h2><div class="formula">Peak factor=Maximum/RMS; &nbsp; Form factor=RMS/Average</div><p>For a sine wave, peak factor=√2≈1.414 and form factor≈1.11 using the rectified average.</p></section>
-<section id="phasors"><h2>2.4 Phase and Phasors</h2><p>If one sinusoid reaches its reference point earlier, it leads; the other lags. In-phase quantities have 0° phase difference; quadrature has 90°.</p><p>A phasor represents a sinusoidal quantity as a rotating vector.</p><div class="formula">Z=a+jb=|Z|∠θ; &nbsp; |Z|=√(a²+b²), θ=tan⁻¹(b/a)</div><p>Rectangular and polar forms are both used in AC calculations.</p></section>
-<section id="parameters"><h2>2.5 Impedance, Admittance, Power Factor and Power Triangle</h2><div class="formula">Z=R+jX; &nbsp; Y=1/Z=G+jB</div><table><tr><th>Element</th><th>Impedance</th><th>Phase relation</th></tr><tr><td>R</td><td>R</td><td>V and I in phase</td></tr><tr><td>L</td><td>jωL</td><td>V leads I by 90°</td></tr><tr><td>C</td><td>1/(jωC)</td><td>I leads V by 90°</td></tr></table><div class="formula">P=VIcosφ (W); Q=VIsinφ (var); S=VI (VA); cosφ=P/S; S²=P²+Q²</div><p>Inductive loads generally have lagging power factor. Capacitors can improve lagging power factor when appropriately selected.</p></section>
-<section id="three"><h2>2.6 Three-Phase Systems</h2><p>A balanced three-phase system has three equal-magnitude sinusoidal quantities separated by 120°. It is widely used for generation, transmission and motors.</p><ul><li>More economical power transmission.</li><li>Nearly constant power for balanced loads.</li><li>Three-phase motors are robust and self-starting.</li></ul><div class="formula">Star: VL=√3Vph, IL=Iph<br>Delta: VL=Vph, IL=√3Iph<br>P=√3VLILcosφ</div><p>Phase sequence is the order in which phase quantities reach their positive maxima. Balanced loads have symmetrical phase impedances; unbalanced loads do not.</p></section>
-<section id="revision"><h2>Exam Revision</h2><ul><li>Derive RMS value of a sine wave.</li><li>Define peak factor and form factor.</li><li>Explain phasor representation.</li><li>Define impedance and admittance.</li><li>Explain power factor and power triangle.</li><li>Explain balanced/unbalanced three-phase systems.</li><li>Derive star/delta line-phase relations.</li></ul></section></main><footer>B.Tech 1st Semester • BEEE • Course Code 100111</footer></body></html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 2 Notes | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="notes.html">Notes</a> › Unit 2</p>
+<section class="unit" id="u2">
+<p class="qno">Unit 2 · 8 hrs · Mapped to CO2</p>
+<h2>A.C. Circuits</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>2.1</strong> Signals and Waveforms: Common electrical signals and their waveform characteristics</li>
+<li><strong>2.2</strong> AC Quantities: Instantaneous, peak, average, and RMS values of alternating signals</li>
+<li><strong>2.3</strong> Waveform Factors: Peak factor and form factor of sinusoidal waves</li>
+<li><strong>2.4</strong> Phase and Phasors: Phase difference, lagging, leading, in-phase quantities, and phasor representation in rectangular and polar forms</li>
+<li><strong>2.5</strong> AC Circuit Parameters: Impedance, admittance, power factor, and power triangle</li>
+<li><strong>2.6</strong> Three-Phase Systems: Necessity, advantages, phase sequence, and balanced/unbalanced supply and load concepts</li>
+</ul>
+
+<h3>2.1 &amp; 2.2 Alternating Signals, Instantaneous, Peak, Average &amp; RMS Values (TSO 2a)</h3>
+<div class="box">
+<p>An alternating voltage or current varies periodically in both magnitude and direction with time. A standard sinusoidal alternating voltage is expressed as:</p>
+<p><strong>v(t) = V<sub>m</sub> sin(ωt + φ) , &nbsp;&nbsp; where &nbsp;&nbsp; ω = 2πf = 2π / T &nbsp;(rad/s)</strong></p>
+<ul>
+<li><strong>Instantaneous Value v(t) or i(t):</strong> The value of the alternating quantity at any specific instant of time <em>t</em>.</li>
+<li><strong>Peak Value (Maximum Value / Amplitude V<sub>m</sub> or I<sub>m</sub>):</strong> The highest positive or negative value attained during a half-cycle. (Peak-to-peak value <em>V<sub>p-p</sub> = 2V<sub>m</sub></em>).</li>
+<li><strong>Time Period (T):</strong> Time taken (in seconds) to complete one full cycle (<em>T = 1/f</em>; for India's 50 Hz grid, <em>T = 1/50 = 0.02 s = 20 ms</em>).</li>
+</ul>
+</div>
+
+<h4>Derivations of Average Value and RMS Value of a Sinusoidal AC Wave</h4>
+<div class="grid2">
+<div class="box">
+<h4>1. Average Value (I<sub>avg</sub> or V<sub>avg</sub>)</h4>
+<p><strong>Definition:</strong> The steady DC current which transfers the <strong>same electric charge</strong> across a circuit in the same time as the alternating current over a half-cycle (since full-cycle average of a symmetrical sine wave is zero):</p>
+<p><strong>I<sub>avg</sub> = (1 / π) ∫<sub>0</sub><sup>π</sup> I<sub>m</sub> sin θ dθ = (I<sub>m</sub> / π) [ −cos θ ]<sub>0</sub><sup>π</sup></strong></p>
+<p><strong>∴ &nbsp; I<sub>avg</sub> = 2I<sub>m</sub> / π = 0.637 I<sub>m</sub> &nbsp;&nbsp; (V<sub>avg</sub> = 0.637 V<sub>m</sub>)</strong></p>
+</div>
+<div class="box">
+<h4>2. RMS / Effective / Virtual Value (I<sub>rms</sub> or V<sub>rms</sub>)</h4>
+<p><strong>Definition:</strong> The steady DC current which produces the <strong>same heating effect (I<sup>2</sup>Rt)</strong> in a given resistor in the same time as the alternating current over one complete cycle:</p>
+<p><strong>I<sub>rms</sub> = √[ (1 / 2π) ∫<sub>0</sub><sup>2π</sup> I<sub>m</sub><sup>2</sup> sin<sup>2</sup> θ dθ ] = √[ (I<sub>m</sub><sup>2</sup> / 4π) ∫<sub>0</sub><sup>2π</sup> (1 − cos 2θ) dθ ]</strong></p>
+<p><strong>∴ &nbsp; I<sub>rms</sub> = I<sub>m</sub> / √2 = 0.707 I<sub>m</sub> &nbsp;&nbsp; (V<sub>rms</sub> = 0.707 V<sub>m</sub>)</strong></p>
+</div>
+</div>
+
+<h3>2.3 Waveform Factors: Form Factor &amp; Peak (Crest) Factor</h3>
+<div class="box">
+<ul>
+<li><strong>1. Form Factor (K<sub>f</sub>):</strong> Ratio of RMS value to Average value of an alternating wave:<br/>
+<strong>Form Factor (K<sub>f</sub>) = RMS Value / Average Value = (V<sub>m</sub> / √2) / (2V<sub>m</sub> / π) = π / (2√2) = 1.11</strong>.</li>
+<li><strong>2. Peak Factor / Crest Factor / Amplitude Factor (K<sub>p</sub>):</strong> Ratio of Maximum (Peak) value to RMS value:<br/>
+<strong>Peak Factor (K<sub>p</sub>) = Maximum Value / RMS Value = V<sub>m</sub> / (V<sub>m</sub> / √2) = √2 = 1.414</strong>.</li>
+</ul>
+</div>
+
+<h3>2.4 Phase, Phasor Representation &amp; Rectangular / Polar Forms (TSO 2b)</h3>
+<div class="box">
+<ul>
+<li><strong>Phase Difference (φ):</strong> If <em>v(t) = V<sub>m</sub> sin(ωt + φ<sub>1</sub>)</em> and <em>i(t) = I<sub>m</sub> sin(ωt + φ<sub>2</sub>)</em>, then <em>φ = φ<sub>1</sub> − φ<sub>2</sub></em> is the phase difference:<br/>
+• <strong>In-Phase (φ = 0°):</strong> Both reach zero and peak values simultaneously (Purely resistive circuit).<br/>
+• <strong>Leading / Lagging:</strong> The quantity that reaches its peak value earlier in time is said to <strong>lead</strong> the other, while the second <strong>lags</strong> behind.</li>
+<li><strong>Phasor Representation (Rectangular ⟷ Polar Conversion):</strong><br/>
+A sinusoidal quantity is represented by a rotating vector (phasor) using RMS magnitude:<br/>
+<strong>Polar Form: Z = |Z| ∠ θ &nbsp;&nbsp; ⟷ &nbsp;&nbsp; Rectangular Form: Z = R + jX = |Z|(cos θ + j sin θ)</strong><br/>
+where <strong>|Z| = √(R<sup>2</sup> + X<sup>2</sup>)</strong> and <strong>θ = tan<sup>−1</sup>(X / R)</strong>.</li>
+</ul>
+</div>
+
+<h3>2.5 AC Circuit Parameters: Impedance, Admittance, Power Factor &amp; Power Triangle (TSO 2c)</h3>
+<div class="table-wrap"><table><thead><tr><th>AC Circuit Type</th><th>Impedance (Z = R + jX)</th><th>Phase Angle (φ) between V &amp; I</th><th>Power Factor (cos φ)</th><th>Average Real Power (P)</th></tr></thead><tbody>
+<tr><td><strong>1. Pure Resistor (R)</strong></td><td>Z = R ∠ 0°</td><td>φ = 0° (V and I in phase)</td><td>cos 0° = <strong>1 (Unity)</strong></td><td>P = V<sub>rms</sub> I<sub>rms</sub></td></tr>
+<tr><td><strong>2. Pure Inductor (L)</strong></td><td>Z = j X<sub>L</sub> = ωL ∠ +90°<br/>(<em>X<sub>L</sub> = 2πfL</em>)</td><td>φ = +90° (<strong>I lags V by 90°</strong>)</td><td>cos 90° = <strong>0 (Zero lagging)</strong></td><td>P = 0</td></tr>
+<tr><td><strong>3. Pure Capacitor (C)</strong></td><td>Z = −j X<sub>C</sub> = (1/ωC) ∠ −90°<br/>(<em>X<sub>C</sub> = 1 / 2πfC</em>)</td><td>φ = −90° (<strong>I leads V by 90°</strong>)</td><td>cos 90° = <strong>0 (Zero leading)</strong></td><td>P = 0</td></tr>
+<tr><td><strong>4. Series R-L Circuit</strong></td><td>Z = R + j X<sub>L</sub><br/>|Z| = √(R<sup>2</sup> + X<sub>L</sub><sup>2</sup>)</td><td>0° &lt; φ &lt; 90° (<strong>I lags V by φ</strong>)<br/>tan φ = X<sub>L</sub> / R</td><td><strong>cos φ = R / |Z| (Lagging)</strong></td><td>P = V I cos φ</td></tr>
+<tr><td><strong>5. Series R-C Circuit</strong></td><td>Z = R − j X<sub>C</sub><br/>|Z| = √(R<sup>2</sup> + X<sub>C</sub><sup>2</sup>)</td><td>−90° &lt; φ &lt; 0° (<strong>I leads V by φ</strong>)<br/>tan φ = −X<sub>C</sub> / R</td><td><strong>cos φ = R / |Z| (Leading)</strong></td><td>P = V I cos φ</td></tr>
+<tr><td><strong>6. Series R-L-C Circuit</strong></td><td>Z = R + j(X<sub>L</sub> − X<sub>C</sub>)<br/>|Z| = √[R<sup>2</sup> + (X<sub>L</sub> − X<sub>C</sub>)<sup>2</sup>]</td><td>• X<sub>L</sub> &gt; X<sub>C</sub>: Lagging<br/>• X<sub>C</sub> &gt; X<sub>L</sub>: Leading<br/>• <strong>X<sub>L</sub> = X<sub>C</sub> (Resonance): φ = 0°</strong></td><td>cos φ = R / |Z|<br/>At resonance (<em>f<sub>0</sub> = 1/(2π√LC)</em>): <strong>cos φ = 1</strong></td><td>P = V I cos φ</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<p><strong>Admittance (Y):</strong> Reciprocal of Impedance: <strong>Y = 1 / Z = G + jB</strong> (measured in Siemens S or mho ℧), where <strong>G = R / |Z|<sup>2</sup></strong> is Conductance and <strong>B = −X / |Z|<sup>2</sup></strong> is Susceptance.</p>
+<p><strong>Power Triangle &amp; Three Types of AC Power:</strong></p>
+<ul>
+<li><strong>1. Active / True / Real Power (P):</strong> Actual useful power consumed in the circuit: <strong>P = V I cos φ = I<sup>2</sup>R</strong> &nbsp;(Unit: <strong>Watts, W or kW</strong>).</li>
+<li><strong>2. Reactive / Quadrature Power (Q):</strong> Power oscillating back and forth in magnetic/electric fields: <strong>Q = V I sin φ = I<sup>2</sup>X</strong> &nbsp;(Unit: <strong>Volt-Ampere Reactive, VAR or kVAR</strong>).</li>
+<li><strong>3. Apparent Power (S):</strong> Product of RMS voltage and RMS current: <strong>S = V I = I<sup>2</sup>|Z| = √(P<sup>2</sup> + Q<sup>2</sup>)</strong> &nbsp;(Unit: <strong>Volt-Ampere, VA or kVA</strong>).</li>
+<li><strong>Power Factor (cos φ):</strong> <strong>cos φ = P / S = R / |Z|</strong>. Low lagging power factor increases line current (<em>I = P / (V cos φ)</em>) and causes higher <em>I<sup>2</sup>R</em> line losses; it is improved by connecting <strong>static capacitors in parallel</strong> with inductive loads.</li>
+</ul>
+</div>
+
+<h3>2.6 Three-Phase AC Systems: Star (Y) and Delta (Δ) Connections (TSO 2d)</h3>
+<div class="box">
+<p>A balanced three-phase system consists of three equal-magnitude sinusoidal EMFs displaced from each other by <strong>120° electrical</strong> (Phase Sequence R-Y-B):</p>
+<p><strong>e<sub>R</sub> = E<sub>m</sub> sin(ωt) , &nbsp;&nbsp; e<sub>Y</sub> = E<sub>m</sub> sin(ωt − 120°) , &nbsp;&nbsp; e<sub>B</sub> = E<sub>m</sub> sin(ωt − 240°) = E<sub>m</sub> sin(ωt + 120°)</strong></p>
+<p><strong>Advantages over Single-Phase:</strong> (1) Requires ~25% less conductor material to transmit the same power, (2) Produces a uniform rotating magnetic field making 3-phase induction motors self-starting, (3) Instantaneous power is constant (smooth torque), (4) Star connection provides two voltages (400 V line, 230 V phase).</p>
+</div>
+
+<div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Star (Y) Connection (3-Phase, 4-Wire)</th><th>Delta (Δ) Connection (3-Phase, 3-Wire)</th></tr></thead><tbody>
+<tr><td><strong>Connection Method</strong></td><td>Similar ends of all 3 phase windings joined at a common <strong>Neutral point (N)</strong>.</td><td>End of each phase winding connected to the start of the next winding forming a closed mesh.</td></tr>
+<tr><td><strong>Line vs. Phase Voltage</strong></td><td><strong>V<sub>L</sub> = √3 V<sub>ph</sub></strong> &nbsp;(V<sub>L</sub> leads V<sub>ph</sub> by 30°)</td><td><strong>V<sub>L</sub> = V<sub>ph</sub></strong></td></tr>
+<tr><td><strong>Line vs. Phase Current</strong></td><td><strong>I<sub>L</sub> = I<sub>ph</sub></strong></td><td><strong>I<sub>L</sub> = √3 I<sub>ph</sub></strong> &nbsp;(I<sub>L</sub> lags I<sub>ph</sub> by 30°)</td></tr>
+<tr><td><strong>Total 3-Phase Power</strong></td><td><strong>P = 3 V<sub>ph</sub> I<sub>ph</sub> cos φ = √3 V<sub>L</sub> I<sub>L</sub> cos φ</strong></td><td><strong>P = 3 V<sub>ph</sub> I<sub>ph</sub> cos φ = √3 V<sub>L</sub> I<sub>L</sub> cos φ</strong></td></tr>
+<tr><td><strong>Neutral Wire</strong></td><td>Present (carries out-of-balance current in unbalanced loads).</td><td>Absent (no neutral point available).</td></tr>
+</tbody></table></div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit2">Practice exam questions for Unit 2</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit1.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit3.html">Next unit →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

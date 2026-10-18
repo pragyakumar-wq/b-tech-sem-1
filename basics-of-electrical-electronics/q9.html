@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 9 (Assignment-1) | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="assignment.html">Assignment</a> › <a href="assignment-1.html">Assignment-1</a> › Question 9</p>
+<section id="q9">
+<p class="qno">Assignment-1 · Question 9 (Sub-BEEE · Submission: 21/10/2026)</p>
+<h2>With a neat diagram, explain the working of a p-n junction diode, draw its V-I characteristics, and explain the operation of forward bias and reverse bias.</h2>
+
+<h3>1. Formation of a p-n Junction &amp; Depletion Region (Unbiased)</h3>
+<div class="box">
+<p>When a <em>p-type</em> semiconductor (having high concentration of holes) is monolithically joined with an <em>n-type</em> semiconductor (having high concentration of free electrons), a <strong>p-n junction</strong> is formed:</p>
+<ul>
+<li>Due to concentration gradient, holes diffuse from the <em>p-side</em> to the <em>n-side</em> and electrons diffuse from the <em>n-side</em> to the <em>p-side</em> across the junction and recombine.</li>
+<li>This leaves behind uncovered, immobile <strong>negative acceptor ions (−)</strong> on the <em>p-side</em> and immobile <strong>positive donor ions (+)</strong> on the <em>n-side</em> near the junction.</li>
+<li>This region depleted of mobile charge carriers is called the <strong>Depletion Region (or Space-Charge Region)</strong> of width <em>W ≈ 0.5 μm</em>.</li>
+<li>The uncovered ions set up an internal built-in electric field (from <em>n</em> to <em>p</em>) and a <strong>Barrier Potential V<sub>B</sub></strong> (<strong>0.7 V for Silicon</strong> and <strong>0.3 V for Germanium</strong> at 300 K) that prevents further diffusion of majority carriers at equilibrium.</li>
+</ul>
+</div>
+
+<h3>2. Neat Diagrams: Forward Bias, Reverse Bias &amp; V-I Characteristics</h3>
+<div class="box" style="text-align:center">
+<svg viewBox="0 0 760 285" style="max-width:100%;height:auto;background:#fff;border:1px solid #dcd8d1;border-radius:8px;padding:8px" xmlns="http://www.w3.org/2000/svg">
+  <!-- Forward Bias -->
+  <rect x="12" y="12" width="235" height="260" rx="8" fill="#fcfbf6" stroke="#dcd8d1"/>
+  <text x="130" y="34" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">(a) Forward Biased p-n Diode</text>
+  <rect x="35" y="55" width="85" height="70" fill="#fde8e0" stroke="#4f4b48" stroke-width="1.8"/>
+  <rect x="120" y="55" width="20" height="70" fill="#e4f2e5" stroke="#3f7547" stroke-width="1.8"/>
+  <rect x="140" y="55" width="85" height="70" fill="#e8f0ff" stroke="#4f4b48" stroke-width="1.8"/>
+  <text x="77" y="85" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#d9534f">P-Region</text>
+  <text x="77" y="105" text-anchor="middle" font-family="Arial" font-size="11">Holes (o →)</text>
+  <text x="182" y="85" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1d4ed8">N-Region</text>
+  <text x="182" y="105" text-anchor="middle" font-family="Arial" font-size="11">(← e⁻) Electrons</text>
+  <text x="130" y="142" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#3f7547">Narrow W</text>
+  <!-- Battery Forward (+ to P, - to N) -->
+  <line x1="35" y1="90" x2="22" y2="90" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="22" y1="90" x2="22" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="22" y1="185" x2="115" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="115" y1="170" x2="115" y2="200" stroke="#3f7547" stroke-width="3"/>
+  <line x1="128" y1="177" x2="128" y2="193" stroke="#4f4b48" stroke-width="3"/>
+  <text x="103" y="173" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">+</text>
+  <text x="134" y="173" font-family="Arial" font-size="13" font-weight="bold" fill="#4f4b48">−</text>
+  <text x="122" y="218" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#3f7547">V_F (+ to P, − to N)</text>
+  <line x1="128" y1="185" x2="238" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="238" y1="90" x2="238" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="225" y1="90" x2="238" y2="90" stroke="#4f4b48" stroke-width="2"/>
+  <text x="130" y="242" text-anchor="middle" font-family="Arial" font-size="11" fill="#4f4b48">Barrier reduces: V_B − V_F</text>
+  <text x="130" y="258" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#3f7547">Large Current I_F (in mA)</text>
+
+  <!-- Reverse Bias -->
+  <rect x="258" y="12" width="235" height="260" rx="8" fill="#fcfbf6" stroke="#dcd8d1"/>
+  <text x="375" y="34" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">(b) Reverse Biased p-n Diode</text>
+  <rect x="280" y="55" width="65" height="70" fill="#fde8e0" stroke="#4f4b48" stroke-width="1.8"/>
+  <rect x="345" y="55" width="60" height="70" fill="#e4f2e5" stroke="#3f7547" stroke-width="1.8"/>
+  <rect x="405" y="55" width="65" height="70" fill="#e8f0ff" stroke="#4f4b48" stroke-width="1.8"/>
+  <text x="312" y="85" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#d9534f">P</text>
+  <text x="312" y="105" text-anchor="middle" font-family="Arial" font-size="10">(← o)</text>
+  <text x="375" y="92" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#3f7547">Wide W</text>
+  <text x="437" y="85" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1d4ed8">N</text>
+  <text x="437" y="105" text-anchor="middle" font-family="Arial" font-size="10">(e⁻ →)</text>
+  <!-- Battery Reverse (- to P, + to N) -->
+  <line x1="280" y1="90" x2="268" y2="90" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="268" y1="90" x2="268" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="268" y1="185" x2="365" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="365" y1="177" x2="365" y2="193" stroke="#4f4b48" stroke-width="3"/>
+  <line x1="378" y1="170" x2="378" y2="200" stroke="#d9534f" stroke-width="3"/>
+  <text x="352" y="173" font-family="Arial" font-size="13" font-weight="bold" fill="#4f4b48">−</text>
+  <text x="384" y="173" font-family="Arial" font-size="13" font-weight="bold" fill="#d9534f">+</text>
+  <text x="375" y="218" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#d9534f">V_R (− to P, + to N)</text>
+  <line x1="378" y1="185" x2="482" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="482" y1="90" x2="482" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="470" y1="90" x2="482" y2="90" stroke="#4f4b48" stroke-width="2"/>
+  <text x="375" y="242" text-anchor="middle" font-family="Arial" font-size="11" fill="#4f4b48">Barrier increases: V_B + V_R</text>
+  <text x="375" y="258" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#d9534f">Tiny Leakage I_S (μA / nA)</text>
+
+  <!-- V-I Characteristics -->
+  <rect x="504" y="12" width="244" height="260" rx="8" fill="#fcfbf6" stroke="#dcd8d1"/>
+  <text x="626" y="34" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#3f7547">(c) V-I Characteristics</text>
+  <line x1="520" y1="145" x2="735" y2="145" stroke="#4f4b48" stroke-width="1.8"/>
+  <line x1="625" y1="48" x2="625" y2="255" stroke="#4f4b48" stroke-width="1.8"/>
+  <text x="710" y="138" font-family="Arial" font-size="11" font-weight="bold">+V_F</text>
+  <text x="522" y="138" font-family="Arial" font-size="11" font-weight="bold">−V_R</text>
+  <text x="630" y="58" font-family="Arial" font-size="11" font-weight="bold">+I_F (mA)</text>
+  <text x="630" y="252" font-family="Arial" font-size="11" font-weight="bold">−I_R (μA)</text>
+  <path d="M 625 145 Q 675 145 688 128 Q 702 105 712 55" fill="none" stroke="#3f7547" stroke-width="2.6"/>
+  <text x="678" y="162" font-family="Arial" font-size="10" font-weight="bold" fill="#3f7547">V_γ (0.7V)</text>
+  <path d="M 625 145 L 555 151 Q 548 152 547 165 L 545 245" fill="none" stroke="#d9534f" stroke-width="2.6"/>
+  <text x="530" y="138" font-family="Arial" font-size="10" font-weight="bold" fill="#d9534f">−V_BR</text>
+  <text x="572" y="164" font-family="Arial" font-size="10" fill="#4f4b48">I_S</text>
+</svg>
+</div>
+
+<h3>3. Operation Under Forward Bias and Reverse Bias</h3>
+<div class="grid2">
+<div class="box">
+<h4>1. Forward Bias Operation</h4>
+<ul>
+<li><strong>Connection:</strong> Positive (+) terminal of the external DC battery is connected to the <strong>p-region</strong> and negative (−) terminal to the <strong>n-region</strong>.</li>
+<li><strong>Effect on Depletion Layer &amp; Barrier:</strong> Holes in the p-side and electrons in the n-side are repelled toward the junction. This <strong>narrows the depletion layer</strong> and reduces the potential barrier to <strong>(V<sub>B</sub> − V<sub>F</sub>)</strong>.</li>
+<li><strong>Current Flow:</strong> Once <em>V<sub>F</sub></em> exceeds the <strong>Cut-in / Knee Voltage V<sub>γ</sub></strong> (<em>0.7 V for Si, 0.3 V for Ge</em>), majority carriers cross the junction easily and forward current <em>I<sub>F</sub></em> rises exponentially (in mA), offering very low forward resistance (10 Ω – 50 Ω).</li>
+</ul>
+</div>
+<div class="box">
+<h4>2. Reverse Bias Operation</h4>
+<ul>
+<li><strong>Connection:</strong> Negative (−) terminal of the external DC battery is connected to the <strong>p-region</strong> and positive (+) terminal to the <strong>n-region</strong>.</li>
+<li><strong>Effect on Depletion Layer &amp; Barrier:</strong> Holes in the p-side and electrons in the n-side are pulled away from the junction toward the battery terminals. This <strong>widens the depletion layer</strong> and increases the potential barrier to <strong>(V<sub>B</sub> + V<sub>R</sub>)</strong>.</li>
+<li><strong>Current Flow:</strong> Majority carrier flow becomes zero. Only a tiny <strong>Reverse Saturation Current (I<sub>S</sub> or I<sub>0</sub>)</strong> (in μA for Ge and nA for Si) flows due to thermally generated minority carriers until the reverse voltage reaches <strong>Breakdown Voltage (V<sub>BR</sub>)</strong>.</li>
+</ul>
+</div>
+</div>
+
+<div class="box">
+<p><strong>Shockley's Ideal Diode Equation:</strong> Across both forward and reverse bias regions, the diode current is governed by:</p>
+<p><strong>I = I<sub>S</sub> [ e<sup>V<sub>D</sub> / (η V<sub>T</sub>)</sup> − 1 ]</strong></p>
+<p>where <em>I<sub>S</sub></em> is reverse saturation current, <em>V<sub>D</sub></em> is applied voltage (+ for forward, − for reverse), <em>η</em> is the ideality factor (1 for Ge, 2 for Si), and <em>V<sub>T</sub> = kT/q ≈ 26 mV</em> at 300 K.</p>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="q8.html">← Previous question (Q8)</a>
+<a class="btn" href="assignment-1.html">Assignment-1</a>
+<a class="btn" href="q10.html">Next question (Q10) →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

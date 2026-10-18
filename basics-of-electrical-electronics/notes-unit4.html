@@ -1,8 +1,124 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unit 4 Notes</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#172033;line-height:1.7}header{background:#1e40af;color:white;padding:35px 7%;text-align:center}header h1{margin:0;font-size:32px}nav{position:sticky;top:0;background:white;padding:10px;text-align:center;box-shadow:0 2px 8px #0002}nav a{color:#1d4ed8;text-decoration:none;font-weight:bold;margin:5px 8px}.container{max-width:1050px;margin:auto;padding:18px}.info,section{background:white;border:1px solid #dbe3ef;border-radius:12px;padding:25px;margin:20px 0}.info span{display:inline-block;background:#eef4ff;color:#1e40af;padding:5px 10px;border-radius:20px;margin:3px}.formula{background:#eef4ff;border-left:5px solid #2563eb;padding:13px;margin:15px 0;font-weight:bold;overflow:auto}.example{background:#f0fdf4;border-left:5px solid #16a34a;padding:14px;margin:15px 0}.important{background:#fff7ed;border-left:5px solid #f97316;padding:14px;margin:15px 0}h2{color:#1e40af;border-bottom:2px solid #e5edff;padding-bottom:7px}h3{margin-top:24px}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #cbd5e1;padding:9px;text-align:left;vertical-align:top}th{background:#2563eb;color:white}footer{background:#111827;color:white;text-align:center;padding:20px}@media(max-width:700px){header h1{font-size:25px}.info,section{padding:18px}nav a{font-size:13px}}</style></head><body><header><h1>Basics of Electrical &amp; Electronics Engineering</h1><p>Unit 4 – Semiconductor Devices</p><p>Course Code: 100111 | B.Tech 1st Semester | Batch 2026–2030</p></header><nav><a href="#semi">Semiconductors</a> <a href="#diode">p-n Diode</a> <a href="#breakdown">Breakdown</a> <a href="#rectifier">Rectifiers</a> <a href="#bjt">BJT</a> <a href="#ce">CE</a> <a href="#revision">Revision</a></nav><main class="container"><div class="info"><h2>Unit 4 — Semiconductor Devices</h2><span>8 Hours</span><p>Topics: intrinsic/extrinsic semiconductors, p-n diode, biasing, temperature effects, breakdown, rectifiers, filters, Zener regulator and BJT CE amplifier/switch.</p></div>
-<section id="semi"><h2>4.1 Semiconductor Materials</h2><p>Semiconductors have conductivity between conductors and insulators. Silicon is widely used.</p><p>Intrinsic semiconductor is pure; electron and hole concentrations are equal:</p><div class="formula">n=p=ni</div><p>Extrinsic semiconductor is intentionally doped.</p><table><tr><th>Type</th><th>Doping</th><th>Majority carrier</th></tr><tr><td>n-type</td><td>Donor/pentavalent</td><td>Electrons</td></tr><tr><td>p-type</td><td>Acceptor/trivalent</td><td>Holes</td></tr></table></section>
-<section id="diode"><h2>4.2 p-n Junction Diode</h2><p>Joining p and n regions creates a depletion region and built-in electric field.</p><h3>Forward bias</h3><p>p-side positive and n-side negative reduces the junction barrier and allows significant current after the practical threshold region.</p><h3>Reverse bias</h3><p>p-side negative and n-side positive widens the depletion region; only small reverse current flows until breakdown.</p><div class="formula">I=Is[e^(VD/(ηVT))−1]</div></section>
-<section id="breakdown"><h2>4.3 Temperature Effects and Breakdown</h2><p>Temperature changes carrier concentration and diode characteristics. Breakdown can occur by Zener or avalanche mechanisms.</p><ul><li><b>Zener:</b> strong electric field in a heavily doped junction.</li><li><b>Avalanche:</b> carrier multiplication due to impact ionization.</li></ul></section>
-<section id="rectifier"><h2>4.4 Rectifiers, Filters and Zener Regulator</h2><h3>Half-wave rectifier</h3><p>One diode conducts during one half-cycle, producing pulsating DC.</p><div class="formula">VDC=Vm/π; ηmax≈40.6%</div><h3>Full-wave rectifier</h3><p>Both half-cycles contribute to output using centre-tapped or bridge arrangements.</p><div class="formula">VDC=2Vm/π; ηmax≈81.2%</div><h3>Filter</h3><p>A capacitor filter reduces ripple by storing charge and supplying the load between peaks.</p><h3>Zener regulator</h3><p>A reverse-biased Zener operated in its breakdown region can maintain approximately constant output voltage with a series current-limiting resistor.</p><div class="formula">Vout≈VZ</div></section>
-<section id="bjt"><h2>4.5 BJT Fundamentals</h2><p>BJT is a three-terminal device: emitter, base and collector. Common types are NPN and PNP.</p><div class="formula">IE=IC+IB; α=IC/IE; β=IC/IB</div><table><tr><th>Region</th><th>Use/condition</th></tr><tr><td>Cut-off</td><td>Approximately OFF</td></tr><tr><td>Active</td><td>Amplification</td></tr><tr><td>Saturation</td><td>Strongly ON; switching</td></tr></table></section>
-<section id="ce"><h2>4.6 CE Configuration</h2><p>In common-emitter configuration, emitter is common to input/output. It provides useful current and voltage gain.</p><p>As an amplifier, a small base-current variation controls a larger collector-current variation. As a switch, cut-off represents OFF and saturation represents ON.</p><div class="formula">Approx. β=ΔIC/ΔIB</div><div class="important">Exam focus: diode V-I characteristics, forward/reverse bias, breakdown mechanisms, HWR/FWR, Zener regulation, NPN/PNP and CE amplifier/switch.</div></section>
-<section id="revision"><h2>Exam Revision</h2><ul><li>Intrinsic vs extrinsic semiconductor.</li><li>Formation and V-I characteristic of p-n diode.</li><li>Forward/reverse bias.</li><li>Zener vs avalanche breakdown.</li><li>Half-wave vs full-wave rectifier.</li><li>Purpose of filter.</li><li>Zener as voltage regulator.</li><li>BJT and CE configuration.</li></ul></section></main><footer>B.Tech 1st Semester • BEEE • Course Code 100111</footer></body></html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 4 Notes | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="notes.html">Notes</a> › Unit 4</p>
+<section class="unit" id="u4">
+<p class="qno">Unit 4 · 8 hrs · Mapped to CO4</p>
+<h2>Semiconductor Devices</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>4.1</strong> Semiconductor Materials: Intrinsic and extrinsic semiconductor types (<a href="q3.html">See Q3</a> &amp; <a href="q8.html">Q8</a>)</li>
+<li><strong>4.2</strong> p-n Junction Diode: Construction, characteristics, forward bias, and reverse bias operation (<a href="q9.html">See Q9</a>)</li>
+<li><strong>4.3</strong> Diode Behavior: Temperature effects and breakdown mechanisms in diodes (<a href="q4.html">See Q4</a>)</li>
+<li><strong>4.4</strong> Diode Applications: Half-wave rectifier (<a href="q5.html">Q5</a>), full-wave rectifier (<a href="q6.html">Q6</a>), filters, and Zener diode as voltage regulator (<a href="q1.html">Q1</a>)</li>
+<li><strong>4.5</strong> BJT Fundamentals: PNP and NPN transistors, construction, and operating principles (<a href="q10.html">See Q10</a>)</li>
+<li><strong>4.6</strong> BJT Applications: CE configuration (<a href="q2.html">Q2</a>) as amplifier and transistor as a switch</li>
+</ul>
+
+<h3>4.1 Intrinsic &amp; Extrinsic Semiconductor Materials (TSO 4a)</h3>
+<div class="box">
+<p>Semiconductors are tetravalent crystalline materials (Group IV: <strong>Silicon Si, E<sub>g</sub> = 1.12 eV</strong>; <strong>Germanium Ge, E<sub>g</sub> = 0.72 eV</strong>) having electrical conductivity between conductors and insulators, and a <strong>negative temperature coefficient of resistance</strong>.</p>
+<ul>
+<li><strong>Intrinsic Semiconductor:</strong> Pure semiconductor crystal with no doping. Electron concentration equals hole concentration: <strong>n = p = n<sub>i</sub></strong>, and the Fermi level <em>E<sub>F</sub></em> lies at the middle of the forbidden energy gap.</li>
+<li><strong>N-Type Extrinsic Semiconductor:</strong> Doped with <strong>pentavalent (Group V) donor impurities</strong> (P, As, Sb). Each donor atom provides one free electron (donor level <em>E<sub>D</sub></em> lies ~0.05 eV below <em>E<sub>C</sub></em>). <strong>Majority carriers = Electrons (n ≫ p)</strong>; Minority carriers = Holes.</li>
+<li><strong>P-Type Extrinsic Semiconductor:</strong> Doped with <strong>trivalent (Group III) acceptor impurities</strong> (B, Ga, In, Al). Each acceptor atom creates a hole (acceptor level <em>E<sub>A</sub></em> lies ~0.05 eV above <em>E<sub>V</sub></em>). <strong>Majority carriers = Holes (p ≫ n)</strong>; Minority carriers = Electrons.</li>
+<li><strong>Mass-Action Law:</strong> <strong>n · p = n<sub>i</sub><sup>2</sup></strong> holds at thermal equilibrium for both intrinsic and extrinsic semiconductors.</li>
+</ul>
+<p><a class="btn btn-sm" href="q3.html">Open Detailed Energy Band Diagrams (Q3) →</a> <a class="btn btn-sm" href="q8.html">Open Full Intrinsic &amp; Extrinsic Explanation (Q8) →</a></p>
+</div>
+
+<h3>4.2 &amp; 4.3 p-n Junction Diode, Temperature Effect &amp; Breakdown Mechanisms (TSO 4b)</h3>
+<div class="box">
+<ul>
+<li><strong>Unbiased p-n Junction:</strong> Diffusion of holes and electrons across the junction creates a charge-free <strong>Depletion Layer</strong> containing immobile negative acceptor ions on the p-side and positive donor ions on the n-side, setting up a <strong>Barrier Potential V<sub>B</sub></strong> (<strong>0.7 V for Si</strong>, <strong>0.3 V for Ge</strong>).</li>
+<li><strong>Forward Bias (+ to P, − to N):</strong> Narrows the depletion layer, reduces barrier potential to <em>(V<sub>B</sub> − V<sub>F</sub>)</em>, and allows large exponential majority-carrier current (in mA) once <em>V<sub>F</sub> ≥ V<sub>γ</sub></em>.</li>
+<li><strong>Reverse Bias (− to P, + to N):</strong> Widens the depletion layer, increases barrier to <em>(V<sub>B</sub> + V<sub>R</sub>)</em>, and blocks majority current; only a tiny minority-carrier <strong>Reverse Saturation Current (I<sub>S</sub>)</strong> flows.</li>
+<li><strong>Effect of Temperature on Diode Characteristics:</strong><br/>
+1. The cut-in / barrier voltage <em>V<sub>γ</sub></em> <strong>decreases by ~2.5 mV/°C</strong> as temperature increases.<br/>
+2. The reverse saturation current <em>I<sub>S</sub></em> <strong>doubles for every 10°C rise</strong> in temperature: <em>I<sub>S2</sub> = I<sub>S1</sub> × 2<sup>(T<sub>2</sub> − T<sub>1</sub>)/10</sup></em>.</li>
+<li><strong>Breakdown Mechanisms:</strong><br/>
+• <strong>Zener Breakdown (&lt; 6 V):</strong> Heavily doped narrow depletion layer; intense electric field (~10<sup>7</sup> V/m) causes direct covalent bond rupture / quantum tunneling; <em>negative temperature coefficient</em>.<br/>
+• <strong>Avalanche Breakdown (&gt; 6 V):</strong> Lightly doped wider depletion layer; accelerated minority carriers cause <strong>impact ionization</strong> and carrier multiplication; <em>positive temperature coefficient</em>.</li>
+</ul>
+<p><a class="btn btn-sm" href="q9.html">Open p-n Diode Diagrams &amp; V-I Curve (Q9) →</a> <a class="btn btn-sm" href="q4.html">Open Zener vs. Avalanche Breakdown (Q4) →</a></p>
+</div>
+
+<h3>4.4 Rectifiers, Filters &amp; Zener Diode Voltage Regulator (TSO 4c)</h3>
+<div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Half-Wave Rectifier (HWR)</th><th>Center-Tapped Full-Wave Rectifier</th><th>Full-Wave Bridge Rectifier</th></tr></thead><tbody>
+<tr><td><strong>Number of Diodes</strong></td><td><strong>1</strong></td><td><strong>2</strong></td><td><strong>4</strong></td></tr>
+<tr><td><strong>Transformer Center-Tap</strong></td><td>Not required</td><td><strong>Required</strong></td><td>Not required</td></tr>
+<tr><td><strong>Average (DC) Current / Voltage</strong></td><td><strong>I<sub>dc</sub> = I<sub>m</sub> / π = 0.318 I<sub>m</sub></strong><br/><strong>V<sub>dc</sub> = V<sub>m</sub> / π</strong></td><td><strong>I<sub>dc</sub> = 2I<sub>m</sub> / π = 0.637 I<sub>m</sub></strong><br/><strong>V<sub>dc</sub> = 2V<sub>m</sub> / π</strong></td><td><strong>I<sub>dc</sub> = 2I<sub>m</sub> / π = 0.637 I<sub>m</sub></strong><br/><strong>V<sub>dc</sub> = 2V<sub>m</sub> / π</strong></td></tr>
+<tr><td><strong>RMS Current / Voltage</strong></td><td><strong>I<sub>rms</sub> = I<sub>m</sub> / 2 = 0.5 I<sub>m</sub></strong></td><td><strong>I<sub>rms</sub> = I<sub>m</sub> / √2 = 0.707 I<sub>m</sub></strong></td><td><strong>I<sub>rms</sub> = I<sub>m</sub> / √2 = 0.707 I<sub>m</sub></strong></td></tr>
+<tr><td><strong>Form Factor (V<sub>rms</sub> / V<sub>dc</sub>)</strong></td><td><strong>π / 2 = 1.57</strong></td><td><strong>π / (2√2) = 1.11</strong></td><td><strong>π / (2√2) = 1.11</strong></td></tr>
+<tr><td><strong>Ripple Factor (γ = √(F<sup>2</sup>−1))</strong></td><td><strong>1.21 (121%)</strong></td><td><strong>0.482 (48.2%)</strong></td><td><strong>0.482 (48.2%)</strong></td></tr>
+<tr><td><strong>Max Efficiency (η<sub>max</sub>)</strong></td><td><strong>40.6%</strong></td><td><strong>81.2%</strong></td><td><strong>81.2%</strong></td></tr>
+<tr><td><strong>Peak Inverse Voltage (PIV)</strong></td><td><strong>V<sub>m</sub></strong></td><td><strong>2 V<sub>m</sub></strong></td><td><strong>V<sub>m</sub></strong></td></tr>
+<tr><td><strong>Output Ripple Frequency</strong></td><td><strong>f</strong> (50 Hz)</td><td><strong>2f</strong> (100 Hz)</td><td><strong>2f</strong> (100 Hz)</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<ul>
+<li><strong>Rectifier Filters (Smoothing Circuits):</strong> Since rectifier output is pulsating DC (contains AC ripple + DC), a <strong>Filter Circuit</strong> is connected between the rectifier and load:<br/>
+• <strong>Shunt Capacitor Filter:</strong> Connected in parallel with <em>R<sub>L</sub></em>; charges to peak voltage <em>V<sub>m</sub></em> when diode conducts and discharges slowly through <em>R<sub>L</sub></em> when diode is off, drastically reducing ripple.<br/>
+• <strong>Series Inductor Filter / LC (Choke-Input) / π-Section Filter:</strong> Uses series inductor (blocks AC ripple) and shunt capacitor (bypasses AC ripple to ground).</li>
+<li><strong>Zener Diode as Shunt Voltage Regulator:</strong> Connected in reverse breakdown across <em>R<sub>L</sub></em> with series resistor <em>R<sub>S</sub></em>; maintains constant <strong>V<sub>out</sub> = V<sub>Z</sub></strong> against input voltage variations (Line Regulation) and load current variations (Load Regulation).</li>
+</ul>
+<p><a class="btn btn-sm" href="q5.html">HWR Derivations (Q5) →</a> <a class="btn btn-sm" href="q6.html">FWR Derivations (Q6) →</a> <a class="btn btn-sm" href="q1.html">Zener Regulator (Q1) →</a></p>
+</div>
+
+<h3>4.5 &amp; 4.6 BJT Fundamentals, CE Amplifier &amp; Transistor as a Switch (TSO 4d)</h3>
+<div class="grid2">
+<div class="box">
+<h4>1. BJT in CE Configuration as an Amplifier</h4>
+<ul>
+<li>Operates in the <strong>Active Region</strong> (Emitter-Base junction Forward Biased, Collector-Base junction Reverse Biased) with Q-point biased near the center of the DC load line.</li>
+<li>A small alternating base current signal <em>i<sub>b</sub></em> produces a large amplified collector current <em>i<sub>c</sub> = β i<sub>b</sub></em> through load resistor <em>R<sub>C</sub></em>.</li>
+<li>Output voltage is <strong>v<sub>ce</sub> = V<sub>CC</sub> − I<sub>C</sub> R<sub>C</sub></strong>, producing high voltage gain <em>A<sub>v</sub> = −β (R<sub>C</sub> / R<sub>i</sub>)</em> with a <strong>180° phase shift</strong> between input and output AC waveforms.</li>
+</ul>
+</div>
+<div class="box">
+<h4>2. BJT as an Electronic Switch</h4>
+<ul>
+<li>Operates alternately between the <strong>Cut-off Region</strong> and the <strong>Saturation Region</strong>:</li>
+<li><strong>OFF State (Open Switch — Cut-off):</strong> When input base voltage <em>V<sub>in</sub> &lt; 0.7 V</em>, base current <em>I<sub>B</sub> = 0 ⇒ I<sub>C</sub> ≈ 0</em>, and output voltage <strong>V<sub>out</sub> = V<sub>CE</sub> ≈ V<sub>CC</sub> (Logic HIGH = 1)</strong>.</li>
+<li><strong>ON State (Closed Switch — Saturation):</strong> When input base voltage drives large <em>I<sub>B</sub> ≥ I<sub>C(sat)</sub>/β</em>, both junctions become forward biased, <em>I<sub>C(sat)</sub> ≈ V<sub>CC</sub>/R<sub>C</sub></em>, and <strong>V<sub>out</sub> = V<sub>CE(sat)</sub> ≈ 0.2 V (Logic LOW = 0)</strong>.</li>
+</ul>
+</div>
+</div>
+<p style="margin-top:16px"><a class="btn btn-sm" href="q10.html">Open PNP &amp; NPN Construction &amp; Working (Q10) →</a> <a class="btn btn-sm" href="q2.html">Open CB, CE, CC Configurations (Q2) →</a></p>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit4">Practice exam questions for Unit 4</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit3.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit5.html">Next unit →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

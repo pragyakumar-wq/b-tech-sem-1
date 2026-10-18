@@ -1,9 +1,174 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unit 5 Notes</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#172033;line-height:1.7}header{background:#1e40af;color:white;padding:35px 7%;text-align:center}header h1{margin:0;font-size:32px}nav{position:sticky;top:0;background:white;padding:10px;text-align:center;box-shadow:0 2px 8px #0002}nav a{color:#1d4ed8;text-decoration:none;font-weight:bold;margin:5px 8px}.container{max-width:1050px;margin:auto;padding:18px}.info,section{background:white;border:1px solid #dbe3ef;border-radius:12px;padding:25px;margin:20px 0}.info span{display:inline-block;background:#eef4ff;color:#1e40af;padding:5px 10px;border-radius:20px;margin:3px}.formula{background:#eef4ff;border-left:5px solid #2563eb;padding:13px;margin:15px 0;font-weight:bold;overflow:auto}.example{background:#f0fdf4;border-left:5px solid #16a34a;padding:14px;margin:15px 0}.important{background:#fff7ed;border-left:5px solid #f97316;padding:14px;margin:15px 0}h2{color:#1e40af;border-bottom:2px solid #e5edff;padding-bottom:7px}h3{margin-top:24px}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #cbd5e1;padding:9px;text-align:left;vertical-align:top}th{background:#2563eb;color:white}footer{background:#111827;color:white;text-align:center;padding:20px}@media(max-width:700px){header h1{font-size:25px}.info,section{padding:18px}nav a{font-size:13px}}</style></head><body><header><h1>Basics of Electrical &amp; Electronics Engineering</h1><p>Unit 5 – Digital, Analog Electronics, Measurement & Safety</p><p>Course Code: 100111 | B.Tech 1st Semester | Batch 2026–2030</p></header><nav><a href="#numbers">Numbers</a> <a href="#logic">Logic Gates</a> <a href="#display">Displays</a> <a href="#measure">ICs & Measurement</a> <a href="#sensor">Sensors & Power</a> <a href="#safety">Safety</a> <a href="#earth">Earthing</a> <a href="#revision">Revision</a></nav><main class="container"><div class="info"><h2>Unit 5 — Digital, Analog Electronics, Measurement and Electrical Safety</h2><span>10 Hours</span><p>This unit covers number systems, binary addition, logic gates, Boolean algebra, LEDs, seven-segment displays, analog/digital ICs, IC 7805/7912, multimeter, CRO, sensors, transducers, power-system layout, protective devices and earthing.</p></div>
-<section id="numbers"><h2>5.1 Number Systems</h2><table><tr><th>System</th><th>Base</th><th>Digits</th></tr><tr><td>Binary</td><td>2</td><td>0,1</td></tr><tr><td>Octal</td><td>8</td><td>0–7</td></tr><tr><td>Decimal</td><td>10</td><td>0–9</td></tr><tr><td>Hexadecimal</td><td>16</td><td>0–9,A–F</td></tr></table><p>Binary addition rules include 1+1=10₂ (sum 0, carry 1).</p><div class="example">1011₂+0110₂=10001₂.</div></section>
-<section id="logic"><h2>5.2 Logic Gates and Boolean Algebra</h2><table><tr><th>Gate</th><th>Expression</th><th>Output condition</th></tr><tr><td>AND</td><td>AB</td><td>1 only if all inputs are 1</td></tr><tr><td>OR</td><td>A+B</td><td>1 if any input is 1</td></tr><tr><td>NOT</td><td>A̅</td><td>Inverts input</td></tr><tr><td>NAND</td><td>(AB)̅</td><td>NOT-AND</td></tr><tr><td>NOR</td><td>(A+B)̅</td><td>NOT-OR</td></tr><tr><td>XOR</td><td>A⊕B</td><td>1 when inputs differ</td></tr><tr><td>XNOR</td><td>(A⊕B)̅</td><td>1 when inputs match</td></tr></table><p>NAND and NOR are universal gates. Important laws:</p><div class="formula">A+0=A; A·1=A; A+1=1; A·0=0; A+A̅=1; A·A̅=0</div><p>De Morgan: (A+B)̅=A̅B̅ and (AB)̅=A̅+B̅.</p></section>
-<section id="display"><h2>5.3 LEDs and Seven-Segment Display</h2><p>An LED emits light under forward bias. A seven-segment display uses seven LED segments, a–g, to display decimal digits.</p><p>In common-cathode displays the cathodes are common; in common-anode displays the anodes are common. Digital ICs process discrete logic states; analog ICs process continuously varying signals.</p></section>
-<section id="measure"><h2>5.4 IC 7805, IC 7912, Multimeter and CRO</h2><p><b>IC 7805:</b> fixed positive regulator providing approximately +5 V under suitable conditions. <b>IC 7912:</b> fixed negative regulator providing approximately −12 V under suitable conditions.</p><p>A multimeter measures quantities such as voltage, current and resistance when correctly configured. A CRO displays electrical waveforms and allows amplitude, time period and frequency measurement.</p><div class="formula">f=1/T</div><div class="important">Always select the correct meter function, range and connection before measurement.</div></section>
-<section id="sensor"><h2>5.5 Sensors, Transducers and Power System</h2><p>A sensor detects a physical quantity such as temperature, light, pressure or displacement. A transducer converts a physical quantity/energy into another form, commonly an electrical signal for measurement/control.</p><table><tr><th>Example</th><th>Quantity</th></tr><tr><td>Thermistor/RTD</td><td>Temperature</td></tr><tr><td>LDR/photodiode</td><td>Light</td></tr><tr><td>Strain-based sensor</td><td>Force/pressure</td></tr></table><p>Basic power-system path: <b>generation → transmission → distribution → utilization</b>. High-voltage transmission reduces current for a given power and therefore helps reduce resistive I²R losses.</p></section>
-<section id="safety"><h2>5.6 Electrical Safety and Protective Devices</h2><ul><li>Isolate supply before working.</li><li>Use correctly rated conductors and protective devices.</li><li>Never touch exposed energized conductors.</li><li>Use suitable insulated tools and supervised laboratory procedures.</li><li>Verify connections before energizing.</li></ul><table><tr><th>Device</th><th>Function</th></tr><tr><td>Fuse</td><td>Melts and opens circuit under excessive current.</td></tr><tr><td>MCB</td><td>Resettable protection against specified overload/short circuit conditions.</td></tr><tr><td>MCCB</td><td>Higher-capacity protective device for many distribution/industrial applications.</td></tr></table></section>
-<section id="earth"><h2>5.7 Earthing</h2><p>Earthing provides a low-impedance path for fault current and helps limit dangerous touch voltage when used with a properly designed protection system.</p><h3>Importance</h3><ul><li>Improves shock protection.</li><li>Provides a fault-current path for protective-device operation.</li><li>Helps protect equipment.</li><li>Supports stable electrical-system operation.</li></ul><p>Approved electrode arrangements can include rod, pipe or plate systems depending on installation requirements and applicable standards.</p><div class="important">Mains electrical work and earthing installation must be performed by qualified personnel according to applicable safety standards.</div></section>
-<section id="revision"><h2>Exam Revision</h2><ul><li>Number systems and binary addition.</li><li>Truth tables of basic and universal gates.</li><li>Boolean laws and De Morgan's laws.</li><li>LED and seven-segment display.</li><li>IC 7805 and IC 7912.</li><li>Multimeter and CRO.</li><li>Sensors vs transducers.</li><li>Generation, transmission and distribution.</li><li>Fuse, MCB and MCCB.</li><li>Purpose and importance of earthing.</li></ul></section></main><footer>B.Tech 1st Semester • BEEE • Course Code 100111</footer></body></html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 5 Notes | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="notes.html">Notes</a> › Unit 5</p>
+<section class="unit" id="u5">
+<p class="qno">Unit 5 · 10 hrs · Mapped to CO5</p>
+<h2>Fundamentals of Digital, Analog Electronics, Measurement and Electrical Safety</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>5.1</strong> Binary, octal, and hexadecimal number systems; binary addition and basic number operations</li>
+<li><strong>5.2</strong> Basic logic gates, universal gates, and Boolean algebra</li>
+<li><strong>5.3</strong> LEDs, seven-segment display and truth table; overview of digital and analog integrated circuits</li>
+<li><strong>5.4</strong> Functions and applications of IC 7805 and IC 7912; basic features and applications of multimeter and CRO</li>
+<li><strong>5.5</strong> Fundamentals, types, and uses of sensors and transducers; generation, transmission, and distribution of electrical power</li>
+<li><strong>5.6</strong> Safe handling practices, prevention of electrical hazards; functions and applications of fuse, MCB, and MCCB</li>
+<li><strong>5.7</strong> Purpose, importance, and methods of earthing systems</li>
+</ul>
+
+<h3>5.1 Number Systems &amp; Binary Arithmetic (TSO 5a)</h3>
+<div class="table-wrap"><table><thead><tr><th>Number System</th><th>Radix / Base (r)</th><th>Allowed Digits / Symbols</th><th>Conversion to/from Binary</th></tr></thead><tbody>
+<tr><td><strong>1. Binary</strong></td><td><strong>2</strong></td><td>0, 1</td><td>Positional weights: … 2<sup>3</sup>, 2<sup>2</sup>, 2<sup>1</sup>, 2<sup>0</sup> . 2<sup>−1</sup>, 2<sup>−2</sup> …</td></tr>
+<tr><td><strong>2. Octal</strong></td><td><strong>8</strong></td><td>0, 1, 2, 3, 4, 5, 6, 7</td><td>Each Octal digit = <strong>3-bit Binary group</strong> (4-2-1 code).</td></tr>
+<tr><td><strong>3. Decimal</strong></td><td><strong>10</strong></td><td>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</td><td>Divide integer part repeatedly by 2; multiply fractional part by 2.</td></tr>
+<tr><td><strong>4. Hexadecimal</strong></td><td><strong>16</strong></td><td>0–9, A(10), B(11), C(12), D(13), E(14), F(15)</td><td>Each Hex digit = <strong>4-bit Binary nibble</strong> (8-4-2-1 code).</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<ul>
+<li><strong>Binary Addition Rules:</strong> <strong>0 + 0 = 0</strong>, &nbsp;<strong>0 + 1 = 1</strong>, &nbsp;<strong>1 + 0 = 1</strong>, &nbsp;<strong>1 + 1 = 0 (with Carry = 1)</strong>, &nbsp;<strong>1 + 1 + 1 = 1 (with Carry = 1)</strong>.<br/>
+<em>Example:</em> <em>(1011)<sub>2</sub> + (0110)<sub>2</sub> = (10001)<sub>2</sub></em> (i.e., 11 + 6 = 17).</li>
+<li><strong>Signed Binary Subtraction (1's and 2's Complement):</strong><br/>
+• <strong>1's Complement:</strong> Invert all bits (0 → 1, 1 → 0).<br/>
+• <strong>2's Complement:</strong> 1's Complement + 1. To compute <em>A − B</em>, add <em>A + (2's complement of B)</em> and discard any end-around carry.</li>
+</ul>
+</div>
+
+<h3>5.2 Logic Gates, Universal Gates &amp; Boolean Algebra (TSO 5b)</h3>
+<div class="table-wrap"><table><thead><tr><th>Logic Gate</th><th>Boolean Expression</th><th>2-Input Truth Table (00, 01, 10, 11)</th><th>Key Description / Universal Property</th></tr></thead><tbody>
+<tr><td><strong>1. NOT (Inverter)</strong></td><td><strong>Y = A' (or A̅)</strong></td><td>Input 0 → 1; Input 1 → 0</td><td>Complements / inverts the input logic state.</td></tr>
+<tr><td><strong>2. AND Gate</strong></td><td><strong>Y = A · B</strong></td><td><strong>0, &nbsp;0, &nbsp;0, &nbsp;1</strong></td><td>Output is HIGH (1) <em>only when all inputs are HIGH (1)</em>.</td></tr>
+<tr><td><strong>3. OR Gate</strong></td><td><strong>Y = A + B</strong></td><td><strong>0, &nbsp;1, &nbsp;1, &nbsp;1</strong></td><td>Output is HIGH (1) <em>if any one or more inputs are HIGH (1)</em>.</td></tr>
+<tr><td><strong>4. NAND Gate</strong><br/><em>(Universal Gate)</em></td><td><strong>Y = (A · B)' = A' + B'</strong></td><td><strong>1, &nbsp;1, &nbsp;1, &nbsp;0</strong></td><td>Output is LOW (0) only when all inputs are HIGH.<br/>• NOT = (A·A)'; AND = ((AB)'·(AB)')'; OR = (A'·B')'.</td></tr>
+<tr><td><strong>5. NOR Gate</strong><br/><em>(Universal Gate)</em></td><td><strong>Y = (A + B)' = A' · B'</strong></td><td><strong>1, &nbsp;0, &nbsp;0, &nbsp;0</strong></td><td>Output is HIGH (1) only when all inputs are LOW.<br/>• NOT = (A+A)'; OR = ((A+B)'+(A+B)')'; AND = (A'+B')'.</td></tr>
+<tr><td><strong>6. XOR (Exclusive-OR)</strong></td><td><strong>Y = A ⊕ B = A'B + AB'</strong></td><td><strong>0, &nbsp;1, &nbsp;1, &nbsp;0</strong></td><td>Inequality detector: Output is 1 when inputs are <strong>different</strong>.</td></tr>
+<tr><td><strong>7. XNOR (Exclusive-NOR)</strong></td><td><strong>Y = (A ⊕ B)' = AB + A'B'</strong></td><td><strong>1, &nbsp;0, &nbsp;0, &nbsp;1</strong></td><td>Equality / coincidence detector: Output is 1 when inputs are <strong>equal</strong>.</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<p><strong>Fundamental Laws of Boolean Algebra &amp; De Morgan's Theorems:</strong></p>
+<ul>
+<li><strong>Identity &amp; Null Laws:</strong> <em>A + 0 = A, &nbsp;A · 1 = A, &nbsp;A + 1 = 1, &nbsp;A · 0 = 0</em></li>
+<li><strong>Idempotent &amp; Complement Laws:</strong> <em>A + A = A, &nbsp;A · A = A, &nbsp;A + A' = 1, &nbsp;A · A' = 0, &nbsp;(A')' = A</em></li>
+<li><strong>Absorption Laws:</strong> <em>A + AB = A, &nbsp;A(A + B) = A, &nbsp;A + A'B = A + B</em></li>
+<li><strong>De Morgan's First Theorem:</strong> The complement of a sum equals the product of the complements: <strong>(A + B)' = A' · B'</strong></li>
+<li><strong>De Morgan's Second Theorem:</strong> The complement of a product equals the sum of the complements: <strong>(A · B)' = A' + B'</strong></li>
+</ul>
+</div>
+
+<h3>5.3 LEDs, Seven-Segment Displays &amp; Analog / Digital ICs (TSO 5c)</h3>
+<div class="box">
+<ul>
+<li><strong>Light Emitting Diode (LED):</strong> A heavily doped forward-biased <em>p-n</em> junction diode fabricated from direct band-gap compound semiconductors (such as <em>GaAs, GaP, GaAsP, InGaN</em>) that emits visible or infrared light by <strong>electroluminescence (radiative recombination of electrons and holes: E = hc/λ = E<sub>g</sub>)</strong>. Requires a series current-limiting resistor (typically 10–20 mA, forward drop 1.8 V–3.3 V).</li>
+<li><strong>Seven-Segment Display:</strong> Consists of <strong>7 rectangular LED segments labeled (a, b, c, d, e, f, g)</strong> arranged in a figure-8 pattern to display decimal digits 0–9:<br/>
+• <strong>Common Cathode (CC):</strong> All 7 LED cathodes are tied to Ground (0 V); a segment glows when its anode is driven <strong>HIGH (Logic 1)</strong>.<br/>
+• <strong>Common Anode (CA):</strong> All 7 LED anodes are tied to +V<sub>CC</sub>; a segment glows when its cathode is driven <strong>LOW (Logic 0)</strong>.</li>
+</ul>
+</div>
+
+<div class="table-wrap"><table><thead><tr><th>Decimal Digit</th><th>Active Segments</th><th>Common Cathode (a b c d e f g)</th><th>Common Anode (a b c d e f g)</th></tr></thead><tbody>
+<tr><td><strong>0</strong></td><td>a, b, c, d, e, f</td><td>1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;0</td><td>0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;1</td></tr>
+<tr><td><strong>1</strong></td><td>b, c</td><td>0 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0</td><td>1 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1</td></tr>
+<tr><td><strong>2</strong></td><td>a, b, d, e, g</td><td>1 &nbsp;1 &nbsp;0 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;1</td><td>0 &nbsp;0 &nbsp;1 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;0</td></tr>
+<tr><td><strong>3</strong></td><td>a, b, c, d, g</td><td>1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;0 &nbsp;1</td><td>0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;1 &nbsp;0</td></tr>
+<tr><td><strong>4</strong></td><td>b, c, f, g</td><td>0 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;1</td><td>1 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;0</td></tr>
+<tr><td><strong>5</strong></td><td>a, c, d, f, g</td><td>1 &nbsp;0 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;1 &nbsp;1</td><td>0 &nbsp;1 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;0 &nbsp;0</td></tr>
+<tr><td><strong>6</strong></td><td>a, c, d, e, f, g</td><td>1 &nbsp;0 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1</td><td>0 &nbsp;1 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0</td></tr>
+<tr><td><strong>7</strong></td><td>a, b, c</td><td>1 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0</td><td>0 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1</td></tr>
+<tr><td><strong>8</strong></td><td>a, b, c, d, e, f, g (All)</td><td>1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;1</td><td>0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;0</td></tr>
+<tr><td><strong>9</strong></td><td>a, b, c, d, f, g</td><td>1 &nbsp;1 &nbsp;1 &nbsp;1 &nbsp;0 &nbsp;1 &nbsp;1</td><td>0 &nbsp;0 &nbsp;0 &nbsp;0 &nbsp;1 &nbsp;0 &nbsp;0</td></tr>
+</tbody></table></div>
+
+<h3>5.4 Voltage Regulator ICs (IC 7805 &amp; IC 7912), Multimeter &amp; CRO (TSO 5d, 5e)</h3>
+<div class="grid2">
+<div class="box">
+<h4>IC 7805 and IC 7912 Three-Terminal Regulators</h4>
+<ul>
+<li><strong>78XX Series (Positive Voltage Regulators):</strong> <strong>IC 7805</strong> provides a fixed, regulated <strong>+5 V DC output</strong> (up to 1 A–1.5 A) from an unregulated DC input of +7.5 V to +35 V.<br/>
+<em>Pinout:</em> Pin 1 = Unregulated Input, Pin 2 = Ground, Pin 3 = Regulated +5 V Output.</li>
+<li><strong>79XX Series (Negative Voltage Regulators):</strong> <strong>IC 7912</strong> provides a fixed, regulated <strong>−12 V DC output</strong> from an unregulated negative DC input of −14.5 V to −35 V.<br/>
+<em>Pinout:</em> Pin 1 = Ground, Pin 2 = Unregulated Negative Input, Pin 3 = Regulated −12 V Output.</li>
+<li>Both include built-in <strong>thermal overload protection</strong> and <strong>short-circuit current limiting</strong>.</li>
+</ul>
+</div>
+<div class="box">
+<h4>Digital Multimeter (DMM) &amp; Cathode Ray Oscilloscope (CRO)</h4>
+<ul>
+<li><strong>Multimeter (AVO Meter):</strong> Measures DC/AC Voltage (connected in <strong>parallel</strong>, high internal resistance), DC/AC Current (connected in <strong>series</strong>, very low internal resistance), Resistance, Diode drop, and Continuity.</li>
+<li><strong>Cathode Ray Oscilloscope (CRO):</strong> High-speed X-Y electronic graphing instrument using a Cathode Ray Tube (Electron Gun, Vertical/Horizontal Deflection Plates, Fluorescent Screen) and Time-Base Generator to display <strong>real-time V(t) waveforms</strong>:<br/>
+• <strong>Peak-to-Peak Voltage:</strong> <em>V<sub>p-p</sub> = (Vertical divisions) × (Volts/div)</em><br/>
+• <strong>Time Period &amp; Frequency:</strong> <em>T = (Horizontal divisions per cycle) × (Time/div)</em>, and <strong>f = 1 / T</strong>.</li>
+</ul>
+</div>
+</div>
+
+<h3>5.5 Sensors, Transducers &amp; Electrical Power System Layout (TSO 5f)</h3>
+<div class="box">
+<ul>
+<li><strong>Sensor vs. Transducer:</strong> A <strong>Sensor</strong> detects and responds to a physical stimulus (heat, light, pressure), whereas a <strong>Transducer</strong> converts one form of energy (non-electrical physical quantity) into another form (electrical voltage/current signal):<br/>
+• <strong>Temperature:</strong> RTD (Pt100 — positive temp coeff.), Thermistor (NTC), Thermocouple (Seebeck effect — active transducer).<br/>
+• <strong>Displacement / Force:</strong> LVDT (inductive), Strain Gauge (piezoresistive), Piezoelectric crystal (active).<br/>
+• <strong>Light:</strong> LDR (Photoresistor), Photodiode, Photovoltaic Solar Cell.</li>
+<li><strong>Layout of Electrical Power System:</strong><br/>
+<strong>1. Generation (11 kV, 50 Hz 3-Phase AC)</strong> → <strong>2. Primary Step-Up Transmission (132 kV / 220 kV / 400 kV / 765 kV)</strong> (stepping up voltage reduces current <em>I = P / (√3 V cos φ)</em> and minimizes <em>I<sup>2</sup>R</em> transmission losses) → <strong>3. Secondary Transmission (66 kV / 33 kV)</strong> → <strong>4. Primary Distribution (11 kV)</strong> → <strong>5. Secondary Distribution (Pole/Plinth Step-Down Transformer: 400 V 3-Phase 4-Wire / 230 V 1-Phase to consumers)</strong>.</li>
+</ul>
+</div>
+
+<h3>5.6 &amp; 5.7 Electrical Safety, Protective Devices (Fuse, MCB, MCCB) &amp; Earthing (TSO 5g, 5h)</h3>
+<div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Fuse (Rewirable / HRC)</th><th>MCB (Miniature Circuit Breaker)</th><th>MCCB (Moulded Case Circuit Breaker)</th></tr></thead><tbody>
+<tr><td><strong>Operating Principle</strong></td><td>Thermal melting of a low-melting-point fuse wire (<strong>I<sup>2</sup>Rt heating</strong>).</td><td>Bi-metallic strip (for overload) + Electromagnetic solenoid (for short-circuit).</td><td>Thermal-magnetic or microprocessor-based electronic trip unit.</td></tr>
+<tr><td><strong>Reusability</strong></td><td><strong>One-time use</strong> (must be replaced/rewired after blowing).</td><td><strong>Resettable</strong> (simply flip the toggle switch back ON).</td><td><strong>Resettable</strong> with adjustable trip current settings.</td></tr>
+<tr><td><strong>Current Rating</strong></td><td>2 A to 100 A (Kit-Kat) / up to 1000 A (HRC)</td><td><strong>0.5 A to 125 A</strong></td><td><strong>100 A to 2500 A</strong></td></tr>
+<tr><td><strong>Interrupting Capacity</strong></td><td>Low to High (HRC)</td><td>Up to 10 kA – 15 kA</td><td>High (<strong>10 kA to 200 kA</strong>)</td></tr>
+<tr><td><strong>Applications</strong></td><td>Domestic cutouts, small appliances, transformer protection.</td><td>Domestic house wiring, lighting, air conditioners, small motors.</td><td>Industrial distribution boards, heavy feeders, large plants.</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<p><strong>Earthing (Grounding) Systems — Purpose, Importance &amp; Methods (TSO 5h):</strong></p>
+<ul>
+<li><strong>Definition:</strong> Connecting the non-current-carrying metallic frames/enclosures of electrical equipment or the neutral point of a supply system directly to the general mass of the Earth (0 V reference potential) through a very low-resistance conductor (earth resistance &lt; 1 Ω for power stations, &lt; 5 Ω for domestic installations).</li>
+<li><strong>Purpose &amp; Importance of Earthing:</strong><br/>
+1. <strong>Protects human life from electric shock:</strong> If live insulation fails and touches a metal appliance body, fault current flows immediately into the low-resistance earth path instead of through a person touching the appliance.<br/>
+2. <strong>Blows the Fuse / Trips the MCB/RCCB immediately:</strong> Large earth fault current trips the protective device and isolates the faulty circuit.<br/>
+3. Maintains stable line-to-ground voltage and protects buildings/installations against lightning surges.</li>
+<li><strong>Standard Methods of Earthing:</strong><br/>
+• <strong>1. Plate Earthing:</strong> A copper plate (60 cm × 60 cm × 3.18 mm) or GI plate (60 cm × 60 cm × 6.35 mm) buried vertically at least 1.5 m–3 m deep in alternating layers of <strong>charcoal and salt</strong> (to retain moisture and keep soil resistivity low).<br/>
+• <strong>2. Pipe Earthing (Most Common in India):</strong> A galvanized perforated iron (GI) pipe (38 mm diameter, 2.5 m long) buried vertically in a pit filled with alternating layers of charcoal and salt, with a funnel at the top for pouring water during summer.</li>
+</ul>
+</div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit5">Practice exam questions for Unit 5</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit4.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="exam.html">Exam Questions →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

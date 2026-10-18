@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 6 (Assignment-1) | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="assignment.html">Assignment</a> › <a href="assignment-1.html">Assignment-1</a> › Question 6</p>
+<section id="q6">
+<p class="qno">Assignment-1 · Question 6 (Sub-BEEE · Submission: 21/10/2026)</p>
+<h2>Explain the working of a Full wave Rectifier and derive the expression for average and RMS values of output voltage.</h2>
+
+<h3>1. Principle &amp; Circuit Diagrams of a Full-Wave Rectifier (FWR)</h3>
+<div class="box">
+<p>A <strong>Full-Wave Rectifier (FWR)</strong> converts both half-cycles (positive and negative) of an alternating current (AC) input signal into unidirectional pulsating DC current through the load resistor <em>R<sub>L</sub></em>. There are two standard circuit configurations: <strong>(1) Center-Tapped Full-Wave Rectifier</strong> (2 diodes) and <strong>(2) Full-Wave Bridge Rectifier</strong> (4 diodes).</p>
+</div>
+
+<div class="box" style="text-align:center">
+<svg viewBox="0 0 740 245" style="max-width:100%;height:auto;background:#fff;border:1px solid #dcd8d1;border-radius:8px;padding:8px" xmlns="http://www.w3.org/2000/svg">
+  <text x="370" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#3f7547">Center-Tapped Full-Wave Rectifier &amp; Input / Output Waveforms</text>
+  <!-- Transformer -->
+  <line x1="35" y1="65" x2="75" y2="65" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="35" y1="185" x2="75" y2="185" stroke="#4f4b48" stroke-width="2"/>
+  <path d="M 75 65 Q 90 85 75 105 Q 90 125 75 145 Q 90 165 75 185" fill="none" stroke="#3f7547" stroke-width="2.2"/>
+  <line x1="96" y1="55" x2="96" y2="195" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="102" y1="55" x2="102" y2="195" stroke="#4f4b48" stroke-width="2"/>
+  <path d="M 122 55 Q 107 78 122 100 Q 107 125 122 150 Q 107 172 122 195" fill="none" stroke="#3f7547" stroke-width="2.2"/>
+  <text x="130" y="50" font-family="Arial" font-size="11" font-weight="bold">A</text>
+  <text x="130" y="208" font-family="Arial" font-size="11" font-weight="bold">B</text>
+  <!-- Top diode D1 -->
+  <line x1="122" y1="55" x2="205" y2="55" stroke="#4f4b48" stroke-width="2"/>
+  <polygon points="205,42 205,68 232,55" fill="#e4f2e5" stroke="#3f7547" stroke-width="2"/>
+  <line x1="232" y1="42" x2="232" y2="68" stroke="#3f7547" stroke-width="2.5"/>
+  <text x="218" y="36" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#3f7547">D1</text>
+  <line x1="232" y1="55" x2="365" y2="55" stroke="#4f4b48" stroke-width="2"/>
+  <!-- Bottom diode D2 -->
+  <line x1="122" y1="195" x2="205" y2="195" stroke="#4f4b48" stroke-width="2"/>
+  <polygon points="205,182 205,208 232,195" fill="#e4f2e5" stroke="#3f7547" stroke-width="2"/>
+  <line x1="232" y1="182" x2="232" y2="208" stroke="#3f7547" stroke-width="2.5"/>
+  <text x="218" y="222" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#3f7547">D2</text>
+  <line x1="232" y1="195" x2="365" y2="195" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="365" y1="55" x2="365" y2="195" stroke="#4f4b48" stroke-width="2"/>
+  <!-- Center Tap CT & Load Resistor RL -->
+  <circle cx="122" cy="125" r="4" fill="#4f4b48"/>
+  <text x="132" y="120" font-family="Arial" font-size="11" font-weight="bold">CT (0 V)</text>
+  <line x1="122" y1="125" x2="245" y2="125" stroke="#4f4b48" stroke-width="2"/>
+  <polyline points="245,125 253,115 263,135 273,115 283,135 293,115 303,135 310,125" fill="none" stroke="#3f7547" stroke-width="2.2"/>
+  <text x="278" y="108" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#3f7547">Load R_L (i_L ←)</text>
+  <line x1="310" y1="125" x2="365" y2="125" stroke="#4f4b48" stroke-width="2"/>
+  <circle cx="365" cy="125" r="4" fill="#4f4b48"/>
+
+  <!-- Waveforms on Right -->
+  <line x1="435" y1="90" x2="705" y2="90" stroke="#4f4b48" stroke-width="1.5"/>
+  <line x1="435" y1="45" x2="435" y2="130" stroke="#4f4b48" stroke-width="1.5"/>
+  <path d="M 435 90 Q 465 38 495 90 Q 525 142 555 90 Q 585 38 615 90 Q 645 142 675 90" fill="none" stroke="#1d4ed8" stroke-width="2.2"/>
+  <text x="435" y="42" font-family="Arial" font-size="11" font-weight="bold" fill="#1d4ed8">Input AC: v_i = V_m sin(ωt)</text>
+
+  <line x1="435" y1="205" x2="705" y2="205" stroke="#4f4b48" stroke-width="1.5"/>
+  <line x1="435" y1="145" x2="435" y2="220" stroke="#4f4b48" stroke-width="1.5"/>
+  <path d="M 435 205 Q 465 150 495 205 Q 525 150 555 205 Q 585 150 615 205 Q 645 150 675 205" fill="none" stroke="#d9534f" stroke-width="2.5"/>
+  <line x1="435" y1="170" x2="685" y2="170" stroke="#3f7547" stroke-dasharray="4,4" stroke-width="1.5"/>
+  <text x="687" y="173" font-family="Arial" font-size="10" font-weight="bold" fill="#3f7547">2V_m/π</text>
+  <text x="435" y="148" font-family="Arial" font-size="11" font-weight="bold" fill="#d9534f">Output v_o (D1, D2, D1, D2)</text>
+  <text x="458" y="220" font-family="Arial" font-size="10">D1 ON</text>
+  <text x="518" y="220" font-family="Arial" font-size="10">D2 ON</text>
+  <text x="578" y="220" font-family="Arial" font-size="10">D1 ON</text>
+  <text x="638" y="220" font-family="Arial" font-size="10">D2 ON</text>
+</svg>
+</div>
+
+<h3>2. Working Operation of Full-Wave Rectifier</h3>
+<div class="box">
+<ul>
+<li><strong>During Positive Half-Cycle (0 &lt; ωt &lt; π):</strong> Upper end <em>A</em> of the secondary winding is positive and lower end <em>B</em> is negative with respect to the Center Tap (<em>CT</em>). Diode <strong>D<sub>1</sub> is forward biased (ON)</strong> while diode <strong>D<sub>2</sub> is reverse biased (OFF)</strong>. Current flows from <em>A → D<sub>1</sub> → R<sub>L</sub> → CT</em>, giving output voltage <strong>v<sub>o</sub> = V<sub>m</sub> sin(ωt)</strong>. (In a Bridge Rectifier, diagonally opposite diodes <em>D<sub>1</sub> &amp; D<sub>2</sub></em> conduct).</li>
+<li><strong>During Negative Half-Cycle (π &lt; ωt &lt; 2π):</strong> Upper end <em>A</em> becomes negative and lower end <em>B</em> becomes positive with respect to <em>CT</em>. Now diode <strong>D<sub>1</sub> is reverse biased (OFF)</strong> while diode <strong>D<sub>2</sub> is forward biased (ON)</strong>. Current flows from <em>B → D<sub>2</sub> → R<sub>L</sub> → CT</em> in the <strong>exact same direction through R<sub>L</sub></strong>! Thus <strong>v<sub>o</sub> = −V<sub>m</sub> sin(ωt) = |V<sub>m</sub> sin(ωt)| &gt; 0</strong>. (In a Bridge Rectifier, diodes <em>D<sub>3</sub> &amp; D<sub>4</sub></em> conduct).</li>
+</ul>
+<p>Since the output pulse repeats every <strong>π radians</strong> (half period), we integrate over <strong>0 to π</strong> with period <strong>π</strong>.</p>
+</div>
+
+<h3>3. Derivation of Average (DC) and RMS Values of Output Voltage</h3>
+<div class="box">
+<h4>(a) Derivation of Average (DC) Output Voltage — V<sub>dc</sub> (or V<sub>avg</sub>)</h4>
+<p>Since the output waveform <em>v<sub>o</sub> = V<sub>m</sub> sin(ωt)</em> repeats with period <strong>π</strong>:</p>
+<p><strong>V<sub>dc</sub> = (1 / π) ∫<sub>0</sub><sup>π</sup> V<sub>m</sub> sin(ωt) d(ωt) = (V<sub>m</sub> / π) [ −cos(ωt) ]<sub>0</sub><sup>π</sup> = (V<sub>m</sub> / π) [ −cos π − (−cos 0) ] = (V<sub>m</sub> / π) [ 1 + 1 ]</strong></p>
+<p style="font-size:1.1rem;color:#3f7547"><strong>∴ &nbsp; V<sub>dc</sub> = V<sub>avg</sub> = 2V<sub>m</sub> / π ≈ 0.637 V<sub>m</sub> &nbsp;&nbsp; (and I<sub>dc</sub> = 2I<sub>m</sub> / π ≈ 0.637 I<sub>m</sub>)</strong></p>
+
+<h4 style="margin-top:20px">(b) Derivation of RMS (Root Mean Square) Output Voltage — V<sub>rms</sub></h4>
+<p>Integrating the square of the output voltage over one period <strong>π</strong>:</p>
+<p><strong>V<sub>rms</sub> = √[ (1 / π) ∫<sub>0</sub><sup>π</sup> V<sub>m</sub><sup>2</sup> sin<sup>2</sup>(ωt) d(ωt) ] = √[ (V<sub>m</sub><sup>2</sup> / 2π) ∫<sub>0</sub><sup>π</sup> (1 − cos 2ωt) d(ωt) ]</strong></p>
+<p><strong>V<sub>rms</sub><sup>2</sup> = (V<sub>m</sub><sup>2</sup> / 2π) [ ωt − sin(2ωt)/2 ]<sub>0</sub><sup>π</sup> = (V<sub>m</sub><sup>2</sup> / 2π) (π − 0) = V<sub>m</sub><sup>2</sup> / 2</strong></p>
+<p>Taking the square root on both sides:</p>
+<p style="font-size:1.1rem;color:#3f7547"><strong>∴ &nbsp; V<sub>rms</sub> = V<sub>m</sub> / √2 ≈ 0.707 V<sub>m</sub> &nbsp;&nbsp; (and I<sub>rms</sub> = I<sub>m</sub> / √2 ≈ 0.707 I<sub>m</sub>)</strong></p>
+
+<h4 style="margin-top:20px">(c) Key Performance Parameters of FWR</h4>
+<ul>
+<li><strong>Form Factor:</strong> <em>F = V<sub>rms</sub> / V<sub>dc</sub> = (V<sub>m</sub>/√2) / (2V<sub>m</sub>/π) = π / (2√2) = <strong>1.11</strong></em></li>
+<li><strong>Ripple Factor:</strong> <em>γ = √(F<sup>2</sup> − 1) = √(1.11<sup>2</sup> − 1) = <strong>0.482</strong></em> (48.2%)</li>
+<li><strong>Maximum Rectification Efficiency:</strong> <em>η<sub>max</sub> = P<sub>dc</sub> / P<sub>ac</sub> = (2V<sub>m</sub>/π)<sup>2</sup> / (V<sub>m</sub>/√2)<sup>2</sup> = 8 / π<sup>2</sup> = <strong>81.2%</strong></em> (twice that of HWR)</li>
+<li><strong>Ripple Frequency:</strong> <strong>2f</strong> (100 Hz for 50 Hz AC supply)</li>
+<li><strong>Peak Inverse Voltage (PIV):</strong> <strong>2V<sub>m</sub></strong> (Center-Tapped) and <strong>V<sub>m</sub></strong> (Bridge Rectifier)</li>
+</ul>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="q5.html">← Previous question (Q5)</a>
+<a class="btn" href="assignment-1.html">Assignment-1</a>
+<a class="btn" href="q7.html">Next question (Q7) →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 5 (Assignment-1) | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="assignment.html">Assignment</a> › <a href="assignment-1.html">Assignment-1</a> › Question 5</p>
+<section id="q5">
+<p class="qno">Assignment-1 · Question 5 (Sub-BEEE · Submission: 21/10/2026)</p>
+<h2>Explain the working of a Half wave Rectifier and derive the expression for average and RMS values of output voltage.</h2>
+
+<h3>1. Principle &amp; Circuit Diagram of a Half-Wave Rectifier (HWR)</h3>
+<div class="box">
+<p>A <strong>Half-Wave Rectifier (HWR)</strong> is an electronic circuit that converts bidirectional alternating current (AC) into unidirectional pulsating direct current (DC) by utilizing <strong>only one half-cycle</strong> of the input AC wave and blocking the other half-cycle using a single <em>p-n</em> junction diode.</p>
+</div>
+
+<div class="box" style="text-align:center">
+<svg viewBox="0 0 720 230" style="max-width:100%;height:auto;background:#fff;border:1px solid #dcd8d1;border-radius:8px;padding:8px" xmlns="http://www.w3.org/2000/svg">
+  <text x="360" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#3f7547">Half-Wave Rectifier Circuit &amp; Input / Output Waveforms</text>
+  <!-- Circuit on Left -->
+  <text x="40" y="125" font-family="Arial" font-size="12" font-weight="bold" fill="#4f4b48">AC Supply</text>
+  <line x1="80" y1="65" x2="120" y2="65" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="80" y1="175" x2="120" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <!-- Transformer coils -->
+  <path d="M 120 65 Q 135 78 120 92 Q 135 106 120 120 Q 135 134 120 148 Q 135 162 120 175" fill="none" stroke="#3f7547" stroke-width="2.2"/>
+  <line x1="142" y1="60" x2="142" y2="180" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="148" y1="60" x2="148" y2="180" stroke="#4f4b48" stroke-width="2"/>
+  <path d="M 170 65 Q 155 78 170 92 Q 155 106 170 120 Q 155 134 170 148 Q 155 162 170 175" fill="none" stroke="#3f7547" stroke-width="2.2"/>
+  <text x="180" y="60" font-family="Arial" font-size="11" font-weight="bold">A</text>
+  <text x="180" y="190" font-family="Arial" font-size="11" font-weight="bold">B</text>
+  <!-- Top wire with Diode D -->
+  <line x1="170" y1="65" x2="235" y2="65" stroke="#4f4b48" stroke-width="2"/>
+  <polygon points="235,50 235,80 265,65" fill="#e4f2e5" stroke="#3f7547" stroke-width="2.2"/>
+  <line x1="265" y1="50" x2="265" y2="80" stroke="#3f7547" stroke-width="2.5"/>
+  <text x="250" y="42" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#3f7547">Diode D</text>
+  <line x1="265" y1="65" x2="345" y2="65" stroke="#4f4b48" stroke-width="2"/>
+  <!-- Load Resistor RL -->
+  <line x1="345" y1="65" x2="345" y2="90" stroke="#4f4b48" stroke-width="2"/>
+  <polyline points="345,90 333,98 357,108 333,118 357,128 333,138 357,148 345,155" fill="none" stroke="#3f7547" stroke-width="2.2"/>
+  <text x="378" y="125" font-family="Arial" font-size="12" font-weight="bold" fill="#3f7547">R_L</text>
+  <text x="378" y="142" font-family="Arial" font-size="11" fill="#4f4b48">(v_o)</text>
+  <line x1="345" y1="155" x2="345" y2="175" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="170" y1="175" x2="345" y2="175" stroke="#4f4b48" stroke-width="2"/>
+
+  <!-- Waveforms on Right -->
+  <line x1="440" y1="90" x2="690" y2="90" stroke="#4f4b48" stroke-width="1.5"/>
+  <line x1="440" y1="45" x2="440" y2="130" stroke="#4f4b48" stroke-width="1.5"/>
+  <path d="M 440 90 Q 470 35 500 90 Q 530 145 560 90 Q 590 35 620 90 Q 650 145 680 90" fill="none" stroke="#1d4ed8" stroke-width="2.2"/>
+  <text x="435" y="42" font-family="Arial" font-size="11" font-weight="bold" fill="#1d4ed8">Input v_i = V_m sin(ωt)</text>
+
+  <line x1="440" y1="195" x2="690" y2="195" stroke="#4f4b48" stroke-width="1.5"/>
+  <line x1="440" y1="145" x2="440" y2="215" stroke="#4f4b48" stroke-width="1.5"/>
+  <path d="M 440 195 Q 470 140 500 195 L 560 195 Q 590 140 620 195 L 680 195" fill="none" stroke="#d9534f" stroke-width="2.5"/>
+  <line x1="440" y1="177" x2="680" y2="177" stroke="#3f7547" stroke-dasharray="4,4" stroke-width="1.5"/>
+  <text x="682" y="180" font-family="Arial" font-size="10" font-weight="bold" fill="#3f7547">V_dc = V_m/π</text>
+  <text x="435" y="148" font-family="Arial" font-size="11" font-weight="bold" fill="#d9534f">Output v_o (Pulsating DC)</text>
+  <text x="495" y="210" font-family="Arial" font-size="10">π</text>
+  <text x="555" y="210" font-family="Arial" font-size="10">2π</text>
+  <text x="615" y="210" font-family="Arial" font-size="10">3π</text>
+</svg>
+</div>
+
+<h3>2. Working Operation of Half-Wave Rectifier</h3>
+<div class="box">
+<p>Let the alternating voltage across the transformer secondary winding be <strong>v<sub>i</sub> = V<sub>m</sub> sin(ωt)</strong>:</p>
+<ul>
+<li><strong>During Positive Half-Cycle (0 &lt; ωt &lt; π):</strong> Terminal <em>A</em> is positive with respect to terminal <em>B</em>. The diode <em>D</em> becomes <strong>forward biased (ON)</strong> and conducts current through the load resistor <em>R<sub>L</sub></em>. Hence, output voltage is <strong>v<sub>o</sub> = V<sub>m</sub> sin(ωt)</strong> and load current is <strong>i<sub>L</sub> = I<sub>m</sub> sin(ωt)</strong>, where <em>I<sub>m</sub> = V<sub>m</sub> / (R<sub>f</sub> + R<sub>L</sub>) ≈ V<sub>m</sub> / R<sub>L</sub></em>.</li>
+<li><strong>During Negative Half-Cycle (π &lt; ωt &lt; 2π):</strong> Terminal <em>A</em> is negative with respect to terminal <em>B</em>. The diode <em>D</em> becomes <strong>reverse biased (OFF)</strong> and acts as an open switch. Hence, no current flows through <em>R<sub>L</sub></em>, so <strong>i<sub>L</sub> = 0</strong> and <strong>v<sub>o</sub> = 0</strong>.</li>
+</ul>
+<p>Thus, the output voltage across <em>R<sub>L</sub></em> over one complete cycle (<em>0 to 2π</em>) is:</p>
+<p><strong>v<sub>o</sub>(ωt) = V<sub>m</sub> sin(ωt) &nbsp;for&nbsp; 0 ≤ ωt ≤ π , &nbsp;&nbsp; and &nbsp;&nbsp; v<sub>o</sub>(ωt) = 0 &nbsp;for&nbsp; π ≤ ωt ≤ 2π</strong>.</p>
+</div>
+
+<h3>3. Derivation of Average (DC) and RMS Values of Output Voltage</h3>
+<div class="box">
+<h4>(a) Derivation of Average (DC) Output Voltage — V<sub>dc</sub> (or V<sub>avg</sub>)</h4>
+<p>By definition, the average value of a periodic waveform over one full period <em>T = 2π</em> is:</p>
+<p><strong>V<sub>dc</sub> = (1 / 2π) ∫<sub>0</sub><sup>2π</sup> v<sub>o</sub> d(ωt) = (1 / 2π) [ ∫<sub>0</sub><sup>π</sup> V<sub>m</sub> sin(ωt) d(ωt) + ∫<sub>π</sub><sup>2π</sup> 0 · d(ωt) ]</strong></p>
+<p><strong>V<sub>dc</sub> = (V<sub>m</sub> / 2π) [ −cos(ωt) ]<sub>0</sub><sup>π</sup> = (V<sub>m</sub> / 2π) [ −cos π − (−cos 0) ] = (V<sub>m</sub> / 2π) [ −(−1) + 1 ] = (V<sub>m</sub> / 2π) (2)</strong></p>
+<p style="font-size:1.1rem;color:#3f7547"><strong>∴ &nbsp; V<sub>dc</sub> = V<sub>avg</sub> = V<sub>m</sub> / π ≈ 0.318 V<sub>m</sub> &nbsp;&nbsp; (and I<sub>dc</sub> = I<sub>m</sub> / π ≈ 0.318 I<sub>m</sub>)</strong></p>
+
+<h4 style="margin-top:20px">(b) Derivation of RMS (Root Mean Square) Output Voltage — V<sub>rms</sub></h4>
+<p>By definition, the RMS value over a full period <em>2π</em> is:</p>
+<p><strong>V<sub>rms</sub> = √[ (1 / 2π) ∫<sub>0</sub><sup>2π</sup> v<sub>o</sub><sup>2</sup> d(ωt) ] = √[ (1 / 2π) ∫<sub>0</sub><sup>π</sup> V<sub>m</sub><sup>2</sup> sin<sup>2</sup>(ωt) d(ωt) ]</strong></p>
+<p>Using the trigonometric identity <strong>sin<sup>2</sup>(ωt) = [ 1 − cos(2ωt) ] / 2</strong>:</p>
+<p><strong>V<sub>rms</sub><sup>2</sup> = (V<sub>m</sub><sup>2</sup> / 4π) ∫<sub>0</sub><sup>π</sup> [ 1 − cos(2ωt) ] d(ωt) = (V<sub>m</sub><sup>2</sup> / 4π) [ ωt − sin(2ωt)/2 ]<sub>0</sub><sup>π</sup> = (V<sub>m</sub><sup>2</sup> / 4π) (π − 0) = V<sub>m</sub><sup>2</sup> / 4</strong></p>
+<p>Taking the square root on both sides:</p>
+<p style="font-size:1.1rem;color:#3f7547"><strong>∴ &nbsp; V<sub>rms</sub> = V<sub>m</sub> / 2 = 0.5 V<sub>m</sub> &nbsp;&nbsp; (and I<sub>rms</sub> = I<sub>m</sub> / 2 = 0.5 I<sub>m</sub>)</strong></p>
+
+<h4 style="margin-top:20px">(c) Key Performance Parameters of HWR</h4>
+<ul>
+<li><strong>Form Factor:</strong> <em>F = V<sub>rms</sub> / V<sub>dc</sub> = (V<sub>m</sub>/2) / (V<sub>m</sub>/π) = π / 2 = <strong>1.57</strong></em></li>
+<li><strong>Ripple Factor:</strong> <em>γ = √(F<sup>2</sup> − 1) = √(1.57<sup>2</sup> − 1) = <strong>1.21</strong></em> (121%)</li>
+<li><strong>Maximum Rectification Efficiency:</strong> <em>η<sub>max</sub> = P<sub>dc</sub> / P<sub>ac</sub> = (V<sub>m</sub>/π)<sup>2</sup> / (V<sub>m</sub>/2)<sup>2</sup> = 4 / π<sup>2</sup> = <strong>40.6%</strong></em></li>
+<li><strong>Peak Inverse Voltage (PIV):</strong> <strong>V<sub>m</sub></strong></li>
+</ul>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="q4.html">← Previous question (Q4)</a>
+<a class="btn" href="assignment-1.html">Assignment-1</a>
+<a class="btn" href="q6.html">Next question (Q6) →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

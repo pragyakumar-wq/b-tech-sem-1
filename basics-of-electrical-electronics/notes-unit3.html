@@ -1,8 +1,149 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unit 3 Notes</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#172033;line-height:1.7}header{background:#1e40af;color:white;padding:35px 7%;text-align:center}header h1{margin:0;font-size:32px}nav{position:sticky;top:0;background:white;padding:10px;text-align:center;box-shadow:0 2px 8px #0002}nav a{color:#1d4ed8;text-decoration:none;font-weight:bold;margin:5px 8px}.container{max-width:1050px;margin:auto;padding:18px}.info,section{background:white;border:1px solid #dbe3ef;border-radius:12px;padding:25px;margin:20px 0}.info span{display:inline-block;background:#eef4ff;color:#1e40af;padding:5px 10px;border-radius:20px;margin:3px}.formula{background:#eef4ff;border-left:5px solid #2563eb;padding:13px;margin:15px 0;font-weight:bold;overflow:auto}.example{background:#f0fdf4;border-left:5px solid #16a34a;padding:14px;margin:15px 0}.important{background:#fff7ed;border-left:5px solid #f97316;padding:14px;margin:15px 0}h2{color:#1e40af;border-bottom:2px solid #e5edff;padding-bottom:7px}h3{margin-top:24px}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #cbd5e1;padding:9px;text-align:left;vertical-align:top}th{background:#2563eb;color:white}footer{background:#111827;color:white;text-align:center;padding:20px}@media(max-width:700px){header h1{font-size:25px}.info,section{padding:18px}nav a{font-size:13px}}</style></head><body><header><h1>Basics of Electrical &amp; Electronics Engineering</h1><p>Unit 3 – Basic Electrical Machines</p><p>Course Code: 100111 | B.Tech 1st Semester | Batch 2026–2030</p></header><nav><a href="#em">Electromagnetism</a> <a href="#dc">DC Machines</a> <a href="#transformer">Transformer</a> <a href="#performance">Performance</a> <a href="#induction">Induction Motor</a> <a href="#fhp">FHP Motors</a> <a href="#revision">Revision</a></nav><main class="container"><div class="info"><h2>Unit 3 — Basic Electrical Machines</h2><span>8 Hours</span><p>Topics: electromagnetic principles, self/mutual inductance, DC machines, single-phase transformers, voltage regulation, induction motors and fractional-horsepower motors.</p></div>
-<section id="em"><h2>3.1 Electromagnetic Principles</h2><p>Faraday's law states that changing magnetic flux linking a circuit induces emf.</p><div class="formula">e=−N(dΦ/dt)</div><p>Lenz's law gives the opposing direction. A current-carrying conductor in a magnetic field experiences force:</p><div class="formula">F=BIl sinθ</div><h3>Self inductance</h3><div class="formula">e=−L(di/dt)</div><p>Change of current in a coil induces emf in the same coil. Mutual inductance occurs when changing current in one coil induces emf in another.</p><div class="formula">e₂=−M(di₁/dt)</div></section>
-<section id="dc"><h2>3.2 DC Machines</h2><p>A DC generator converts mechanical to electrical energy; a DC motor converts electrical to mechanical energy.</p><h3>Construction</h3><ul><li>Yoke: mechanical support and magnetic path.</li><li>Poles/pole shoes: establish and spread flux.</li><li>Field winding: produces magnetic field.</li><li>Armature core/winding: energy-conversion region.</li><li>Commutator: switching/rectification arrangement.</li><li>Brushes: electrical connection to rotating commutator.</li></ul><h3>Generator EMF</h3><div class="formula">Eg=PΦZN/(60A)</div><p>P=poles, Φ=flux/pole, Z=conductors, N=speed rpm, A=parallel paths.</p><h3>Motor</h3><p>Motor action is based on force on a current-carrying conductor. Back emf opposes supply:</p><div class="formula">Eb=V−IaRa</div><table><tr><th>Type</th><th>Main feature</th></tr><tr><td>Shunt</td><td>Approximately constant speed</td></tr><tr><td>Series</td><td>High starting torque</td></tr><tr><td>Compound</td><td>Combination of series and shunt characteristics</td></tr></table></section>
-<section id="transformer"><h2>3.3 Single-Phase Transformer</h2><p>A transformer is a static AC device transferring energy between circuits at the same frequency by mutual induction. It is used for stepping voltage up/down and isolation.</p><h3>Construction</h3><p>It consists mainly of a laminated magnetic core, primary winding, secondary winding and insulation.</p><div class="formula">E1=4.44fN1Φm; &nbsp; E2=4.44fN2Φm</div><div class="formula">V1/V2≈N1/N2≈I2/I1</div><p>N2>N1 gives step-up action; N2<N1 gives step-down action.</p></section>
-<section id="performance"><h2>3.4 Transformer Performance</h2><div class="formula">Voltage ratio k=V2/V1≈N2/N1</div><div class="formula">Voltage regulation(%)=[(VNL−VFL)/VFL]×100</div><p>Important losses are core losses (hysteresis and eddy current) and copper I²R losses. Regulation indicates the change in secondary voltage from no-load to full-load condition at constant primary voltage.</p></section>
-<section id="induction"><h2>3.5 Induction Motors</h2><p>In an induction motor, rotor current is induced by the rotating magnetic field produced by the stator.</p><div class="formula">Ns=120f/P &nbsp; ; &nbsp; s=(Ns−N)/Ns</div><p>Ns is synchronous speed, N is rotor speed and s is slip. A three-phase stator produces a rotating magnetic field. Single-phase induction motors need a suitable starting arrangement because a basic single-phase motor is not inherently self-starting.</p><p>Applications include pumps, fans, compressors, conveyors and industrial drives.</p></section>
-<section id="fhp"><h2>3.6 Fractional-Horsepower Motors</h2><p>These are small motors with output below one horsepower, used in fans, small pumps, appliances and light-duty mechanisms.</p><div class="important">Exam focus: Faraday/Lenz laws, DC-machine construction and EMF equation, transformer EMF equation and regulation, induction-motor rotating field, synchronous speed and slip.</div></section>
-<section id="revision"><h2>Exam Revision</h2><ul><li>State Faraday and Lenz laws.</li><li>Differentiate self and mutual inductance.</li><li>Explain DC machine construction and operation.</li><li>Derive transformer EMF equation.</li><li>Define voltage regulation.</li><li>Explain induction motor principle.</li><li>Define synchronous speed and slip.</li></ul></section></main><footer>B.Tech 1st Semester • BEEE • Course Code 100111</footer></body></html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 3 Notes | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="notes.html">Notes</a> › Unit 3</p>
+<section class="unit" id="u3">
+<p class="qno">Unit 3 · 8 hrs · Mapped to CO3</p>
+<h2>Basic Electrical Machines</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>3.1</strong> Electromagnetic Principles: Basic laws of electromagnetism, self-inductance, and mutual inductance</li>
+<li><strong>3.2</strong> DC Machines: Principle of operation, construction, classification, and applications of DC machines</li>
+<li><strong>3.3</strong> Single-Phase Transformers: Necessity, working principle, construction, and E.M.F. equation of transformers</li>
+<li><strong>3.4</strong> Transformer Performance: Voltage ratio, current ratio, and voltage regulation with significance</li>
+<li><strong>3.5</strong> Induction Motors: Overview of single-phase and three-phase induction motors and their working principles</li>
+<li><strong>3.6</strong> Motor Applications: Applications of induction motors and fractional horsepower motors</li>
+</ul>
+
+<h3>3.1 Electromagnetic Principles, Self-Inductance &amp; Mutual Inductance (TSO 3a)</h3>
+<div class="box">
+<ul>
+<li><strong>Faraday's First Law:</strong> Whenever the magnetic flux linking a closed conductor or coil changes, an electromotive force (EMF) is induced in it.</li>
+<li><strong>Faraday's Second Law &amp; Lenz's Law:</strong> The magnitude of induced EMF is directly proportional to the rate of change of flux linkage, and its direction (by <strong>Lenz's Law</strong>) opposes the cause producing it:<br/>
+<strong>e = − N (dΦ / dt) &nbsp;&nbsp; Volts</strong>.</li>
+<li><strong>Dynamically Induced EMF (Generator Rule):</strong> When a conductor of active length <em>l</em> moves with velocity <em>v</em> across a magnetic field <em>B</em>: <strong>e = B l v sin θ</strong> (Direction given by <strong>Fleming's Right-Hand Rule</strong>).</li>
+<li><strong>Force on a Current-Carrying Conductor (Motor Rule):</strong> <strong>F = B I l sin θ</strong> Newtons (Direction given by <strong>Fleming's Left-Hand Rule</strong>).</li>
+</ul>
+</div>
+
+<div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Self-Inductance (L)</th><th>Mutual Inductance (M)</th></tr></thead><tbody>
+<tr><td><strong>Definition</strong></td><td>Property of a single coil by which it opposes any change in current flowing through itself by inducing a self-EMF.</td><td>Property of two magnetically coupled coils by which a change in current in one coil induces an EMF in the neighboring coil.</td></tr>
+<tr><td><strong>Induced EMF Formula</strong></td><td><strong>e<sub>1</sub> = − L (di<sub>1</sub> / dt)</strong></td><td><strong>e<sub>2</sub> = − M (di<sub>1</sub> / dt)</strong></td></tr>
+<tr><td><strong>Inductance Formula</strong></td><td><strong>L = N Φ / I = (μ<sub>0</sub> μ<sub>r</sub> N<sup>2</sup> A) / l</strong> (Henry)</td><td><strong>M = N<sub>2</sub> Φ<sub>12</sub> / I<sub>1</sub> = k √(L<sub>1</sub> L<sub>2</sub>)</strong> (where <em>k ∈ [0,1]</em> is coefficient of coupling)</td></tr>
+<tr><td><strong>Applications</strong></td><td>Choke coils, filters, tuning circuits, energy storage.</td><td>Transformers, induction motors, wireless inductive charging.</td></tr>
+</tbody></table></div>
+
+<h3>3.2 DC Machines: Construction, Working, EMF Equation &amp; Classification (TSO 3b)</h3>
+<div class="box">
+<p><strong>Main Constructional Parts of a DC Machine:</strong></p>
+<ul>
+<li><strong>1. Yoke (Frame):</strong> Outer cylindrical frame made of cast steel; provides mechanical protection and a low-reluctance return path for magnetic flux.</li>
+<li><strong>2. Field Poles (Pole Core &amp; Pole Shoes):</strong> Laminated steel cores carrying the field windings; pole shoes spread flux uniformly in the air gap.</li>
+<li><strong>3. Armature Core &amp; Winding:</strong> Rotating cylindrical drum built of <strong>silicon steel laminations</strong> (to minimize eddy current and hysteresis losses) with slots holding copper armature conductors connected in <strong>Lap Winding (A = P, high current, low voltage)</strong> or <strong>Wave Winding (A = 2, high voltage, low current)</strong>.</li>
+<li><strong>4. Split-Ring Commutator:</strong> Cylindrical assembly of hard-drawn copper segments insulated by mica; acts as a <strong>mechanical rectifier</strong> (converts AC induced in armature to DC in a generator, and DC supply to alternating torque current in a motor).</li>
+<li><strong>5. Carbon Brushes:</strong> Rest on the rotating commutator to collect/supply current smoothly without sparking.</li>
+</ul>
+</div>
+
+<h4>Derivation of EMF Equation of a DC Machine</h4>
+<div class="box">
+<p>Let <strong>P</strong> = number of poles, <strong>Φ</strong> = flux per pole (Wb), <strong>Z</strong> = total armature conductors, <strong>N</strong> = speed in RPM, and <strong>A</strong> = number of parallel paths (<em>A = P</em> for Lap, <em>A = 2</em> for Wave):</p>
+<ol>
+<li>Flux cut by 1 conductor in 1 revolution = <strong>P Φ</strong> Webers.</li>
+<li>Time taken for 1 revolution = <strong>60 / N</strong> seconds.</li>
+<li>Average EMF induced per conductor = <em>(Flux cut) / (Time) = P Φ N / 60</em> Volts.</li>
+<li>Since there are <strong>Z / A</strong> conductors in series per parallel path, the total generated EMF is:<br/>
+<span style="font-size:1.1rem;color:#3f7547"><strong>E<sub>g</sub> = (P Φ Z N) / (60 A) &nbsp;&nbsp; Volts</strong></span></li>
+</ol>
+<p><strong>Terminal Voltage Equations &amp; Back EMF:</strong></p>
+<ul>
+<li><strong>DC Generator:</strong> <strong>V = E<sub>g</sub> − I<sub>a</sub> R<sub>a</sub></strong> (where <em>I<sub>a</sub></em> is armature current and <em>R<sub>a</sub></em> is armature resistance).</li>
+<li><strong>DC Motor:</strong> When rotating in the magnetic field, the motor armature induces an opposing <strong>Back EMF (E<sub>b</sub> = PΦZN / 60A)</strong>:<br/>
+<strong>V = E<sub>b</sub> + I<sub>a</sub> R<sub>a</sub> &nbsp; ⇒ &nbsp; I<sub>a</sub> = (V − E<sub>b</sub>) / R<sub>a</sub></strong>, and electromagnetic torque <strong>T<sub>a</sub> = 0.159 P Φ Z I<sub>a</sub> / A ∝ Φ I<sub>a</sub></strong>.</li>
+</ul>
+</div>
+
+<h4>Classification &amp; Applications of DC Machines</h4>
+<div class="table-wrap"><table><thead><tr><th>Type of DC Machine</th><th>Field Winding Connection</th><th>Key Characteristics</th><th>Engineering Applications</th></tr></thead><tbody>
+<tr><td><strong>1. DC Shunt</strong></td><td>Field winding (many turns of thin wire) connected in <strong>parallel</strong> with armature.</td><td>Flux Φ is nearly constant ⇒ <strong>Almost constant speed</strong> from no-load to full-load; medium starting torque.</td><td>Lathes, drilling machines, centrifugal pumps, blowers, conveyors, battery charging.</td></tr>
+<tr><td><strong>2. DC Series</strong></td><td>Field winding (few turns of thick wire) connected in <strong>series</strong> with armature (<em>I<sub>se</sub> = I<sub>a</sub></em>).</td><td>At start, <strong>T ∝ I<sub>a</sub><sup>2</sup> (Very High Starting Torque)</strong>; variable speed (<strong>Never start at no-load!</strong>).</td><td>Electric traction (trains/locomotives), cranes, hoists, elevators, starter motors.</td></tr>
+<tr><td><strong>3. DC Compound</strong></td><td>Has both series and shunt field windings (Cumulative or Differential).</td><td>Combines high starting torque of series motor with safe no-load speed of shunt motor.</td><td>Rolling mills, heavy planers, punching &amp; shearing presses, printing presses.</td></tr>
+</tbody></table></div>
+
+<h3>3.3 &amp; 3.4 Single-Phase Transformers: Construction, EMF Equation &amp; Performance (TSO 3c)</h3>
+<div class="box">
+<p><strong>Working Principle:</strong> A transformer is a <strong>static AC electromagnetic device</strong> that transfers electrical power from one AC circuit to another at the <strong>same frequency</strong> with a change in voltage and current levels, operating on the principle of <strong>Faraday's Law of Mutual Induction</strong>.</p>
+<p><strong>Construction Types:</strong> Uses high-grade <strong>CRGO silicon steel laminations (0.35 mm – 0.5 mm thick)</strong> to minimize hysteresis and eddy current losses:<br/>
+• <strong>Core-Type Transformer:</strong> Windings surround a considerable part of the rectangular core (2 limbs); used for high-voltage, medium/small power.<br/>
+• <strong>Shell-Type Transformer:</strong> Core surrounds a major portion of the windings on the central limb (3 limbs); provides dual magnetic paths and strong mechanical bracing.</p>
+</div>
+
+<h4>Derivation of EMF Equation &amp; Transformation Ratios</h4>
+<div class="box">
+<p>Let alternating flux in the core be <strong>Φ(t) = Φ<sub>m</sub> sin(2πft)</strong>. In one quarter-cycle (time <em>dt = T/4 = 1/(4f)</em>), flux changes from <em>0 to +Φ<sub>m</sub></em>:</p>
+<ol>
+<li>Average EMF induced per turn = <strong>dΦ / dt = Φ<sub>m</sub> / (1/4f) = 4 f Φ<sub>m</sub></strong> Volts.</li>
+<li>For a sinusoidal wave, <strong>Form Factor = RMS / Average = 1.11</strong>. Hence, RMS EMF induced per turn = <strong>1.11 × 4 f Φ<sub>m</sub> = 4.44 f Φ<sub>m</sub></strong> Volts.</li>
+<li>For Primary (<em>N<sub>1</sub></em> turns) and Secondary (<em>N<sub>2</sub></em> turns) windings:<br/>
+<span style="font-size:1.1rem;color:#3f7547"><strong>E<sub>1</sub> = 4.44 f N<sub>1</sub> Φ<sub>m</sub> &nbsp; Volts , &nbsp;&nbsp; and &nbsp;&nbsp; E<sub>2</sub> = 4.44 f N<sub>2</sub> Φ<sub>m</sub> &nbsp; Volts</strong></span></li>
+<li><strong>Voltage, Turns &amp; Current Transformation Ratio (K):</strong><br/>
+<strong>E<sub>2</sub> / E<sub>1</sub> ≈ V<sub>2</sub> / V<sub>1</sub> = N<sub>2</sub> / N<sub>1</sub> = I<sub>1</sub> / I<sub>2</sub> = K</strong><br/>
+(If <em>N<sub>2</sub> &gt; N<sub>1</sub></em> ⇒ K &gt; 1: <strong>Step-Up Transformer</strong>; if <em>N<sub>2</sub> &lt; N<sub>1</sub></em> ⇒ K &lt; 1: <strong>Step-Down Transformer</strong>).</li>
+<li><strong>Voltage Regulation &amp; Efficiency:</strong><br/>
+• <strong>% Voltage Regulation = [ (V<sub>2(No-Load)</sub> − V<sub>2(Full-Load)</sub>) / V<sub>2(Full-Load)</sub> ] × 100%</strong> (Lower regulation = better voltage stability!).<br/>
+• <strong>Efficiency η = Output Power / (Output Power + Core Loss P<sub>i</sub> + Copper Loss P<sub>cu</sub>)</strong>. Maximum efficiency occurs when <strong>Variable Copper Loss = Constant Iron/Core Loss (I<sub>2</sub><sup>2</sup> R<sub>02</sub> = P<sub>i</sub>)</strong>.</li>
+</ol>
+</div>
+
+<h3>3.5 &amp; 3.6 Single-Phase, Three-Phase Induction Motors &amp; FHP Motors (TSO 3d)</h3>
+<div class="box">
+<p><strong>1. Three-Phase Induction Motor (Self-Starting):</strong></p>
+<ul>
+<li>When a 3-phase stator winding is fed from a balanced 3-phase AC supply, it produces a <strong>Rotating Magnetic Field (RMF)</strong> of constant magnitude <em>1.5 Φ<sub>m</sub></em> rotating at <strong>Synchronous Speed</strong>:<br/>
+<strong>N<sub>s</sub> = 120 f / P &nbsp;&nbsp; (RPM)</strong>.</li>
+<li>The RMF cuts the stationary rotor conductors (Squirrel-Cage or Slip-Ring/Wound Rotor), inducing rotor EMF and current. By Lenz's law, the rotor rotates in the same direction as the RMF at rotor speed <strong>N &lt; N<sub>s</sub></strong>.</li>
+<li><strong>Fractional Slip (s):</strong> <strong>s = (N<sub>s</sub> − N) / N<sub>s</sub></strong> &nbsp; ⇒ &nbsp; <strong>N = N<sub>s</sub>(1 − s)</strong>, and rotor current frequency is <strong>f<sub>r</sub> = s · f</strong>.</li>
+</ul>
+<p><strong>2. Single-Phase Induction Motor (Why Not Self-Starting &amp; How Made Self-Starting):</strong></p>
+<ul>
+<li>A single-phase stator winding produces a <strong>pulsating (alternating) magnetic field</strong>, which by the <strong>Double-Field Revolving Theory</strong> resolves into two equal magnetic fields rotating in opposite directions at <em>±N<sub>s</sub></em>, producing <strong>zero net starting torque</strong>.</li>
+<li>To make it self-starting, an <strong>auxiliary (starting) winding</strong> displaced by 90° in space (often with a series capacitor to create a ~90° phase split) is used: e.g., <strong>Split-Phase, Capacitor-Start, Capacitor-Run (Ceiling Fans), and Shaded-Pole Motors</strong>.</li>
+</ul>
+<p><strong>3. Fractional Horsepower (FHP) Motors:</strong> Small electric motors rated <strong>below 1 HP (746 W)</strong> (such as Universal motors, Shaded-pole motors, Capacitor motors, Stepper &amp; Servo motors) used in ceiling fans, mixers, washing machines, refrigerators, printers, hair dryers, and medical instruments.</p>
+</div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit3">Practice exam questions for Unit 3</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit2.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit4.html">Next unit →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

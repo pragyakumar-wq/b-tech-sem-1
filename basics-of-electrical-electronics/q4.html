@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 4 (Assignment-1) | Basics of Electrical &amp; Electronics Engineering</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Basics of Electrical &amp; Electronics Engineering</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>BEEE Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">BEEE</a> › <a href="assignment.html">Assignment</a> › <a href="assignment-1.html">Assignment-1</a> › Question 4</p>
+<section id="q4">
+<p class="qno">Assignment-1 · Question 4 (Sub-BEEE · Submission: 21/10/2026)</p>
+<h2>Discuss the mechanism of breakdown in a diode. Differentiate between Zener and avalanche breakdown.</h2>
+
+<h3>1. What is Reverse Breakdown in a p-n Junction Diode?</h3>
+<div class="box">
+<p>When a <em>p-n</em> junction diode is reverse biased, only a tiny reverse saturation current <em>I<sub>S</sub></em> (in μA for Ge, nA for Si) flows due to thermally generated minority carriers. However, if the reverse bias voltage <em>V<sub>R</sub></em> is increased beyond a critical threshold called the <strong>Breakdown Voltage (V<sub>BR</sub> or V<sub>Z</sub>)</strong>, the reverse current increases abruptly and rapidly while the voltage across the junction remains nearly constant. This phenomenon is called <strong>Diode Breakdown</strong>.</p>
+<p>There are two distinct physical mechanisms responsible for reverse breakdown in a diode: <strong>(1) Zener Breakdown</strong> and <strong>(2) Avalanche Breakdown</strong>.</p>
+</div>
+
+<h3>2. Mechanism of Zener Breakdown vs. Avalanche Breakdown</h3>
+<div class="grid2">
+<div class="box">
+<h4>1. Zener Breakdown Mechanism (V<sub>R</sub> &lt; 6 V)</h4>
+<ul>
+<li><strong>Heavy Doping &amp; Narrow Depletion Layer:</strong> Occurs in heavily doped <em>p-n</em> junctions where the depletion region is extremely thin (width <em>W &lt; 10 nm</em>).</li>
+<li><strong>Intense Electric Field:</strong> Even a small reverse voltage (2 V to 6 V) across this narrow depletion layer creates an intense electric field <strong>E = V / W ≈ 3 × 10<sup>7</sup> V/m</strong>.</li>
+<li><strong>Direct Rupture / Quantum Tunneling:</strong> This intense electric field directly pulls valence electrons out of covalent bonds in the p-side and makes them tunnel across the narrow energy barrier into the conduction band of the n-side (<strong>quantum mechanical tunneling</strong>), producing a large reverse current at constant voltage <em>V<sub>Z</sub></em>.</li>
+</ul>
+</div>
+<div class="box">
+<h4>2. Avalanche Breakdown Mechanism (V<sub>R</sub> &gt; 6 V)</h4>
+<ul>
+<li><strong>Light / Moderate Doping &amp; Wider Depletion Layer:</strong> Occurs in lightly or moderately doped <em>p-n</em> junctions with a wider depletion zone at higher reverse voltages (typically <em>&gt; 6 V</em>).</li>
+<li><strong>Carrier Acceleration &amp; Impact Ionization:</strong> Thermally generated minority carriers crossing the depletion region are accelerated to high kinetic energy by the reverse voltage.</li>
+<li><strong>Carrier Multiplication (Avalanche Effect):</strong> These high-speed electrons collide with stationary crystal atoms, breaking covalent bonds and knocking out new electron-hole pairs (<strong>impact ionization</strong>). These secondary carriers also accelerate and create more pairs in a chain reaction (avalanche), causing a sudden surge in reverse current.</li>
+</ul>
+</div>
+</div>
+
+<h3>3. Diagram Comparing Zener and Avalanche Breakdown Characteristics</h3>
+<div class="box" style="text-align:center">
+<svg viewBox="0 0 600 280" style="max-width:100%;height:auto;background:#fff;border:1px solid #dcd8d1;border-radius:8px;padding:8px" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="24" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#3f7547">Zener Breakdown vs. Avalanche Breakdown in Reverse Bias</text>
+  <!-- Axes -->
+  <line x1="60" y1="80" x2="540" y2="80" stroke="#4f4b48" stroke-width="2"/>
+  <line x1="480" y1="40" x2="480" y2="260" stroke="#4f4b48" stroke-width="2"/>
+  <text x="70" y="70" font-family="Arial" font-size="13" font-weight="bold" fill="#4f4b48">Reverse Voltage (−V_R)</text>
+  <text x="490" y="255" font-family="Arial" font-size="13" font-weight="bold" fill="#4f4b48">Reverse Current (−I_R)</text>
+  <!-- Zener curve -->
+  <path d="M 480 80 L 340 85 Q 332 86 330 100 L 328 245" fill="none" stroke="#3f7547" stroke-width="3"/>
+  <text x="320" y="70" font-family="Arial" font-size="12" font-weight="bold" fill="#3f7547">V_Z (&lt; 6 V)</text>
+  <text x="342" y="175" font-family="Arial" font-size="12" font-weight="bold" fill="#3f7547">Zener Breakdown</text>
+  <text x="342" y="192" font-family="Arial" font-size="11" fill="#4f4b48">(Heavy Doping, Tunneling)</text>
+  <!-- Avalanche curve -->
+  <path d="M 480 80 L 185 88 Q 175 90 172 108 L 165 245" fill="none" stroke="#d9534f" stroke-width="3"/>
+  <text x="150" y="70" font-family="Arial" font-size="12" font-weight="bold" fill="#d9534f">V_BR (&gt; 6 V)</text>
+  <text x="45" y="175" font-family="Arial" font-size="12" font-weight="bold" fill="#d9534f">Avalanche Breakdown</text>
+  <text x="45" y="192" font-family="Arial" font-size="11" fill="#4f4b48">(Light Doping, Impact Ionization)</text>
+</svg>
+</div>
+
+<h3>4. Detailed Comparison Table: Zener Breakdown vs. Avalanche Breakdown</h3>
+<div class="table-wrap"><table><thead><tr><th>S. No.</th><th>Parameter</th><th>Zener Breakdown</th><th>Avalanche Breakdown</th></tr></thead><tbody>
+<tr><td>1</td><td><strong>Doping Concentration</strong></td><td>Occurs in <strong>heavily doped</strong> p-n junctions.</td><td>Occurs in <strong>lightly or moderately doped</strong> p-n junctions.</td></tr>
+<tr><td>2</td><td><strong>Width of Depletion Layer</strong></td><td>Very <strong>thin / narrow</strong> (&lt; 10 nm).</td><td>Comparatively <strong>thick / wide</strong>.</td></tr>
+<tr><td>3</td><td><strong>Breakdown Voltage Range</strong></td><td>Occurs at low reverse voltages (<strong>V<sub>Z</sub> &lt; 5 V to 6 V</strong>).</td><td>Occurs at higher reverse voltages (<strong>V<sub>BR</sub> &gt; 6 V</strong>).</td></tr>
+<tr><td>4</td><td><strong>Physical Mechanism</strong></td><td>Direct rupture of covalent bonds by intense electric field (~10<sup>7</sup> V/m) and <strong>quantum mechanical tunneling</strong>.</td><td><strong>Impact ionization (collisions)</strong> and cumulative carrier multiplication by high-energy minority carriers.</td></tr>
+<tr><td>5</td><td><strong>Temperature Coefficient</strong></td><td><strong>Negative temperature coefficient</strong> (Breakdown voltage <em>decreases</em> as temperature increases).</td><td><strong>Positive temperature coefficient</strong> (Breakdown voltage <em>increases</em> as temperature increases because lattice vibrations shorten mean free path).</td></tr>
+<tr><td>6</td><td><strong>Sharpness of V-I Curve</strong></td><td>Exhibits a very sharp, vertical breakdown knee.</td><td>Breakdown knee is slightly more gradual before becoming vertical.</td></tr>
+<tr><td>7</td><td><strong>Permanent Junction Damage</strong></td><td>Non-destructive as long as power dissipation is kept below <em>P<sub>Z(max)</sub></em>.</td><td>Can cause permanent thermal damage in ordinary rectifier diodes if current is not externally limited.</td></tr>
+</tbody></table></div>
+</section>
+<div class="pager">
+<a class="btn" href="q3.html">← Previous question (Q3)</a>
+<a class="btn" href="assignment-1.html">Assignment-1</a>
+<a class="btn" href="q5.html">Next question (Q5) →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: BEEE (100111)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>
