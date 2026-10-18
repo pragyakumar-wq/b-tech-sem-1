@@ -1,93 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>B.Tech Sem-1 Study Portal | Group-A (2026–2030)</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B.Tech 1st Semester | Subjects</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-  <header class="hero">
-    <div class="container hero-inner">
-      <div>
-        <span class="badge">Batch 2026–2030 • Group-A</span>
-        <h1>B.Tech 1st Semester Academic Portal</h1>
-        <p>Complete Syllabus, Unit-Wise Notes, Reference Books &amp; Lab Manuals (20 Credits)</p>
-      </div>
-      <div class="hero-actions">
-        <button id="themeToggle" class="btn-secondary" type="button">🌗 Toggle Theme</button>
-      </div>
+
+<header class="top home-top">
+  <div class="brand"><span class="brand-mark">LN</span><div><h1>LNJPIT Study Hub</h1><small>B.Tech • Semester I • 2026–2030</small></div></div>
+  <nav><a href="#subjects" class="active">Subjects</a><a href="#quick-access">Quick Access</a><a href="#labs">Labs</a></nav>
+</header>
+
+<main>
+<section class="hero-home">
+  <div class="hero-copy"><span class="eyebrow">🎓 GROUP A • BATCH 2026–2030</span><h2>B.Tech Semester I<br><span>Complete Study Portal</span></h2><p>Notes, syllabus, assignments, exam questions and practical resources — all in one place.</p><a class="hero-btn" href="#subjects">Explore Subjects ↓</a></div>
+  <div class="hero-art"><div class="hero-circle">📚</div><strong>Learn • Practice • Prepare</strong><span>LNJPIT, Chapra</span></div>
+</section>
+<section class="stats" aria-label="Semester overview"><div><b>10</b><span>Courses</span></div><div><b>20</b><span>Credits</span></div><div><b>7</b><span>Theory</span></div><div><b>3</b><span>Labs</span></div></section>
+<section id="quick-access" class="quick-section"><h3>Quick Access</h3><div class="quick-grid"><a href="ai/notes.html">📚<b>Notes</b><span>Study material</span></a><a href="ai/assignment.html">📝<b>Assignments</b><span>Practice work</span></a><a href="ai/syllabus.html">📑<b>Syllabus</b><span>Course outline</span></a><a href="ai/exam.html">❓<b>Exam Prep</b><span>Important questions</span></a></div></section>
+<section id="subjects" class="subjects-section"><h3>Theory Subjects</h3>
+<div class="qlist two">
+    <!-- theory -->
+    <div class="qcard" data-page="ai/index.html" role="link" tabindex="0">
+      <span class="qno">100105</span>
+      <h2>Introduction to AI</h2>
+      <p class="muted">L-T-P 3-0-0 &middot; 3 credits</p><p class="ready">Syllabus, Assignment, Notes, References, Exam Questions ready</p><span class="open">Open subject &rarr;</span>
     </div>
-  </header>
-
-  <main class="container">
-    <!-- FIXED QUICK ACCESS & QUICK ACCESS NOTES HUB -->
-    <section class="quick-access-panel">
-      <div class="qa-header">
-        <div>
-          <h2>⚡ Quick Access &amp; Unit Notes</h2>
-          <p>Select a subject below to open its exact Syllabus, Unit 1–5 Notes, or References (no forced redirect to AI).</p>
-        </div>
-        <div class="qa-selector-wrap">
-          <label for="qaSubjectSelect">Active Subject:</label>
-          <select id="qaSubjectSelect" aria-label="Select Subject for Quick Access">
-            <option value="engineering-mathematics-1" data-type="theory">100102 — Engineering Mathematics - I</option>
-            <option value="engineering-physics" data-type="theory">100104 — Engineering Physics</option>
-            <option value="ai" data-type="theory">100105 — Introduction to AI</option>
-            <option value="computer-fundamentals" data-type="theory">100108 — Computer Fundamentals &amp; Emerging Tech</option>
-            <option value="universal-human-values" data-type="theory">100109 — Universal Human Values</option>
-            <option value="indian-constitution" data-type="theory">100110 — Essence of Indian Constitution</option>
-            <option value="basics-of-electrical-electronics" data-type="theory">100111 — Basics of Electrical &amp; Electronics Engg</option>
-            <option value="engineering-physics-lab" data-type="lab">100104P — Engineering Physics Lab</option>
-            <option value="electrical-electronics-lab" data-type="lab">100111P — Basics of Electrical &amp; Electronics Lab</option>
-            <option value="programming-lab" data-type="lab">100112P — Programming for Problem Solving Lab</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Quick Access Main Links -->
-      <div class="qa-links-grid">
-        <a id="qaOverview" class="qa-chip" href="engineering-mathematics-1/index.html">🏠 Subject Hub</a>
-        <a id="qaSyllabus" class="qa-chip" href="engineering-mathematics-1/syllabus.html">📋 Official Syllabus</a>
-        <a id="qaAllNotes" class="qa-chip" href="engineering-mathematics-1/notes.html">📚 All Notes / Lab Manual</a>
-        <a id="qaReferences" class="qa-chip" href="engineering-mathematics-1/references.html">📖 Reference Books</a>
-      </div>
-
-      <!-- Quick Access Unit Notes (Unit 1 to Unit 5) -->
-      <div id="qaUnitsBar" class="qa-units-bar">
-        <span class="qa-unit-label">Quick Access Notes:</span>
-        <a id="qaUnit1" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit1.html">Unit 1</a>
-        <a id="qaUnit2" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit2.html">Unit 2</a>
-        <a id="qaUnit3" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit3.html">Unit 3</a>
-        <a id="qaUnit4" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit4.html">Unit 4</a>
-        <a id="qaUnit5" class="qa-unit-btn" href="engineering-mathematics-1/notes-unit5.html">Unit 5</a>
-      </div>
-    </section>
-
-    <!-- SEARCH & FILTER CONTROLS -->
-    <section class="controls-bar">
-      <input
-        type="search"
-        id="subjectSearch"
-        placeholder="Search courses by name, code (e.g., 100108), or topic (e.g., Matrices, Lasers, C++, IoT)..."
-      />
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all">All (10)</button>
-        <button class="filter-btn" data-filter="theory">Theory (7)</button>
-        <button class="filter-btn" data-filter="lab">Practical Labs (3)</button>
-      </div>
-    </section>
-
-    <!-- SUBJECT CARDS GRID -->
-    <section id="subjectsGrid" class="subjects-grid"></section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>B.Tech Semester-1 Group-A Portal (Batch 2026–2030) • Mathematics &amp; Computing / CSE &amp; Allied Branches</p>
+    <div class="qcard" data-page="engineering-mathematics-1/index.html" role="link" tabindex="0">
+      <span class="qno">100102</span>
+      <h2>Engineering Mathematics - I</h2>
+      <p class="muted">L-T-P 3-0-0 &middot; 3 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
     </div>
-  </footer>
+    <div class="qcard" data-page="engineering-physics/index.html" role="link" tabindex="0">
+      <span class="qno">100104</span>
+      <h2>Engineering Physics</h2>
+      <p class="muted">L-T-P 3-0-0 &middot; 3 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+    <div class="qcard" data-page="computer-fundamentals/index.html" role="link" tabindex="0">
+      <span class="qno">100108</span>
+      <h2>Computer Fundamentals &amp; Emerging Technologies</h2>
+      <p class="muted">L-T-P 3-0-0 &middot; 3 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+    <div class="qcard" data-page="universal-human-values/index.html" role="link" tabindex="0">
+      <span class="qno">100109</span>
+      <h2>Universal Human Values</h2>
+      <p class="muted">L-T-P 2-0-0 &middot; 2 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+    <div class="qcard" data-page="indian-constitution/index.html" role="link" tabindex="0">
+      <span class="qno">100110</span>
+      <h2>Essence of Indian Constitution</h2>
+      <p class="muted">L-T-P 3-0-0 &middot; 0 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+    <div class="qcard" data-page="basics-of-electrical-electronics/index.html" role="link" tabindex="0">
+      <span class="qno">100111</span>
+      <h2>Basics of Electrical &amp; Electronics Engineering</h2>
+      <p class="muted">L-T-P 3-0-0 &middot; 3 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+</div>
+<section id="labs" class="subjects-section"><h3>Lab Subjects</h3>
+<div class="qlist two">
+    <div class="qcard" data-page="engineering-physics-lab/index.html" role="link" tabindex="0">
+      <span class="qno">100104P</span>
+      <h2>Engineering Physics Lab</h2>
+      <p class="muted">L-T-P 0-0-2 &middot; 1 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+    <div class="qcard" data-page="electrical-electronics-lab/index.html" role="link" tabindex="0">
+      <span class="qno">100111P</span>
+      <h2>Basics of Electrical &amp; Electronics Engineering Lab</h2>
+      <p class="muted">L-T-P 0-0-2 &middot; 1 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+    <div class="qcard" data-page="programming-lab/index.html" role="link" tabindex="0">
+      <span class="qno">100112P</span>
+      <h2>Programming for Problem Solving Lab</h2>
+      <p class="muted">L-T-P 0-0-2 &middot; 1 credits</p><p class="ready">Syllabus ready, other sections coming soon</p><span class="open">Open subject &rarr;</span>
+    </div>
+</div></section>
+<section class="updates"><h3>📢 Latest Updates</h3><div class="update-box"><span class="update-dot">●</span><div><b>Study portal is ready!</b><p>Explore each subject to access its syllabus, notes, assignments and exam resources.</p></div></div></section>
+</main>
+<footer><p><strong>LNJPIT Study Hub</strong> • B.Tech Semester I • Batch 2026–2030</p><p class="credit">Made with ❤️ for LNJPIT students • Pragya Kumar</p></footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
