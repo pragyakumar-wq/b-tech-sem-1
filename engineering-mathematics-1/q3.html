@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 3 | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="assignment.html">Assignment</a> › Question 3</p>
+<section id="q3">
+<p class="qno">Question 3 · Unit 3 (CO3)</p>
+<h2>State Euler's Theorem on homogeneous functions. If u = tan<sup>−1</sup>[(x<sup>3</sup> + y<sup>3</sup>)/(x − y)], prove that x u<sub>x</sub> + y u<sub>y</sub> = sin 2u and x<sup>2</sup> u<sub>xx</sub> + 2xy u<sub>xy</sub> + y<sup>2</sup> u<sub>yy</sub> = sin 4u − sin 2u. Also find extreme values using Lagrange's Multiplier Method.</h2>
+
+<h3>Part A: Euler's Theorem Proof &amp; Application</h3>
+<div class="box">
+<p><strong>Euler's Theorem Statement:</strong> If <em>z = f(x, y)</em> is a homogeneous function of degree <em>n</em> (meaning <em>f(tx, ty) = t<sup>n</sup> f(x, y)</em>), then:</p>
+<p><strong>x (∂z/∂x) + y (∂z/∂y) = n z , &nbsp;&nbsp; and &nbsp;&nbsp; x<sup>2</sup>(∂<sup>2</sup>z/∂x<sup>2</sup>) + 2xy(∂<sup>2</sup>z/∂x∂y) + y<sup>2</sup>(∂<sup>2</sup>z/∂y<sup>2</sup>) = n(n − 1)z</strong>.</p>
+<p><strong>Solution for u = tan<sup>−1</sup>[(x<sup>3</sup> + y<sup>3</sup>)/(x − y)]:</strong></p>
+<ol>
+<li>Rewrite as <strong>z = tan u = (x<sup>3</sup> + y<sup>3</sup>) / (x − y)</strong>.</li>
+<li>Test homogeneity of <em>z</em>: <em>z(tx, ty) = t<sup>3</sup>(x<sup>3</sup> + y<sup>3</sup>) / [t(x − y)] = t<sup>2</sup> z(x, y)</em>.<br/>
+Hence <strong>z = tan u</strong> is a homogeneous function of <em>x</em> and <em>y</em> of degree <strong>n = 2</strong>.</li>
+<li>Applying Euler's First-Order Theorem to <em>z = tan u</em>:<br/>
+<em>x (∂/∂x)(tan u) + y (∂/∂y)(tan u) = 2 tan u</em><br/>
+<em>sec<sup>2</sup> u [ x(∂u/∂x) + y(∂u/∂y) ] = 2 tan u</em><br/>
+<strong>x (∂u/∂x) + y (∂u/∂y) = 2 tan u / sec<sup>2</sup> u = 2 sin u cos u = sin 2u = g(u)</strong>. (First Result Proved!)</li>
+<li>Applying the Second-Order Deduction with <em>g(u) = sin 2u</em> and <em>g'(u) = 2 cos 2u</em>:<br/>
+<strong>x<sup>2</sup> u<sub>xx</sub> + 2xy u<sub>xy</sub> + y<sup>2</sup> u<sub>yy</sub> = g(u) [ g'(u) − 1 ] = sin 2u (2 cos 2u − 1) = 2 sin 2u cos 2u − sin 2u = sin 4u − sin 2u</strong>. (Second Result Proved!)</li>
+</ol>
+</div>
+
+<h3>Part B: Constrained Optimization Using Lagrange's Multiplier Method</h3>
+<div class="box">
+<p><strong>Problem:</strong> Find the minimum value of <strong>f(x, y, z) = x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup></strong> subject to the plane constraint <strong>ax + by + cz = p</strong>.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Form Lagrangian: <strong>F(x, y, z, λ) = (x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup>) + λ(ax + by + cz − p)</strong>.</li>
+<li>Set partial derivatives to zero:<br/>
+• <em>∂F/∂x = 2x + λa = 0 ⇒ x = −λa / 2</em><br/>
+• <em>∂F/∂y = 2y + λb = 0 ⇒ y = −λb / 2</em><br/>
+• <em>∂F/∂z = 2z + λc = 0 ⇒ z = −λc / 2</em></li>
+<li>Substitute into constraint <em>ax + by + cz = p</em>:<br/>
+<em>−(λ/2)(a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup>) = p ⇒ −λ/2 = p / (a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup>)</em>.</li>
+<li>Hence <em>x = ap/(a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>), y = bp/(a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>), z = cp/(a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)</em>, giving the minimum value:<br/>
+<strong>f<sub>min</sub> = x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = p<sup>2</sup> / (a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup>)</strong>.</li>
+</ol>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="q2.html">← Previous question</a>
+<a class="btn" href="assignment.html">All questions</a>
+<a class="btn" href="q4.html">Next question →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

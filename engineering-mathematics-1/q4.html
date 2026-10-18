@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 4 | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="assignment.html">Assignment</a> › Question 4</p>
+<section id="q4">
+<p class="qno">Question 4 · Unit 4 (CO4)</p>
+<h2>Evaluate ∫<sub>0</sub><sup>1</sup> ∫<sub>x<sup>2</sup></sub><sup>2−x</sup> xy dy dx by changing the order of integration. Also prove the Beta-Gamma relation β(m, n) = Γ(m)Γ(n) / Γ(m + n) and evaluate ∫<sub>0</sub><sup>π/2</sup> √(sin θ) dθ × ∫<sub>0</sub><sup>π/2</sup> dθ / √(sin θ).</h2>
+
+<h3>Part A: Evaluation by Changing the Order of Integration</h3>
+<div class="box">
+<p><strong>Given Integral:</strong> <strong>I = ∫<sub>x=0</sub><sup>1</sup> ∫<sub>y=x<sup>2</sup></sub><sup>2−x</sup> x y dy dx</strong></p>
+<ol>
+<li><strong>Boundary Curves &amp; Region R:</strong><br/>
+The lower curve is the parabola <strong>y = x<sup>2</sup></strong> and the upper curve is the line <strong>y = 2 − x</strong>. They intersect in the first quadrant at <em>x<sup>2</sup> = 2 − x ⇒ (x + 2)(x − 1) = 0 ⇒ <strong>(1, 1)</strong></em>.<br/>
+The y-coordinate runs from <em>y = 0</em> (at origin) to <em>y = 1</em> (at intersection) and up to <em>y = 2</em> (where <em>y = 2 − x</em> meets the y-axis at <em>(0, 2)</em>).</li>
+<li><strong>Horizontal Strip Split at y = 1:</strong><br/>
+When switching to horizontal strips (<em>dx dy</em>), the right boundary changes at <strong>y = 1</strong>:<br/>
+• <strong>Region R<sub>1</sub> (0 ≤ y ≤ 1):</strong> <em>x</em> goes from <strong>x = 0</strong> to the parabola <strong>x = √y</strong>.<br/>
+• <strong>Region R<sub>2</sub> (1 ≤ y ≤ 2):</strong> <em>x</em> goes from <strong>x = 0</strong> to the line <strong>x = 2 − y</strong>.</li>
+<li><strong>Evaluate I = I<sub>1</sub> + I<sub>2</sub>:</strong><br/>
+<strong>I = ∫<sub>y=0</sub><sup>1</sup> ∫<sub>x=0</sub><sup>√y</sup> x y dx dy + ∫<sub>y=1</sub><sup>2</sup> ∫<sub>x=0</sub><sup>2−y</sup> x y dx dy</strong><br/>
+• <em>I<sub>1</sub> = ∫<sub>0</sub><sup>1</sup> y [ x<sup>2</sup>/2 ]<sub>0</sub><sup>√y</sup> dy = (1/2) ∫<sub>0</sub><sup>1</sup> y<sup>2</sup> dy = (1/2)(1/3) = <strong>1 / 6</strong></em>.<br/>
+• <em>I<sub>2</sub> = ∫<sub>1</sub><sup>2</sup> y [ x<sup>2</sup>/2 ]<sub>0</sub><sup>2−y</sup> dy = (1/2) ∫<sub>1</sub><sup>2</sup> (4y − 4y<sup>2</sup> + y<sup>3</sup>) dy = (1/2) [ 2y<sup>2</sup> − (4/3)y<sup>3</sup> + y<sup>4</sup>/4 ]<sub>1</sub><sup>2</sup> = (1/2)(5/12) = <strong>5 / 24</strong></em>.<br/>
+• Total: <strong>I = 1/6 + 5/24 = 9 / 24 = 3 / 8</strong>.</li>
+</ol>
+</div>
+
+<h3>Part B: Beta-Gamma Relation &amp; Product of Trigonometric Integrals</h3>
+<div class="box">
+<p><strong>1. Outline of Proof of β(m, n) = Γ(m)Γ(n) / Γ(m + n):</strong></p>
+<ul>
+<li>Start from <em>Γ(m) = 2 ∫<sub>0</sub><sup>∞</sup> e<sup>−x<sup>2</sup></sup> x<sup>2m−1</sup> dx</em> and <em>Γ(n) = 2 ∫<sub>0</sub><sup>∞</sup> e<sup>−y<sup>2</sup></sup> y<sup>2n−1</sup> dy</em>.</li>
+<li>Multiply: <em>Γ(m)Γ(n) = 4 ∫<sub>0</sub><sup>∞</sup> ∫<sub>0</sub><sup>∞</sup> e<sup>−(x<sup>2</sup>+y<sup>2</sup>)</sup> x<sup>2m−1</sup> y<sup>2n−1</sup> dx dy</em>.</li>
+<li>Transform to polar coordinates <em>x = r cos θ, y = r sin θ, dx dy = r dr dθ</em> over the first quadrant (<em>0 ≤ r &lt; ∞, 0 ≤ θ ≤ π/2</em>):<br/>
+<em>Γ(m)Γ(n) = [ 2 ∫<sub>0</sub><sup>∞</sup> e<sup>−r<sup>2</sup></sup> r<sup>2(m+n)−1</sup> dr ] · [ 2 ∫<sub>0</sub><sup>π/2</sup> cos<sup>2m−1</sup> θ sin<sup>2n−1</sup> θ dθ ] = Γ(m + n) · β(m, n)</em>.</li>
+</ul>
+<p><strong>2. Evaluation of P = [ ∫<sub>0</sub><sup>π/2</sup> sin<sup>1/2</sup> θ dθ ] × [ ∫<sub>0</sub><sup>π/2</sup> sin<sup>−1/2</sup> θ dθ ]:</strong><br/>
+Using <em>∫<sub>0</sub><sup>π/2</sup> sin<sup>p</sup> θ cos<sup>0</sup> θ dθ = [ Γ((p+1)/2) Γ(1/2) ] / [ 2 Γ((p+3)/2) ]</em>:</p>
+<ul>
+<li>For the first integral (p = 1/2, q = 0): <strong>I<sub>1</sub> = [ Γ(3/4) Γ(1/2) ] / [ 2 Γ(5/4) ]</strong>.</li>
+<li>For the second integral (p = −1/2, q = 0): <strong>I<sub>2</sub> = [ Γ(1/4) Γ(1/2) ] / [ 2 Γ(3/4) ]</strong>.</li>
+<li>Multiply <em>I<sub>1</sub> × I<sub>2</sub></em> (noting <em>Γ(5/4) = (1/4)Γ(1/4)</em> and <em>[Γ(1/2)]<sup>2</sup> = π</em>):<br/>
+<strong>P = I<sub>1</sub> · I<sub>2</sub> = [ Γ(3/4) Γ(1/4) · π ] / [ 4 · (1/4) Γ(1/4) Γ(3/4) ] = π</strong>.</li>
+</ul>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="q3.html">← Previous question</a>
+<a class="btn" href="assignment.html">All questions</a>
+<a class="btn" href="q5.html">Next question →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 2 Notes | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="notes.html">Notes</a> › Unit 2</p>
+<section class="unit" id="u2">
+<p class="qno">Unit 2 · 8 hrs · Mapped to CO2</p>
+<h2>Differential Calculus: Single Variable</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>2.1</strong> Higher order derivatives; Successive differentiation and Leibnitz's Theorem</li>
+<li><strong>2.2</strong> Mean Value Theorems (Rolle's; Lagrange's; Cauchy)</li>
+<li><strong>2.3</strong> Indeterminate Forms; L'Hopital Rule</li>
+<li><strong>2.4</strong> Tangents &amp; Normal of Algebraic &amp; Polar Curves, Curvature</li>
+</ul>
+
+<h3>2.1 Successive Differentiation &amp; Leibnitz's Theorem (TSO 2a)</h3>
+<p>The process of differentiating a function <em>y = f(x)</em> repeatedly with respect to <em>x</em> is called <strong>successive differentiation</strong>. The successive derivatives are denoted by <em>y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, …, y<sub>n</sub></em> or <em>D y, D<sup>2</sup>y, …, D<sup>n</sup>y</em>.</p>
+
+<h4>Standard n<sup>th</sup> Order Derivatives Formula Sheet</h4>
+<div class="table-wrap"><table><thead><tr><th>Function y = f(x)</th><th>n<sup>th</sup> Derivative y<sub>n</sub> = D<sup>n</sup>y</th><th>Important Special Case</th></tr></thead><tbody>
+<tr><td><strong>(ax + b)<sup>m</sup></strong></td><td><strong>m(m − 1)…(m − n + 1) a<sup>n</sup> (ax + b)<sup>m−n</sup></strong></td><td>If <em>m = n</em> (positive integer), <strong>D<sup>n</sup>(ax + b)<sup>n</sup> = n! a<sup>n</sup></strong></td></tr>
+<tr><td><strong>1 / (ax + b)</strong></td><td><strong>(−1)<sup>n</sup> n! a<sup>n</sup> / (ax + b)<sup>n+1</sup></strong></td><td>Used via partial fractions for rational functions</td></tr>
+<tr><td><strong>log(ax + b)</strong></td><td><strong>(−1)<sup>n−1</sup> (n − 1)! a<sup>n</sup> / (ax + b)<sup>n</sup></strong></td><td>First derivative is <em>a / (ax + b)</em></td></tr>
+<tr><td><strong>e<sup>ax</sup></strong></td><td><strong>a<sup>n</sup> e<sup>ax</sup></strong></td><td>For <em>a<sup>mx</sup></em>: <strong>(m log a)<sup>n</sup> a<sup>mx</sup></strong></td></tr>
+<tr><td><strong>sin(ax + b)</strong></td><td><strong>a<sup>n</sup> sin(ax + b + nπ/2)</strong></td><td>Each differentiation shifts phase by <em>+π/2</em></td></tr>
+<tr><td><strong>cos(ax + b)</strong></td><td><strong>a<sup>n</sup> cos(ax + b + nπ/2)</strong></td><td>Each differentiation shifts phase by <em>+π/2</em></td></tr>
+<tr><td><strong>e<sup>ax</sup> sin(bx + c)</strong></td><td><strong>r<sup>n</sup> e<sup>ax</sup> sin(bx + c + nφ)</strong></td><td>where <strong>r = √(a<sup>2</sup> + b<sup>2</sup>)</strong> and <strong>φ = tan<sup>−1</sup>(b/a)</strong></td></tr>
+<tr><td><strong>e<sup>ax</sup> cos(bx + c)</strong></td><td><strong>r<sup>n</sup> e<sup>ax</sup> cos(bx + c + nφ)</strong></td><td>where <strong>r = √(a<sup>2</sup> + b<sup>2</sup>)</strong> and <strong>φ = tan<sup>−1</sup>(b/a)</strong></td></tr>
+</tbody></table></div>
+
+<h4>Leibnitz's Theorem for the n<sup>th</sup> Derivative of a Product</h4>
+<div class="box">
+<p><strong>Statement:</strong> If <em>u</em> and <em>v</em> are two functions of <em>x</em> possessing derivatives up to the <em>n<sup>th</sup></em> order, then the <em>n<sup>th</sup></em> derivative of their product <em>(uv)</em> is given by:</p>
+<p><strong>(uv)<sub>n</sub> = u<sub>n</sub>v + <sup>n</sup>C<sub>1</sub> u<sub>n−1</sub>v<sub>1</sub> + <sup>n</sup>C<sub>2</sub> u<sub>n−2</sub>v<sub>2</sub> + … + <sup>n</sup>C<sub>r</sub> u<sub>n−r</sub>v<sub>r</sub> + … + u v<sub>n</sub></strong></p>
+<p><strong>Practical Rule:</strong> Choose <strong>v</strong> as the algebraic polynomial (like <em>x<sup>2</sup></em> or <em>1 − x<sup>2</sup></em>) so that its higher derivatives vanish after 2 or 3 terms!</p>
+</div>
+
+<h4>Solved Example 2.1: Leibnitz's Theorem &amp; Finding y<sub>n</sub>(0)</h4>
+<p><strong>Problem:</strong> If <strong>y = sin(m sin<sup>−1</sup> x)</strong>, prove that <strong>(1 − x<sup>2</sup>)y<sub>2</sub> − x y<sub>1</sub> + m<sup>2</sup> y = 0</strong>, and hence prove by Leibnitz's theorem that <strong>(1 − x<sup>2</sup>)y<sub>n+2</sub> − (2n + 1)x y<sub>n+1</sub> − (n<sup>2</sup> − m<sup>2</sup>)y<sub>n</sub> = 0</strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Differentiate <em>y = sin(m sin<sup>−1</sup> x)</em> with respect to <em>x</em>:<br/>
+<em>y<sub>1</sub> = cos(m sin<sup>−1</sup> x) · [ m / √(1 − x<sup>2</sup>) ]</em> ⇒ <em>√(1 − x<sup>2</sup>) y<sub>1</sub> = m cos(m sin<sup>−1</sup> x)</em>.<br/>
+Squaring both sides: <em>(1 − x<sup>2</sup>) y<sub>1</sub><sup>2</sup> = m<sup>2</sup> cos<sup>2</sup>(m sin<sup>−1</sup> x) = m<sup>2</sup> (1 − y<sup>2</sup>)</em>.</li>
+<li>Differentiate again with respect to <em>x</em>:<br/>
+<em>(1 − x<sup>2</sup>)(2 y<sub>1</sub> y<sub>2</sub>) + y<sub>1</sub><sup>2</sup>(−2x) = −2 m<sup>2</sup> y y<sub>1</sub></em>.<br/>
+Dividing throughout by <em>2y<sub>1</sub></em> gives: <strong>(1 − x<sup>2</sup>)y<sub>2</sub> − x y<sub>1</sub> + m<sup>2</sup>y = 0</strong>.</li>
+<li>Apply <strong>Leibnitz's Theorem</strong> to differentiate each term <em>n</em> times:<br/>
+• <em>D<sup>n</sup>[(1 − x<sup>2</sup>)y<sub>2</sub>] = y<sub>n+2</sub>(1 − x<sup>2</sup>) + n y<sub>n+1</sub>(−2x) + [n(n − 1)/2] y<sub>n</sub>(−2)</em><br/>
+• <em>D<sup>n</sup>[−x y<sub>1</sub>] = −[ y<sub>n+1</sub>(x) + n y<sub>n</sub>(1) ]</em><br/>
+• <em>D<sup>n</sup>[m<sup>2</sup> y] = m<sup>2</sup> y<sub>n</sub></em></li>
+<li>Combine like terms:<br/>
+<em>(1 − x<sup>2</sup>)y<sub>n+2</sub> − (2n + 1)x y<sub>n+1</sub> − (n<sup>2</sup> − n + n − m<sup>2</sup>)y<sub>n</sub> = 0</em><br/>
+<strong>(1 − x<sup>2</sup>)y<sub>n+2</sub> − (2n + 1)x y<sub>n+1</sub> − (n<sup>2</sup> − m<sup>2</sup>)y<sub>n</sub> = 0</strong>. (Hence Proved!)</li>
+</ol>
+</div>
+
+<h3>2.2 Mean Value Theorems: Rolle's, Lagrange's &amp; Cauchy's (TSO 2b)</h3>
+<div class="table-wrap"><table><thead><tr><th>Theorem</th><th>Hypotheses on [a, b]</th><th>Conclusion (for some c ∈ (a, b))</th><th>Geometrical / Physical Meaning</th></tr></thead><tbody>
+<tr><td><strong>1. Rolle's Theorem</strong></td><td>1. <em>f(x)</em> is continuous on <em>[a, b]</em><br/>2. <em>f(x)</em> is differentiable on <em>(a, b)</em><br/>3. <strong>f(a) = f(b)</strong></td><td><strong>f'(c) = 0</strong></td><td>There is at least one point <em>c ∈ (a, b)</em> where the tangent to the curve is <strong>parallel to the x-axis</strong> (horizontal tangent).</td></tr>
+<tr><td><strong>2. Lagrange's Mean Value Theorem (LMVT)</strong></td><td>1. <em>f(x)</em> is continuous on <em>[a, b]</em><br/>2. <em>f(x)</em> is differentiable on <em>(a, b)</em></td><td><strong>f'(c) = [f(b) − f(a)] / (b − a)</strong></td><td>There is at least one point <em>c ∈ (a, b)</em> where the tangent is <strong>parallel to the secant chord</strong> joining <em>(a, f(a))</em> and <em>(b, f(b))</em>.</td></tr>
+<tr><td><strong>3. Cauchy's Mean Value Theorem (CMVT)</strong></td><td>1. <em>f(x), g(x)</em> continuous on <em>[a, b]</em><br/>2. <em>f(x), g(x)</em> differentiable on <em>(a, b)</em><br/>3. <strong>g'(x) ≠ 0</strong> for all <em>x ∈ (a, b)</em></td><td><strong>f'(c) / g'(c) = [f(b) − f(a)] / [g(b) − g(a)]</strong></td><td>Tangent to the parametric curve <em>x = g(t), y = f(t)</em> at <em>t = c</em> is parallel to the chord joining endpoints <em>t = a</em> and <em>t = b</em>.</td></tr>
+</tbody></table></div>
+
+<h4>Solved Example 2.2: Inequality Proof Using Lagrange's Mean Value Theorem</h4>
+<p><strong>Problem:</strong> Using Lagrange's Mean Value Theorem, prove that <strong>x / (1 + x) &lt; log(1 + x) &lt; x</strong> for all <strong>x &gt; 0</strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong> Let <em>f(t) = log(1 + t)</em> on the interval <em>[0, x]</em> for <em>x &gt; 0</em>. Since <em>f(t)</em> is continuous on <em>[0, x]</em> and differentiable on <em>(0, x)</em> with <em>f'(t) = 1 / (1 + t)</em>, by LMVT there exists <em>c ∈ (0, x)</em> such that:</p>
+<p><strong>[ log(1 + x) − log(1 + 0) ] / (x − 0) = f'(c) = 1 / (1 + c) &nbsp; ⇒ &nbsp; log(1 + x) / x = 1 / (1 + c)</strong></p>
+<p>Since <em>0 &lt; c &lt; x</em>, we have <em>1 &lt; 1 + c &lt; 1 + x</em>. Taking reciprocals reverses the inequalities:</p>
+<p><strong>1 / (1 + x) &lt; 1 / (1 + c) &lt; 1 &nbsp; ⇒ &nbsp; 1 / (1 + x) &lt; log(1 + x) / x &lt; 1</strong></p>
+<p>Multiplying throughout by <em>x &gt; 0</em> gives: <strong>x / (1 + x) &lt; log(1 + x) &lt; x</strong>. (Hence Proved!)</p>
+</div>
+
+<h3>2.3 Indeterminate Forms &amp; L'Hospital's Rule (TSO 2c)</h3>
+<p>When evaluating <em>lim<sub>x→a</sub> F(x)</em> yields one of the <strong>seven indeterminate forms</strong>: <strong>0/0, &nbsp;∞/∞, &nbsp;0 × ∞, &nbsp;∞ − ∞, &nbsp;0<sup>0</sup>, &nbsp;∞<sup>0</sup>, &nbsp;1<sup>∞</sup></strong>, we reduce the expression to <strong>0/0</strong> or <strong>∞/∞</strong> and apply <strong>L'Hospital's Rule</strong>:</p>
+<div class="box">
+<p><strong>L'Hospital's Rule:</strong> If <em>lim<sub>x→a</sub> f(x)/g(x)</em> is of the form <em>0/0</em> or <em>∞/∞</em>, then:</p>
+<p><strong>lim<sub>x→a</sub> [ f(x) / g(x) ] = lim<sub>x→a</sub> [ f'(x) / g'(x) ]</strong> &nbsp;(provided the latter limit exists).</p>
+<ul>
+<li><strong>Form 0 × ∞:</strong> Rewrite <em>f(x) · g(x)</em> as <em>f(x) / [1/g(x)]</em> (0/0) or <em>g(x) / [1/f(x)]</em> (∞/∞).</li>
+<li><strong>Form ∞ − ∞:</strong> Combine fractions by taking a common denominator or rationalizing to get <em>0/0</em>.</li>
+<li><strong>Exponential Forms (0<sup>0</sup>, ∞<sup>0</sup>, 1<sup>∞</sup>):</strong> For <em>y = [f(x)]<sup>g(x)</sup></em>, take natural log: <strong>log y = g(x) log f(x) = [log f(x)] / [1/g(x)]</strong>. If <em>lim (log y) = L</em>, then the required limit is <strong>e<sup>L</sup></strong>.<br/>
+<em>Shortcut for 1<sup>∞</sup> form:</em> If <em>lim<sub>x→a</sub> f(x) = 1</em> and <em>lim<sub>x→a</sub> g(x) = ∞</em>, then <strong>lim<sub>x→a</sub> [f(x)]<sup>g(x)</sup> = exp( lim<sub>x→a</sub> g(x) [f(x) − 1] )</strong>.</li>
+</ul>
+</div>
+
+<h4>Solved Example 2.3: L'Hospital's Rule</h4>
+<p><strong>Problem:</strong> Evaluate <strong>L = lim<sub>x→0</sub> [ (tan x) / x ]<sup>1 / x<sup>2</sup></sup></strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong> As <em>x → 0</em>, <em>(tan x)/x → 1</em> and <em>1/x<sup>2</sup> → ∞</em>, so this is the <strong>1<sup>∞</sup></strong> indeterminate form.<br/>
+Taking logarithms and using standard Maclaurin expansion <em>tan x = x + x<sup>3</sup>/3 + 2x<sup>5</sup>/15 + …</em> (or repeated L'Hospital's Rule):</p>
+<p><strong>log L = lim<sub>x→0</sub> [ log((tan x)/x) ] / x<sup>2</sup> = lim<sub>x→0</sub> [ (tan x / x) − 1 ] / x<sup>2</sup> = lim<sub>x→0</sub> [ (x + x<sup>3</sup>/3 + … − x) / x<sup>3</sup> ] = 1/3</strong>.</p>
+<p>Hence, <strong>L = e<sup>1/3</sup></strong>.</p>
+</div>
+
+<h3>2.4 Tangents, Normals &amp; Curvature (TSO 2d)</h3>
+<h4>1. Tangents and Normals of Algebraic (Cartesian) &amp; Polar Curves</h4>
+<div class="grid2">
+<div class="box">
+<h4>Cartesian Curve y = f(x) at Point P(x<sub>1</sub>, y<sub>1</sub>)</h4>
+<ul>
+<li><strong>Slope of Tangent:</strong> m = (dy/dx)<sub>(x<sub>1</sub>, y<sub>1</sub>)</sub> = tan ψ</li>
+<li><strong>Equation of Tangent:</strong> y − y<sub>1</sub> = m (x − x<sub>1</sub>)</li>
+<li><strong>Equation of Normal:</strong> y − y<sub>1</sub> = (−1/m) (x − x<sub>1</sub>)</li>
+<li><strong>Length of Subtangent:</strong> |y<sub>1</sub> / m|</li>
+<li><strong>Length of Subnormal:</strong> |y<sub>1</sub> · m|</li>
+</ul>
+</div>
+<div class="box">
+<h4>Polar Curve r = f(θ)</h4>
+<ul>
+<li><strong>Angle φ between radius vector OP and tangent:</strong><br/>
+<strong>tan φ = r (dθ / dr)</strong> &nbsp;or&nbsp; <strong>cot φ = (1/r)(dr/dθ)</strong></li>
+<li><strong>Angle between two polar curves at intersection:</strong><br/>
+<strong>tan α = | (tan φ<sub>1</sub> − tan φ<sub>2</sub>) / (1 + tan φ<sub>1</sub> tan φ<sub>2</sub>) |</strong></li>
+<li><strong>Pedal Equation (p-r relation):</strong> <em>p = r sin φ</em> and <strong>1/p<sup>2</sup> = 1/r<sup>2</sup> + (1/r<sup>4</sup>)(dr/dθ)<sup>2</sup></strong>.</li>
+</ul>
+</div>
+</div>
+
+<h4>2. Curvature (κ) and Radius of Curvature (ρ) (TSO 2d)</h4>
+<p>The <strong>curvature κ = |dψ / ds|</strong> measures the rate of bending of a curve at a point. Its reciprocal <strong>ρ = 1 / κ = |ds / dψ|</strong> is the <strong>Radius of Curvature</strong>.</p>
+<div class="table-wrap"><table><thead><tr><th>Coordinate Representation</th><th>Formula for Radius of Curvature (ρ)</th><th>Notes / Notation</th></tr></thead><tbody>
+<tr><td><strong>1. Intrinsic Equation s = f(ψ)</strong></td><td><strong>ρ = ds / dψ</strong></td><td>Direct definition of radius of curvature.</td></tr>
+<tr><td><strong>2. Cartesian Form y = f(x)</strong></td><td><strong>ρ = [ 1 + y<sub>1</sub><sup>2</sup> ]<sup>3/2</sup> / |y<sub>2</sub>|</strong></td><td><em>y<sub>1</sub> = dy/dx</em>, &nbsp;<em>y<sub>2</sub> = d<sup>2</sup>y/dx<sup>2</sup> ≠ 0</em>.<br/>(If tangent is vertical, swap x and y).</td></tr>
+<tr><td><strong>3. Parametric Form x = x(t), y = y(t)</strong></td><td><strong>ρ = [ (x')<sup>2</sup> + (y')<sup>2</sup> ]<sup>3/2</sup> / | x' y'' − y' x'' |</strong></td><td><em>x' = dx/dt</em>, &nbsp;<em>y' = dy/dt</em>.</td></tr>
+<tr><td><strong>4. Polar Form r = f(θ)</strong></td><td><strong>ρ = [ r<sup>2</sup> + r<sub>1</sub><sup>2</sup> ]<sup>3/2</sup> / | r<sup>2</sup> + 2r<sub>1</sub><sup>2</sup> − r r<sub>2</sub> |</strong></td><td><em>r<sub>1</sub> = dr/dθ</em>, &nbsp;<em>r<sub>2</sub> = d<sup>2</sup>r/dθ<sup>2</sup></em>.</td></tr>
+<tr><td><strong>5. Pedal Form p = f(r)</strong></td><td><strong>ρ = r (dr / dp)</strong></td><td>Very fast for spirals and cardioids!</td></tr>
+<tr><td><strong>6. Newton's Formula (at Origin)</strong></td><td>If x-axis is tangent at (0,0): <strong>ρ = lim<sub>x→0</sub> (x<sup>2</sup> / 2y)</strong><br/>If y-axis is tangent at (0,0): <strong>ρ = lim<sub>y→0</sub> (y<sup>2</sup> / 2x)</strong></td><td>Quick shortcut for algebraic curves passing through origin.</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<p><strong>Centre of Curvature (X̄, Ȳ) and Circle of Curvature:</strong> For a Cartesian curve <em>y = f(x)</em> at point <em>(x, y)</em>:</p>
+<p><strong>X̄ = x − [ y<sub>1</sub> (1 + y<sub>1</sub><sup>2</sup>) ] / y<sub>2</sub> , &nbsp;&nbsp; Ȳ = y + [ 1 + y<sub>1</sub><sup>2</sup> ] / y<sub>2</sub></strong></p>
+<p>The locus of the centre of curvature <em>(X̄, Ȳ)</em> is called the <strong>Evolute</strong> of the curve, and the circle <em>(X − X̄)<sup>2</sup> + (Y − Ȳ)<sup>2</sup> = ρ<sup>2</sup></em> is the <strong>Circle of Curvature</strong>.</p>
+</div>
+
+<h4>Solved Example 2.4: Radius of Curvature of a Polar Curve (Cardioid)</h4>
+<p><strong>Problem:</strong> Find the radius of curvature at any point <em>(r, θ)</em> on the cardioid <strong>r = a(1 + cos θ)</strong> and prove that <strong>ρ<sup>2</sup> / r</strong> is constant.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Differentiate <em>r = a(1 + cos θ)</em> with respect to <em>θ</em>:<br/>
+<em>r<sub>1</sub> = dr/dθ = −a sin θ</em>, &nbsp;&nbsp;<em>r<sub>2</sub> = d<sup>2</sup>r/dθ<sup>2</sup> = −a cos θ</em>.</li>
+<li>Compute <em>r<sup>2</sup> + r<sub>1</sub><sup>2</sup></em>:<br/>
+<em>r<sup>2</sup> + r<sub>1</sub><sup>2</sup> = a<sup>2</sup>(1 + cos θ)<sup>2</sup> + a<sup>2</sup> sin<sup>2</sup> θ = a<sup>2</sup>(1 + 2 cos θ + cos<sup>2</sup> θ + sin<sup>2</sup> θ) = 2a<sup>2</sup>(1 + cos θ) = 4a<sup>2</sup> cos<sup>2</sup>(θ/2)</em>.</li>
+<li>Compute <em>r<sup>2</sup> + 2r<sub>1</sub><sup>2</sup> − r r<sub>2</sub></em>:<br/>
+<em>= a<sup>2</sup>(1 + cos θ)<sup>2</sup> + 2a<sup>2</sup> sin<sup>2</sup> θ − a(1 + cos θ)(−a cos θ) = 3a<sup>2</sup>(1 + cos θ) = 6a<sup>2</sup> cos<sup>2</sup>(θ/2)</em>.</li>
+<li>Substitute into the polar radius of curvature formula:<br/>
+<strong>ρ = [ 4a<sup>2</sup> cos<sup>2</sup>(θ/2) ]<sup>3/2</sup> / [ 6a<sup>2</sup> cos<sup>2</sup>(θ/2) ] = [ 8a<sup>3</sup> cos<sup>3</sup>(θ/2) ] / [ 6a<sup>2</sup> cos<sup>2</sup>(θ/2) ] = (4a / 3) cos(θ/2)</strong>.</li>
+<li>Since <em>r = a(1 + cos θ) = 2a cos<sup>2</sup>(θ/2)</em>, we have <em>cos<sup>2</sup>(θ/2) = r / (2a)</em>. Squaring <em>ρ</em>:<br/>
+<strong>ρ<sup>2</sup> = (16a<sup>2</sup> / 9) cos<sup>2</sup>(θ/2) = (16a<sup>2</sup> / 9) · (r / 2a) = (8a / 9) r &nbsp; ⇒ &nbsp; ρ<sup>2</sup> / r = 8a / 9 = Constant</strong>. (Hence Proved!)</li>
+</ol>
+</div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit2">Practice exam questions for Unit 2</a> <a class="btn" href="q2.html">View Assignment Q2 Solution →</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit1.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit3.html">Next unit →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

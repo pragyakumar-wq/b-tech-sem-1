@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 1 | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="assignment.html">Assignment</a> › Question 1</p>
+<section id="q1">
+<p class="qno">Question 1 · Unit 1 (CO1)</p>
+<h2>Find the rank of a matrix using Row Echelon Form, state Rouche's Theorem for consistency of linear equations, and verify the Cayley-Hamilton Theorem for A = [2 −1 1; −1 2 −1; 1 −1 2] to find A<sup>−1</sup> and A<sup>4</sup>.</h2>
+
+<h3>Part A: Rank of a Matrix &amp; Rouche's Consistency Theorem</h3>
+<div class="box">
+<p><strong>1. Rank of a Matrix ρ(A):</strong> The rank of an <em>m × n</em> matrix <em>A</em> is the order <em>r</em> of its largest non-vanishing minor, or equivalently the <strong>number of non-zero rows</strong> when <em>A</em> is reduced to <strong>Row Echelon Form (REF)</strong> via elementary row transformations.</p>
+<p><strong>2. Rouche's Theorem for Linear System AX = B (n unknowns):</strong></p>
+<ul>
+<li>If <strong>ρ(A) ≠ ρ([A | B])</strong>: The system is <strong>inconsistent</strong> and has <strong>no solution</strong>.</li>
+<li>If <strong>ρ(A) = ρ([A | B]) = n</strong>: The system is <strong>consistent</strong> and has a <strong>unique solution</strong>.</li>
+<li>If <strong>ρ(A) = ρ([A | B]) = r &lt; n</strong>: The system is <strong>consistent</strong> and has <strong>infinitely many solutions</strong> involving <strong>(n − r)</strong> independent arbitrary parameters.</li>
+</ul>
+</div>
+
+<h3>Part B: Verification of Cayley-Hamilton Theorem &amp; Finding A<sup>−1</sup> and A<sup>4</sup></h3>
+<div class="box">
+<p><strong>Given Matrix:</strong></p>
+<pre class="tree">A = [  2  -1   1 ]
+    [ -1   2  -1 ]
+    [  1  -1   2 ]</pre>
+<p><strong>Step 1 — Characteristic Equation |A − λI| = 0:</strong><br/>
+For a 3 × 3 matrix, the characteristic equation is <strong>λ<sup>3</sup> − S<sub>1</sub>λ<sup>2</sup> + S<sub>2</sub>λ − |A| = 0</strong>:</p>
+<ul>
+<li><strong>S<sub>1</sub> = Trace(A)</strong> = 2 + 2 + 2 = <strong>6</strong></li>
+<li><strong>S<sub>2</sub> = Sum of principal minors</strong> = (4 − 1) + (4 − 1) + (4 − 1) = 3 + 3 + 3 = <strong>9</strong></li>
+<li><strong>|A| = Determinant of A</strong> = 2(4 − 1) − (−1)(−2 + 1) + 1(1 − 2) = 6 − 1 − 1 = <strong>4</strong></li>
+</ul>
+<p>Hence, the characteristic equation is: <strong>λ<sup>3</sup> − 6λ<sup>2</sup> + 9λ − 4 = 0</strong>.</p>
+<p><strong>Step 2 — Verification of Cayley-Hamilton Theorem:</strong><br/>
+We must show that <strong>A<sup>3</sup> − 6A<sup>2</sup> + 9A − 4I = 0</strong>:</p>
+<pre class="tree">A² = A · A = [  6  -5   5 ]      A³ = A² · A = [  22  -21   21 ]
+             [ -5   6  -5 ]                    [ -21   22  -21 ]
+             [  5  -5   6 ]                    [  21  -21   22 ]</pre>
+<p>Substituting into <em>A<sup>3</sup> − 6A<sup>2</sup> + 9A − 4I</em>:<br/>
+• Diagonal entries: <em>22 − 6(6) + 9(2) − 4(1) = 22 − 36 + 18 − 4 = 0</em>.<br/>
+• Off-diagonal (±) entries: <em>±(21 − 6(5) + 9(1) − 0) = ±(21 − 30 + 9) = 0</em>.<br/>
+Thus <strong>A<sup>3</sup> − 6A<sup>2</sup> + 9A − 4I = 0<sub>3×3</sub></strong>, verifying the Cayley-Hamilton Theorem.</p>
+<p><strong>Step 3 — Finding A<sup>−1</sup>:</strong> Multiply <em>A<sup>3</sup> − 6A<sup>2</sup> + 9A − 4I = 0</em> by <em>A<sup>−1</sup></em>:<br/>
+<strong>4I = A<sup>2</sup> − 6A + 9A · A<sup>−1</sup> &nbsp; ⇒ &nbsp; A<sup>−1</sup> = (1/4) [ A<sup>2</sup> − 6A + 9I ]</strong></p>
+<pre class="tree">A⁻¹ = (1/4) [  3   1  -1 ]
+            [  1   3   1 ]
+            [ -1   1   3 ]</pre>
+<p><strong>Step 4 — Finding A<sup>4</sup>:</strong> From <em>A<sup>3</sup> = 6A<sup>2</sup> − 9A + 4I</em>, multiply by <em>A</em>:<br/>
+<em>A<sup>4</sup> = 6A<sup>3</sup> − 9A<sup>2</sup> + 4A = 6(6A<sup>2</sup> − 9A + 4I) − 9A<sup>2</sup> + 4A = <strong>27A<sup>2</sup> − 50A + 24I</strong></em>:</p>
+<pre class="tree">A⁴ = [  86  -85   85 ]
+     [ -85   86  -85 ]
+     [  85  -85   86 ]</pre>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="assignment.html">← All questions</a>
+<a class="btn" href="q2.html">Next question →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 1 Notes | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="notes.html">Notes</a> › Unit 1</p>
+<section class="unit" id="u1">
+<p class="qno">Unit 1 · 8 hrs · Mapped to CO1</p>
+<h2>Basic Linear Algebra</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>1.1</strong> Elementary transformations and Rank of Matrix, Rank by using Echelon and Normal form of Matrices. Linear dependence &amp; independence of vectors in R<sup>n</sup> space</li>
+<li><strong>1.2</strong> Consistency of System of Linear Equations</li>
+<li><strong>1.3</strong> Eigenvalues &amp; Eigenvectors, Cayley-Hamilton Theorem</li>
+<li><strong>1.4</strong> Similarity of Matrices &amp; Diagonalization of Square Matrices. Quadratic Form, Canonical Form of Matrices</li>
+</ul>
+
+<h3>1.1 Elementary Transformations &amp; Rank of a Matrix</h3>
+<div class="box">
+<p><strong>Elementary Row / Column Operations:</strong> Any of the following three operations on a matrix <em>A</em> produces an <strong>equivalent matrix</strong> (denoted <em>A ~ B</em>) having the exact same rank:</p>
+<ul>
+<li><strong>Interchange:</strong> Swapping two rows or two columns (<em>R<sub>i</sub> ↔ R<sub>j</sub></em> or <em>C<sub>i</sub> ↔ C<sub>j</sub></em>).</li>
+<li><strong>Scaling:</strong> Multiplying all elements of a row or column by a non-zero scalar <em>k ≠ 0</em> (<em>R<sub>i</sub> → kR<sub>i</sub></em>).</li>
+<li><strong>Linear Combination:</strong> Adding to the elements of a row (or column) a scalar multiple of the corresponding elements of another row (or column) (<em>R<sub>i</sub> → R<sub>i</sub> + kR<sub>j</sub></em>).</li>
+</ul>
+</div>
+
+<h4>Definition of Rank of a Matrix — ρ(A)</h4>
+<div class="box">
+<p>A non-negative integer <strong>r</strong> is called the <strong>rank</strong> of an <em>m × n</em> matrix <em>A</em>, denoted by <strong>ρ(A) = r</strong>, if:</p>
+<ol>
+<li>There exists at least one non-zero minor of order <em>r</em> (i.e., determinant of an <em>r × r</em> submatrix ≠ 0).</li>
+<li>Every minor of order <em>(r + 1)</em> and higher (if any exist) is strictly zero.</li>
+</ol>
+<p><strong>Key Properties:</strong> For an <em>m × n</em> matrix <em>A</em>, <strong>0 ≤ ρ(A) ≤ min(m, n)</strong>. Rank of a null matrix is 0; rank of an identity matrix <em>I<sub>n</sub></em> is <em>n</em>; for a non-singular square matrix of order <em>n</em> (|A| ≠ 0), <strong>ρ(A) = n</strong>.</p>
+</div>
+
+<h4>Methods to Find the Rank of a Matrix (TSO 1a)</h4>
+<div class="table-wrap"><table><thead><tr><th>Method</th><th>Structure / Conditions</th><th>How Rank is Determined</th></tr></thead><tbody>
+<tr><td><strong>1. Minor / Determinant Method</strong></td><td>Compute determinants of square submatrices starting from the largest possible order.</td><td>Largest order <em>r</em> for which at least one minor is non-zero. Best for small 3 × 3 matrices.</td></tr>
+<tr><td><strong>2. Row Echelon Form (REF)</strong></td><td>Uses <strong>only row operations</strong>:<br/>• All zero rows are at the bottom.<br/>• The leading non-zero entry (pivot) of each row lies strictly to the right of the pivot of the row above it.</td><td><strong>ρ(A) = Number of non-zero rows</strong> in Row Echelon Form.</td></tr>
+<tr><td><strong>3. Normal Form (Canonical Form)</strong></td><td>Uses <strong>both row and column operations</strong> to reduce <em>A</em> into one of the four block forms:<br/>[ I<sub>r</sub> &nbsp; 0 ; 0 &nbsp; 0 ], &nbsp;[ I<sub>r</sub> &nbsp; 0 ], &nbsp;[ I<sub>r</sub> ; 0 ], or [ I<sub>r</sub> ].</td><td><strong>ρ(A) = r</strong>, where <em>I<sub>r</sub></em> is the identity matrix of order <em>r</em>.</td></tr>
+<tr><td><strong>4. PAQ Form</strong></td><td>Find non-singular matrices <em>P</em> (via row ops on <em>I<sub>m</sub></em>) and <em>Q</em> (via col ops on <em>I<sub>n</sub></em>) such that <strong>PAQ = [ I<sub>r</sub> &nbsp; 0 ; 0 &nbsp; 0 ]</strong>.</td><td><strong>ρ(A) = r</strong>.</td></tr>
+</tbody></table></div>
+
+<h4>Solved Example 1.1: Rank by Row Echelon Form &amp; Normal Form</h4>
+<p><strong>Problem:</strong> Find the rank of the matrix <em>A</em> by reducing it to Row Echelon Form:</p>
+<pre class="tree">A = [  1   2   3   0 ]
+    [  2   4   3   2 ]
+    [  3   2   1   3 ]
+    [  6   8   7   5 ]</pre>
+<div class="box">
+<p><strong>Solution (Step-by-Step Row Reduction):</strong></p>
+<ol>
+<li>Apply <em>R<sub>2</sub> → R<sub>2</sub> − 2R<sub>1</sub></em>, &nbsp;<em>R<sub>3</sub> → R<sub>3</sub> − 3R<sub>1</sub></em>, &nbsp;<em>R<sub>4</sub> → R<sub>4</sub> − 6R<sub>1</sub></em>:
+<pre class="tree">~ [  1    2    3    0 ]
+  [  0    0   -3    2 ]
+  [  0   -4   -8    3 ]
+  [  0   -4  -11    5 ]</pre></li>
+<li>Interchange <em>R<sub>2</sub> ↔ R<sub>3</sub></em> so the second row has a non-zero pivot in column 2:
+<pre class="tree">~ [  1    2    3    0 ]
+  [  0   -4   -8    3 ]
+  [  0    0   -3    2 ]
+  [  0   -4  -11    5 ]</pre></li>
+<li>Apply <em>R<sub>4</sub> → R<sub>4</sub> − R<sub>2</sub></em>:
+<pre class="tree">~ [  1    2    3    0 ]
+  [  0   -4   -8    3 ]
+  [  0    0   -3    2 ]
+  [  0    0   -3    2 ]</pre></li>
+<li>Apply <em>R<sub>4</sub> → R<sub>4</sub> − R<sub>3</sub></em>:
+<pre class="tree">~ [  1    2    3    0 ]
+  [  0   -4   -8    3 ]
+  [  0    0   -3    2 ]
+  [  0    0    0    0 ]</pre></li>
+</ol>
+<p>This matrix is in <strong>Row Echelon Form</strong> with <strong>3 non-zero rows</strong>. Hence, <strong>Rank ρ(A) = 3</strong>.</p>
+</div>
+
+<h4>Linear Dependence and Independence of Vectors in R<sup>n</sup></h4>
+<div class="box">
+<p>Let <em>X<sub>1</sub>, X<sub>2</sub>, …, X<sub>k</sub></em> be <em>k</em> vectors in <em>R<sup>n</sup></em>, and consider the vector equation:</p>
+<p><strong>c<sub>1</sub>X<sub>1</sub> + c<sub>2</sub>X<sub>2</sub> + … + c<sub>k</sub>X<sub>k</sub> = 0</strong></p>
+<ul>
+<li><strong>Linearly Independent (LI):</strong> If the only solution is the trivial solution <strong>c<sub>1</sub> = c<sub>2</sub> = … = c<sub>k</sub> = 0</strong>. Equivalently, if we form a matrix <em>A</em> with these <em>k</em> vectors as rows, then <strong>ρ(A) = k</strong>.</li>
+<li><strong>Linearly Dependent (LD):</strong> If there exist scalars <em>c<sub>i</sub></em> (not all zero) satisfying the equation. Equivalently, <strong>ρ(A) &lt; k</strong> (for <em>k = n</em> vectors in <em>R<sup>n</sup></em>, they are LD iff <strong>|A| = 0</strong>).</li>
+</ul>
+</div>
+
+<h3>1.2 Consistency of System of Linear Equations (TSO 1b)</h3>
+<p>Consider a system of <em>m</em> linear equations in <em>n</em> unknowns written in matrix form as <strong>AX = B</strong>, where <em>A</em> is the <em>m × n</em> coefficient matrix and <strong>[A | B]</strong> is the <em>m × (n + 1)</em> augmented matrix.</p>
+
+<h4>Rouche's Theorem (Rank Test for Non-Homogeneous Systems AX = B)</h4>
+<div class="table-wrap"><table><thead><tr><th>Condition on Ranks</th><th>Consistency</th><th>Nature of Solution</th><th>Number of Free Variables</th></tr></thead><tbody>
+<tr><td><strong>ρ(A) ≠ ρ([A | B])</strong> (i.e. ρ(A) &lt; ρ([A | B]))</td><td><strong>Inconsistent</strong></td><td><strong>No Solution</strong> (Parallel / conflicting planes)</td><td>None</td></tr>
+<tr><td><strong>ρ(A) = ρ([A | B]) = n</strong> (number of unknowns)</td><td><strong>Consistent</strong></td><td><strong>Unique Solution</strong></td><td>0</td></tr>
+<tr><td><strong>ρ(A) = ρ([A | B]) = r &lt; n</strong></td><td><strong>Consistent</strong></td><td><strong>Infinitely Many Solutions</strong></td><td><strong>(n − r)</strong> arbitrary parameters</td></tr>
+</tbody></table></div>
+
+<h4>Homogeneous System of Linear Equations (AX = 0)</h4>
+<div class="box">
+<p>Since <em>ρ(A) = ρ([A | 0])</em> always holds, a homogeneous system <strong>AX = 0 is ALWAYS consistent</strong>:</p>
+<ul>
+<li><strong>Case 1: ρ(A) = n</strong> (or <strong>|A| ≠ 0</strong> when <em>m = n</em>) ⇒ Only the <strong>Trivial Solution (X = 0)</strong> exists.</li>
+<li><strong>Case 2: ρ(A) = r &lt; n</strong> (or <strong>|A| = 0</strong> when <em>m = n</em>) ⇒ <strong>Infinitely many Non-Trivial Solutions</strong> exist with <strong>(n − r)</strong> linearly independent solutions (nullity of <em>A</em>).</li>
+</ul>
+</div>
+
+<h4>Solved Example 1.2: Testing Consistency (Parameters λ and μ)</h4>
+<p><strong>Problem:</strong> Investigate for what values of <em>λ</em> and <em>μ</em> the simultaneous equations <em>x + y + z = 6</em>, <em>x + 2y + 3z = 10</em>, <em>x + 2y + λz = μ</em> have: (i) no solution, (ii) a unique solution, (iii) an infinite number of solutions.</p>
+<div class="box">
+<p><strong>Solution:</strong> Write the augmented matrix <em>[A | B]</em> and apply <em>R<sub>2</sub> → R<sub>2</sub> − R<sub>1</sub></em>, <em>R<sub>3</sub> → R<sub>3</sub> − R<sub>1</sub></em>, followed by <em>R<sub>3</sub> → R<sub>3</sub> − R<sub>2</sub></em>:</p>
+<pre class="tree">[A | B] = [ 1   1   1   |   6  ]      [ 1   1     1     |    6    ]
+          [ 1   2   3   |  10  ]  ~   [ 0   1     2     |    4    ]
+          [ 1   2   λ   |   μ  ]      [ 0   0   λ - 3   |  μ - 10 ]</pre>
+<ul>
+<li><strong>(i) No Solution:</strong> Requires <em>ρ(A) ≠ ρ([A | B])</em> ⇒ <strong>λ = 3</strong> and <strong>μ ≠ 10</strong> (gives <em>ρ(A) = 2 ≠ ρ([A | B]) = 3</em>).</li>
+<li><strong>(ii) Unique Solution:</strong> Requires <em>ρ(A) = ρ([A | B]) = 3</em> ⇒ <strong>λ ≠ 3</strong> and <strong>μ is any real number</strong>.</li>
+<li><strong>(iii) Infinite Solutions:</strong> Requires <em>ρ(A) = ρ([A | B]) = 2 &lt; 3</em> ⇒ <strong>λ = 3</strong> and <strong>μ = 10</strong>.</li>
+</ul>
+</div>
+
+<h3>1.3 Eigenvalues, Eigenvectors &amp; Cayley-Hamilton Theorem (TSO 1c)</h3>
+<div class="box">
+<p>Let <em>A</em> be an <em>n × n</em> square matrix. A scalar <strong>λ</strong> is called an <strong>eigenvalue</strong> (characteristic root / latent root) and a non-zero column vector <strong>X ≠ 0</strong> is called the corresponding <strong>eigenvector</strong> if:</p>
+<p><strong>AX = λX &nbsp; ⟺ &nbsp; (A − λI)X = 0</strong></p>
+<p>For a non-trivial solution <em>X ≠ 0</em>, the characteristic determinant must vanish: <strong>|A − λI| = 0</strong> (Characteristic Equation).</p>
+<p><strong>Shortcut for 3 × 3 Matrix:</strong> The characteristic polynomial of a 3 × 3 matrix <em>A</em> is:</p>
+<p><strong>λ<sup>3</sup> − S<sub>1</sub>λ<sup>2</sup> + S<sub>2</sub>λ − |A| = 0</strong></p>
+<p>where <strong>S<sub>1</sub> = Trace(A) = a<sub>11</sub> + a<sub>22</sub> + a<sub>33</sub></strong>, &nbsp;<strong>S<sub>2</sub> = Sum of minors of main diagonal elements</strong>, and <strong>|A| = Determinant of A</strong>.</p>
+</div>
+
+<h4>Important Properties of Eigenvalues &amp; Eigenvectors</h4>
+<ul class="cards">
+<li><strong>Sum of Eigenvalues:</strong> λ<sub>1</sub> + λ<sub>2</sub> + … + λ<sub>n</sub> = Trace(A) = Sum of main diagonal elements.</li>
+<li><strong>Product of Eigenvalues:</strong> λ<sub>1</sub> · λ<sub>2</sub> · … · λ<sub>n</sub> = |A| (Determinant of A).</li>
+<li><strong>Powers &amp; Inverse:</strong> If λ is an eigenvalue of A, then <strong>λ<sup>k</sup></strong> is an eigenvalue of A<sup>k</sup>, and <strong>1/λ</strong> is an eigenvalue of A<sup>−1</sup> (with the same eigenvector X).</li>
+<li><strong>Triangular / Diagonal Matrix:</strong> The eigenvalues of an upper/lower triangular or diagonal matrix are simply its main diagonal entries.</li>
+<li><strong>Real Symmetric Matrix:</strong> All eigenvalues are purely <strong>real</strong>, and eigenvectors corresponding to distinct eigenvalues are mutually <strong>orthogonal</strong> (X<sub>i</sub><sup>T</sup> X<sub>j</sub> = 0).</li>
+<li><strong>Transpose:</strong> A and A<sup>T</sup> have the exact same characteristic equation and therefore the same eigenvalues.</li>
+</ul>
+
+<h4>Cayley-Hamilton Theorem (TSO 1c)</h4>
+<div class="box">
+<p><strong>Statement:</strong> <em>"Every square matrix satisfies its own characteristic equation."</em></p>
+<p>If the characteristic equation of an <em>n × n</em> matrix <em>A</em> is <strong>|A − λI| = (−1)<sup>n</sup> [λ<sup>n</sup> + c<sub>1</sub>λ<sup>n−1</sub> + c<sub>2</sub>λ<sup>n−2</sub> + … + c<sub>n</sub>] = 0</strong>, then replacing λ by the matrix <em>A</em> gives the matrix equation:</p>
+<p><strong>A<sup>n</sup> + c<sub>1</sub>A<sup>n−1</sup> + c<sub>2</sub>A<sup>n−2</sup> + … + c<sub>n</sub>I = 0</strong></p>
+<ul>
+<li><strong>To find A<sup>−1</sup>:</strong> Multiply the matrix equation by <em>A<sup>−1</sup></em> (valid when <em>c<sub>n</sub> = (−1)<sup>n</sup>|A| ≠ 0</em>):<br/>
+<strong>A<sup>−1</sup> = −(1 / c<sub>n</sub>) [A<sup>n−1</sup> + c<sub>1</sub>A<sup>n−2</sup> + … + c<sub>n−1</sub>I]</strong>.</li>
+<li><strong>To find higher integral powers (e.g., A<sup>4</sup>, A<sup>8</sup>):</strong> Express <em>A<sup>n</sup> = −c<sub>1</sub>A<sup>n−1</sup> − … − c<sub>n</sub>I</em> and multiply successively by <em>A</em>, or divide the target polynomial <em>f(λ)</em> by the characteristic polynomial <em>p(λ)</em> so <em>f(A) = r(A)</em> where <em>r(λ)</em> is the remainder.</li>
+</ul>
+</div>
+
+<h4>Solved Example 1.3: Cayley-Hamilton Theorem, A<sup>−1</sup> and A<sup>4</sup></h4>
+<p><strong>Problem:</strong> Verify Cayley-Hamilton theorem for <em>A = [ 2 &nbsp; −1 &nbsp; 1 ; −1 &nbsp; 2 &nbsp; −1 ; 1 &nbsp; −1 &nbsp; 2 ]</em> and hence find <em>A<sup>−1</sup></em> and <em>A<sup>4</sup></em>.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li><strong>Characteristic Equation:</strong><br/>
+• <em>S<sub>1</sub> = Trace(A) = 2 + 2 + 2 = 6</em><br/>
+• <em>S<sub>2</sub> = (4 − 1) + (4 − 1) + (4 − 1) = 3 + 3 + 3 = 9</em><br/>
+• <em>|A| = 2(3) − (−1)(−1) + 1(−1) = 6 − 1 − 1 = 4</em><br/>
+Hence the characteristic equation is <strong>λ<sup>3</sup> − 6λ<sup>2</sup> + 9λ − 4 = 0</strong> (whose roots are <strong>λ = 1, 1, 4</strong>).</li>
+<li><strong>Cayley-Hamilton Verification:</strong> By Cayley-Hamilton theorem, <strong>A<sup>3</sup> − 6A<sup>2</sup> + 9A − 4I = 0</strong>.<br/>
+Computing <em>A<sup>2</sup> = [ 6 &nbsp; −5 &nbsp; 5 ; −5 &nbsp; 6 &nbsp; −5 ; 5 &nbsp; −5 &nbsp; 6 ]</em> and <em>A<sup>3</sup> = [ 22 &nbsp; −21 &nbsp; 21 ; −21 &nbsp; 22 &nbsp; −21 ; 21 &nbsp; −21 &nbsp; 22 ]</em>:<br/>
+<em>A<sup>3</sup> − 6A<sup>2</sup> + 9A − 4I = [ 22 − 36 + 18 − 4, … ] = 0<sub>3×3</sub></em> (Verified!).</li>
+<li><strong>Finding A<sup>−1</sup>:</strong> Multiply by <em>A<sup>−1</sup></em>:<br/>
+<strong>4A<sup>−1</sup> = A<sup>2</sup> − 6A + 9I</strong><br/>
+<em>A<sup>−1</sup> = (1/4) ( [ 6 &nbsp; −5 &nbsp; 5 ; −5 &nbsp; 6 &nbsp; −5 ; 5 &nbsp; −5 &nbsp; 6 ] − [ 12 &nbsp; −6 &nbsp; 6 ; −6 &nbsp; 12 &nbsp; −6 ; 6 &nbsp; −6 &nbsp; 12 ] + [ 9 &nbsp; 0 &nbsp; 0 ; 0 &nbsp; 9 &nbsp; 0 ; 0 &nbsp; 0 &nbsp; 9 ] )</em><br/>
+<strong>A<sup>−1</sup> = (1/4) [ 3 &nbsp; 1 &nbsp; −1 ; 1 &nbsp; 3 &nbsp; 1 ; −1 &nbsp; 1 &nbsp; 3 ]</strong>.</li>
+<li><strong>Finding A<sup>4</sup>:</strong> Since <em>A<sup>3</sup> = 6A<sup>2</sup> − 9A + 4I</em>, multiply by <em>A</em>:<br/>
+<em>A<sup>4</sup> = 6A<sup>3</sup> − 9A<sup>2</sup> + 4A = 6(6A<sup>2</sup> − 9A + 4I) − 9A<sup>2</sup> + 4A = <strong>27A<sup>2</sup> − 50A + 24I</strong></em>.<br/>
+Substituting <em>A<sup>2</sup>, A, I</em> gives <strong>A<sup>4</sup> = [ 86 &nbsp; −85 &nbsp; 85 ; −85 &nbsp; 86 &nbsp; −85 ; 85 &nbsp; −85 &nbsp; 86 ]</strong>.</li>
+</ol>
+</div>
+
+<h3>1.4 Similarity of Matrices, Diagonalization, Quadratic &amp; Canonical Forms (TSO 1d)</h3>
+<div class="grid2">
+<div class="box">
+<h4>Similarity of Matrices</h4>
+<p>Two <em>n × n</em> matrices <em>A</em> and <em>B</em> are said to be <strong>similar</strong> if there exists an invertible (non-singular) matrix <em>P</em> such that:</p>
+<p><strong>B = P<sup>−1</sup> A P</strong></p>
+<ul>
+<li>Similar matrices have the <strong>same characteristic polynomial, eigenvalues, determinant, trace, and rank</strong>.</li>
+</ul>
+</div>
+<div class="box">
+<h4>Diagonalization of a Square Matrix</h4>
+<p>An <em>n × n</em> matrix <em>A</em> is <strong>diagonalizable</strong> if it has <em>n</em> linearly independent eigenvectors <em>X<sub>1</sub>, …, X<sub>n</sub></em>. Let <strong>P = [X<sub>1</sub> &nbsp; X<sub>2</sub> &nbsp; … &nbsp; X<sub>n</sub>]</strong> be the modal matrix. Then:</p>
+<p><strong>P<sup>−1</sup> A P = D = diag(λ<sub>1</sub>, λ<sub>2</sub>, …, λ<sub>n</sub>)</strong></p>
+<ul>
+<li>Allows fast matrix powers: <strong>A<sup>k</sup> = P D<sup>k</sup> P<sup>−1</sup></strong>.</li>
+<li>If <em>A</em> is real symmetric, it can be <strong>orthogonally diagonalized</strong>: <strong>N<sup>T</sup> A N = D</strong>, where <em>N</em> has orthonormalized eigenvectors (<em>N<sup>−1</sup> = N<sup>T</sup></em>).</li>
+</ul>
+</div>
+</div>
+
+<h4>Quadratic Forms and Canonical (Sum of Squares) Form (TSO 1d)</h4>
+<div class="box">
+<p>A homogeneous polynomial of second degree in <em>n</em> variables <em>X = [x<sub>1</sub>, x<sub>2</sub>, …, x<sub>n</sub>]<sup>T</sup></em> is called a <strong>Quadratic Form</strong>:</p>
+<p><strong>Q = X<sup>T</sup> A X = ∑<sub>i=1</sub><sup>n</sup> ∑<sub>j=1</sub><sup>n</sup> a<sub>ij</sub> x<sub>i</sub> x<sub>j</sub></strong></p>
+<p>For 3 variables <em>(x, y, z)</em>: <strong>Q = ax<sup>2</sup> + by<sup>2</sup> + cz<sup>2</sup> + 2f yz + 2g zx + 2h xy</strong>, where the symmetric matrix <em>A</em> is written with diagonal elements <em>(a, b, c)</em> and off-diagonal elements <em>a<sub>12</sub> = a<sub>21</sub> = h</em> (half of the coefficient of <em>xy</em>), <em>a<sub>13</sub> = a<sub>31</sub> = g</em> (half of <em>xz</em>), and <em>a<sub>23</sub> = a<sub>32</sub> = f</em> (half of <em>yz</em>).</p>
+<p><strong>Canonical Form (Sum of Squares Form):</strong> By an orthogonal transformation <strong>X = NY</strong> (where <em>N</em> is the normalized modal matrix of <em>A</em>), the quadratic form reduces to:</p>
+<p><strong>Q = Y<sup>T</sup> (N<sup>T</sup> A N) Y = λ<sub>1</sub> y<sub>1</sub><sup>2</sup> + λ<sub>2</sub> y<sub>2</sub><sup>2</sup> + … + λ<sub>n</sub> y<sub>n</sub><sup>2</sup></strong></p>
+<ul>
+<li><strong>Rank of Q (r):</strong> Total number of non-zero eigenvalues (non-zero squared terms in canonical form).</li>
+<li><strong>Index of Q (p):</strong> Number of positive eigenvalues (positive terms in canonical form).</li>
+<li><strong>Signature of Q (s):</strong> Difference between positive and negative terms: <strong>s = p − (r − p) = 2p − r</strong>.</li>
+</ul>
+</div>
+
+<h4>Nature of a Quadratic Form (Eigenvalue &amp; Sylvester's Principal Minor Criteria)</h4>
+<div class="table-wrap"><table><thead><tr><th>Nature of Quadratic Form Q</th><th>Eigenvalue Condition (λ<sub>1</sub>, …, λ<sub>n</sub>)</th><th>Principal Minor Condition (Δ<sub>1</sub>, Δ<sub>2</sub>, Δ<sub>3</sub>)</th></tr></thead><tbody>
+<tr><td><strong>1. Positive Definite</strong> (Q &gt; 0 for all X ≠ 0)</td><td>All eigenvalues are strictly positive (<strong>λ<sub>i</sub> &gt; 0</strong> for all <em>i</em>)</td><td>All leading principal minors are positive: <strong>Δ<sub>1</sub> &gt; 0, Δ<sub>2</sub> &gt; 0, Δ<sub>3</sub> &gt; 0</strong></td></tr>
+<tr><td><strong>2. Negative Definite</strong> (Q &lt; 0 for all X ≠ 0)</td><td>All eigenvalues are strictly negative (<strong>λ<sub>i</sub> &lt; 0</strong> for all <em>i</em>)</td><td>Leading principal minors alternate in sign: <strong>Δ<sub>1</sub> &lt; 0, Δ<sub>2</sub> &gt; 0, Δ<sub>3</sub> &lt; 0</strong></td></tr>
+<tr><td><strong>3. Positive Semidefinite</strong> (Q ≥ 0)</td><td>All <strong>λ<sub>i</sub> ≥ 0</strong> and at least one <strong>λ<sub>i</sub> = 0</strong></td><td>All principal minors ≥ 0 and |A| = 0</td></tr>
+<tr><td><strong>4. Negative Semidefinite</strong> (Q ≤ 0)</td><td>All <strong>λ<sub>i</sub> ≤ 0</strong> and at least one <strong>λ<sub>i</sub> = 0</strong></td><td>|A| = 0 and odd/even principal minors ≤ 0 / ≥ 0</td></tr>
+<tr><td><strong>5. Indefinite</strong> (Q takes both + and − signs)</td><td>Some eigenvalues are positive (<strong>λ<sub>i</sub> &gt; 0</strong>) and some are negative (<strong>λ<sub>j</sub> &lt; 0</strong>)</td><td>Fails the definite / semidefinite conditions above</td></tr>
+</tbody></table></div>
+
+<h4>Solved Example 1.4: Canonical Form, Rank, Index, Signature &amp; Nature of Quadratic Form</h4>
+<p><strong>Problem:</strong> Reduce the quadratic form <strong>Q = 3x<sup>2</sup> + 5y<sup>2</sup> + 3z<sup>2</sup> − 2yz + 2zx − 2xy</strong> to canonical form by orthogonal transformation and find its rank, index, signature, and nature.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li><strong>Symmetric Matrix A of Q:</strong> Half the coefficients of <em>xy, yz, zx</em> give <em>a<sub>12</sub> = −1, a<sub>23</sub> = −1, a<sub>13</sub> = 1</em>:
+<pre class="tree">A = [  3  -1   1 ]
+    [ -1   5  -1 ]
+    [  1  -1   3 ]</pre></li>
+<li><strong>Eigenvalues of A:</strong><br/>
+• <em>S<sub>1</sub> = 3 + 5 + 3 = 11</em><br/>
+• <em>S<sub>2</sub> = (15 − 1) + (9 − 1) + (15 − 1) = 14 + 8 + 14 = 36</em><br/>
+• <em>|A| = 3(14) − (−1)(−2) + 1(−4) = 42 − 2 − 4 = 36</em><br/>
+Characteristic equation: <strong>λ<sup>3</sup> − 11λ<sup>2</sup> + 36λ − 36 = 0</strong> ⇒ <strong>(λ − 2)(λ − 3)(λ − 6) = 0</strong>.<br/>
+Thus the eigenvalues are <strong>λ<sub>1</sub> = 2, &nbsp;λ<sub>2</sub> = 3, &nbsp;λ<sub>3</sub> = 6</strong>.</li>
+<li><strong>Canonical Form:</strong> Under orthogonal transformation <em>X = NY</em>, the canonical form is:<br/>
+<strong>Q = 2y<sub>1</sub><sup>2</sup> + 3y<sub>2</sub><sup>2</sup> + 6y<sub>3</sub><sup>2</sup></strong></li>
+<li><strong>Parameters &amp; Nature:</strong><br/>
+• <strong>Rank (r) = 3</strong> (all 3 eigenvalues are non-zero)<br/>
+• <strong>Index (p) = 3</strong> (all 3 eigenvalues are positive)<br/>
+• <strong>Signature (s) = 2p − r = 2(3) − 3 = 3</strong><br/>
+• <strong>Nature:</strong> Since all eigenvalues <em>(2, 3, 6) &gt; 0</em>, the quadratic form is <strong>Positive Definite</strong>.</li>
+</ol>
+</div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit1">Practice exam questions for Unit 1</a> <a class="btn" href="q1.html">View Assignment Q1 Solution →</a></p>
+</section>
+<div class="pager">
+<span></span>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit2.html">Next unit →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

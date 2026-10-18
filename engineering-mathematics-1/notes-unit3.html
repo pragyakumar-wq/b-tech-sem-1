@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 3 Notes | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="notes.html">Notes</a> › Unit 3</p>
+<section class="unit" id="u3">
+<p class="qno">Unit 3 · 9 hrs · Mapped to CO3</p>
+<h2>Differential Calculus: Several Variables</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>3.1</strong> Partial differentiations; Euler's theorems</li>
+<li><strong>3.2</strong> Limit, Continuity and differentiability of functions of Several Variables</li>
+<li><strong>3.3</strong> Taylor's theorem with various forms of remainders, Maclaurin's theorem and related problems</li>
+<li><strong>3.4</strong> Maxima &amp; Minima for functions of several variables; Lagrange's Multiplier Method</li>
+</ul>
+
+<h3>3.1 Partial Differentiation &amp; Euler's Theorem on Homogeneous Functions (TSO 3a)</h3>
+<div class="box">
+<p><strong>Partial Derivatives &amp; Standard Monge's Notation:</strong> For a function of two independent variables <em>z = f(x, y)</em>, partial derivatives are obtained by differentiating with respect to one variable while treating the other variable as a constant:</p>
+<ul>
+<li><strong>First-Order Partial Derivatives:</strong> <strong>p = ∂z/∂x = f<sub>x</sub></strong> , &nbsp;&nbsp;<strong>q = ∂z/∂y = f<sub>y</sub></strong></li>
+<li><strong>Second-Order Partial Derivatives:</strong> <strong>r = ∂<sup>2</sup>z/∂x<sup>2</sup> = f<sub>xx</sub></strong> , &nbsp;&nbsp;<strong>s = ∂<sup>2</sup>z/∂x∂y = f<sub>xy</sub></strong> , &nbsp;&nbsp;<strong>t = ∂<sup>2</sup>z/∂y<sup>2</sup> = f<sub>yy</sub></strong></li>
+<li><strong>Schwarz's / Clairaut's Theorem:</strong> If <em>f<sub>xy</sub></em> and <em>f<sub>yx</sub></em> are continuous in a region, then the mixed partial derivatives are equal: <strong>∂<sup>2</sup>z / ∂x∂y = ∂<sup>2</sup>z / ∂y∂x</strong>.</li>
+</ul>
+</div>
+
+<h4>Homogeneous Functions &amp; Euler's Theorems (TSO 3a)</h4>
+<div class="box">
+<p><strong>Homogeneous Function of Degree n:</strong> A function <em>f(x, y)</em> is said to be <strong>homogeneous of degree n</strong> if for any scale factor <em>t &gt; 0</em>:</p>
+<p><strong>f(tx, ty) = t<sup>n</sup> f(x, y) &nbsp;&nbsp; ⟺ &nbsp;&nbsp; f(x, y) = x<sup>n</sup> φ(y/x) = y<sup>n</sup> ψ(x/y)</strong></p>
+<p><strong>1. Euler's First-Order Theorem:</strong> If <em>u = f(x, y)</em> is a homogeneous function of degree <em>n</em> with continuous first-order partial derivatives, then:</p>
+<p><strong>x (∂u / ∂x) + y (∂u / ∂y) = n u</strong></p>
+<p><em>(For m variables x<sub>1</sub>, x<sub>2</sub>, …, x<sub>m</sub>: &nbsp;∑<sub>i=1</sub><sup>m</sup> x<sub>i</sub> (∂u / ∂x<sub>i</sub>) = n u).</em></p>
+<p><strong>2. Euler's Second-Order Deduction:</strong> If <em>u = f(x, y)</em> is homogeneous of degree <em>n</em> with continuous second-order partial derivatives, then:</p>
+<p><strong>x<sup>2</sup> (∂<sup>2</sup>u / ∂x<sup>2</sup>) + 2xy (∂<sup>2</sup>u / ∂x∂y) + y<sup>2</sup> (∂<sup>2</sup>u / ∂y<sup>2</sup>) = n(n − 1) u</strong></p>
+<p><strong>3. Deduction for Composite Homogeneous Functions u = F(v) where v = φ(u) is Homogeneous of Degree n:</strong></p>
+<ul>
+<li><strong>x (∂u / ∂x) + y (∂u / ∂y) = n · [ φ(u) / φ'(u) ] = g(u)</strong></li>
+<li><strong>x<sup>2</sup> u<sub>xx</sub> + 2xy u<sub>xy</sub> + y<sup>2</sup> u<sub>yy</sub> = g(u) [ g'(u) − 1 ]</strong></li>
+</ul>
+</div>
+
+<h4>Solved Example 3.1: Euler's Theorem on Composite Homogeneous Functions</h4>
+<p><strong>Problem:</strong> If <strong>u = sin<sup>−1</sup>[ (x<sup>2</sup> + y<sup>2</sup>) / (x + y) ]</strong>, prove that <strong>x (∂u/∂x) + y (∂u/∂y) = tan u</strong> and <strong>x<sup>2</sup> u<sub>xx</sub> + 2xy u<sub>xy</sub> + y<sup>2</sup> u<sub>yy</sub> = tan u (sec<sup>2</sup> u − 1) = tan<sup>3</sup> u</strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Rewrite the relation as: <strong>v = sin u = (x<sup>2</sup> + y<sup>2</sup>) / (x + y)</strong>.</li>
+<li>Check homogeneity of <em>v(x, y)</em>: <em>v(tx, ty) = t<sup>2</sup>(x<sup>2</sup> + y<sup>2</sup>) / [t(x + y)] = t<sup>1</sup> v(x, y)</em>.<br/>
+Thus <strong>v = sin u</strong> is a homogeneous function of degree <strong>n = 1</strong>.</li>
+<li>By Euler's Theorem on <em>v = φ(u) = sin u</em>:<br/>
+<strong>x (∂u/∂x) + y (∂u/∂y) = n · [ φ(u) / φ'(u) ] = 1 · (sin u / cos u) = tan u = g(u)</strong>.</li>
+<li>By the second-order deduction with <em>g(u) = tan u</em> and <em>g'(u) = sec<sup>2</sup> u</em>:<br/>
+<strong>x<sup>2</sup> u<sub>xx</sub> + 2xy u<sub>xy</sub> + y<sup>2</sup> u<sub>yy</sub> = g(u) [g'(u) − 1] = tan u (sec<sup>2</sup> u − 1) = tan<sup>3</sup> u</strong>. (Hence Proved!)</li>
+</ol>
+</div>
+
+<h3>3.2 Limit, Continuity, Differentiability, Total Derivatives &amp; Jacobians (TSO 3b)</h3>
+<div class="table-wrap"><table><thead><tr><th>Concept</th><th>Mathematical Definition / Condition</th><th>Key Exam Check / Test</th></tr></thead><tbody>
+<tr><td><strong>1. Simultaneous Limit</strong><br/>lim<sub>(x,y)→(a,b)</sub> f(x, y) = L</td><td>|f(x, y) − L| &lt; ε whenever 0 &lt; √((x−a)<sup>2</sup> + (y−b)<sup>2</sup>) &lt; δ, independent of the path of approach.</td><td><strong>Two-Path Test:</strong> Approach (0,0) along <strong>y = mx</strong> (or <strong>y = mx<sup>k</sup></strong>). If the limit depends on slope <em>m</em>, the simultaneous limit <strong>does not exist (DNE)</strong>.</td></tr>
+<tr><td><strong>2. Continuity at (a, b)</strong></td><td>1. f(a, b) is defined<br/>2. lim<sub>(x,y)→(a,b)</sub> f(x, y) exists<br/>3. <strong>lim<sub>(x,y)→(a,b)</sub> f(x, y) = f(a, b)</strong></td><td>Use polar substitution <strong>x = a + r cos θ, y = b + r sin θ</strong> as <em>r → 0</em>; if bounded by a function of <em>r</em> alone that → 0, limit exists and equals <em>f(a,b)</em>.</td></tr>
+<tr><td><strong>3. Differentiability at (a, b)</strong></td><td>Increment Δf = f(a+h, b+k) − f(a, b) satisfies:<br/><strong>Δf = h f<sub>x</sub>(a,b) + k f<sub>y</sub>(a,b) + √(h<sup>2</sup>+k<sup>2</sup>) · ε(h,k)</strong><br/>where <strong>lim<sub>(h,k)→(0,0)</sub> ε(h,k) = 0</strong>.</td><td><strong>Sufficient Condition:</strong> If <em>f<sub>x</sub></em> and <em>f<sub>y</sub></em> exist in a neighborhood of <em>(a,b)</em> and are continuous at <em>(a,b)</em>, then <em>f</em> is differentiable.<br/><em>Differentiability ⇒ Continuity</em> (and existence of <em>f<sub>x</sub>, f<sub>y</sub></em>), but mere existence of <em>f<sub>x</sub>, f<sub>y</sub></em> does NOT imply differentiability!</td></tr>
+<tr><td><strong>4. Total Differential &amp; Chain Rule</strong></td><td><strong>dz = (∂z/∂x)dx + (∂z/∂y)dy</strong><br/>If x = x(t), y = y(t): <strong>dz/dt = (∂z/∂x)(dx/dt) + (∂z/∂y)(dy/dt)</strong></td><td>For implicit function <strong>f(x, y) = 0</strong>:<br/><strong>dy / dx = − (∂f / ∂x) / (∂f / ∂y)</strong> (provided f<sub>y</sub> ≠ 0).</td></tr>
+<tr><td><strong>5. Jacobian J = ∂(u, v) / ∂(x, y)</strong></td><td>Determinant of first partial derivatives:<br/><strong>J = | ∂u/∂x &nbsp; ∂u/∂y ; ∂v/∂x &nbsp; ∂v/∂y |</strong></td><td>• <strong>Chain Rule:</strong> J · J' = [∂(u,v)/∂(x,y)] · [∂(x,y)/∂(u,v)] = 1.<br/>• <strong>Functional Dependence:</strong> <em>u</em> and <em>v</em> are functionally dependent iff <strong>∂(u, v)/∂(x, y) = 0</strong>.</td></tr>
+</tbody></table></div>
+
+<h3>3.3 Taylor's &amp; Maclaurin's Theorem for Two Variables (TSO 3c)</h3>
+<div class="box">
+<p><strong>Taylor's Theorem in the Neighborhood of (a, b):</strong> If <em>f(x, y)</em> and its partial derivatives up to order <em>n</em> are continuous in a neighborhood of <em>(a, b)</em>, then setting <strong>h = x − a</strong> and <strong>k = y − b</strong>:</p>
+<p><strong>f(x, y) = f(a, b) + [ (x − a)f<sub>x</sub>(a,b) + (y − b)f<sub>y</sub>(a,b) ] + (1/2!) [ (x − a)<sup>2</sup>f<sub>xx</sub>(a,b) + 2(x − a)(y − b)f<sub>xy</sub>(a,b) + (y − b)<sup>2</sup>f<sub>yy</sub>(a,b) ] + (1/3!) [ (x − a)(∂/∂x) + (y − b)(∂/∂y) ]<sup>3</sup> f(a, b) + … + R<sub>n</sub></strong></p>
+<p>where <strong>Lagrange's Form of Remainder after n terms</strong> is:</p>
+<p><strong>R<sub>n</sub> = (1 / n!) [ (x − a)(∂/∂x) + (y − b)(∂/∂y) ]<sup>n</sup> f(a + θh, b + θk) , &nbsp;&nbsp; 0 &lt; θ &lt; 1</strong>.</p>
+<p><strong>Maclaurin's Series (Special Case at Origin a = 0, b = 0):</strong></p>
+<p><strong>f(x, y) = f(0,0) + [ x f<sub>x</sub>(0,0) + y f<sub>y</sub>(0,0) ] + (1/2!) [ x<sup>2</sup> f<sub>xx</sub>(0,0) + 2xy f<sub>xy</sub>(0,0) + y<sup>2</sup> f<sub>yy</sub>(0,0) ] + …</strong></p>
+</div>
+
+<h4>Solved Example 3.2: Taylor's Series Expansion About (1, 1)</h4>
+<p><strong>Problem:</strong> Expand <strong>f(x, y) = x<sup>2</sup>y + 3y − 2</strong> in powers of <strong>(x − 1)</strong> and <strong>(y − 1)</strong> using Taylor's theorem.</p>
+<div class="box">
+<p><strong>Solution:</strong> Evaluate <em>f</em> and all its partial derivatives at <strong>(a, b) = (1, 1)</strong>:</p>
+<ul>
+<li><em>f(x, y) = x<sup>2</sup>y + 3y − 2 &nbsp; ⇒ &nbsp; <strong>f(1, 1) = 1 + 3 − 2 = 2</strong></em></li>
+<li><em>f<sub>x</sub> = 2xy ⇒ <strong>f<sub>x</sub>(1,1) = 2</strong> ; &nbsp;&nbsp; f<sub>y</sub> = x<sup>2</sup> + 3 ⇒ <strong>f<sub>y</sub>(1,1) = 4</strong></em></li>
+<li><em>f<sub>xx</sub> = 2y ⇒ <strong>f<sub>xx</sub>(1,1) = 2</strong> ; &nbsp;&nbsp; f<sub>xy</sub> = 2x ⇒ <strong>f<sub>xy</sub>(1,1) = 2</strong> ; &nbsp;&nbsp; f<sub>yy</sub> = 0 ⇒ <strong>f<sub>yy</sub>(1,1) = 0</strong></em></li>
+<li><em>f<sub>xxx</sub> = 0, &nbsp; f<sub>xxy</sub> = 2 ⇒ <strong>f<sub>xxy</sub>(1,1) = 2</strong>, &nbsp; f<sub>xyy</sub> = 0, &nbsp; f<sub>yyy</sub> = 0</em> (all higher derivatives are 0).</li>
+</ul>
+<p>Substituting into Taylor's formula:<br/>
+<strong>f(x, y) = 2 + [ 2(x − 1) + 4(y − 1) ] + (1/2!)[ 2(x − 1)<sup>2</sup> + 4(x − 1)(y − 1) ] + (1/3!)[ 3 · 2(x − 1)<sup>2</sup>(y − 1) ]</strong><br/>
+<strong>f(x, y) = 2 + 2(x − 1) + 4(y − 1) + (x − 1)<sup>2</sup> + 2(x − 1)(y − 1) + (x − 1)<sup>2</sup>(y − 1)</strong>.</p>
+</div>
+
+<h3>3.4 Maxima &amp; Minima of Functions of Several Variables &amp; Lagrange's Multipliers (TSO 3d)</h3>
+<h4>1. Unconstrained Extrema of f(x, y) — The (rt − s<sup>2</sup>) Second Derivative Test</h4>
+<div class="box">
+<p><strong>Step 1 (Stationary / Critical Points):</strong> Solve simultaneous equations <strong>p = ∂f/∂x = 0</strong> and <strong>q = ∂f/∂y = 0</strong> to find stationary points <em>(a, b)</em>.</p>
+<p><strong>Step 2 (Hessian Discriminant):</strong> At each stationary point <em>(a, b)</em>, compute <strong>r = f<sub>xx</sub>(a,b)</strong>, <strong>s = f<sub>xy</sub>(a,b)</strong>, <strong>t = f<sub>yy</sub>(a,b)</strong>, and <strong>Δ = rt − s<sup>2</sup></strong>:</p>
+<ul>
+<li><strong>If rt − s<sup>2</sup> &gt; 0 and r &lt; 0:</strong> <em>f(x, y)</em> has a <strong>Local Maximum</strong> at <em>(a, b)</em>.</li>
+<li><strong>If rt − s<sup>2</sup> &gt; 0 and r &gt; 0:</strong> <em>f(x, y)</em> has a <strong>Local Minimum</strong> at <em>(a, b)</em>.</li>
+<li><strong>If rt − s<sup>2</sup> &lt; 0:</strong> <em>(a, b)</em> is a <strong>Saddle Point</strong> (neither maximum nor minimum).</li>
+<li><strong>If rt − s<sup>2</sup> = 0:</strong> Test is <strong>inconclusive</strong> (further investigation of increment <em>Δf</em> required).</li>
+</ul>
+</div>
+
+<h4>2. Constrained Optimization: Lagrange's Method of Undetermined Multipliers (TSO 3d)</h4>
+<div class="box">
+<p>To find the stationary (extreme) values of an objective function <strong>u = f(x, y, z)</strong> subject to the constraint equation <strong>φ(x, y, z) = 0</strong>:</p>
+<ol>
+<li>Construct the <strong>Lagrangian Auxiliary Function</strong> using an undetermined multiplier <strong>λ</strong>:<br/>
+<strong>F(x, y, z, λ) = f(x, y, z) + λ φ(x, y, z)</strong></li>
+<li>Set the partial derivatives with respect to <em>x, y, z</em> to zero:<br/>
+<strong>∂F/∂x = ∂f/∂x + λ(∂φ/∂x) = 0 , &nbsp;&nbsp; ∂F/∂y = ∂f/∂y + λ(∂φ/∂y) = 0 , &nbsp;&nbsp; ∂F/∂z = ∂f/∂z + λ(∂φ/∂z) = 0</strong></li>
+<li>Solve these three equations together with the constraint <strong>φ(x, y, z) = 0</strong> to determine <em>λ</em> and the optimal point <em>(x, y, z)</em>.</li>
+</ol>
+</div>
+
+<h4>Solved Example 3.3: Engineering Design Optimization Using Lagrange's Multipliers</h4>
+<p><strong>Problem:</strong> A rectangular box, open at the top, is to have a given capacity (volume) of <strong>V = 32 cubic meters</strong>. Find the dimensions of the box requiring the <strong>least material</strong> (minimum surface area) for its construction.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li><strong>Objective &amp; Constraint:</strong> Let <em>x, y, z</em> be the length, breadth, and height of the open-top box.<br/>
+• Surface area to minimize: <strong>S = xy + 2yz + 2zx</strong><br/>
+• Volume constraint: <strong>φ(x, y, z) = xyz − 32 = 0</strong>.</li>
+<li><strong>Lagrangian Function:</strong> <strong>F(x, y, z, λ) = (xy + 2yz + 2zx) + λ(xyz − 32)</strong>.</li>
+<li><strong>First-Order Conditions:</strong><br/>
+• <em>∂F/∂x = y + 2z + λ yz = 0 &nbsp; ⇒ &nbsp; λ = −(1/z + 2/y)</em><br/>
+• <em>∂F/∂y = x + 2z + λ xz = 0 &nbsp; ⇒ &nbsp; λ = −(1/z + 2/x)</em><br/>
+• <em>∂F/∂z = 2y + 2x + λ xy = 0 &nbsp; ⇒ &nbsp; λ = −(2/x + 2/y)</em></li>
+<li><strong>Solve for x, y, z:</strong><br/>
+Equating the first two expressions for <em>λ</em> gives <strong>x = y</strong>.<br/>
+Equating the second and third gives <em>1/z = 2/y ⇒ <strong>y = 2z</strong></em>.<br/>
+Hence <strong>x = y = 2z</strong>. Substitute into the constraint <em>xyz = 32</em>:<br/>
+<em>(2z)(2z)(z) = 32 ⇒ 4z<sup>3</sup> = 32 ⇒ z<sup>3</sup> = 8 ⇒ <strong>z = 2 m</strong></em>.<br/>
+Therefore, <strong>x = 4 m, &nbsp;y = 4 m, &nbsp;z = 2 m</strong>, and minimum surface area <strong>S<sub>min</sub> = 16 + 16 + 16 = 48 m<sup>2</sup></strong>.</li>
+</ol>
+</div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit3">Practice exam questions for Unit 3</a> <a class="btn" href="q3.html">View Assignment Q3 Solution →</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit2.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit4.html">Next unit →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

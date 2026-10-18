@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 5 | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="assignment.html">Assignment</a> › Question 5</p>
+<section id="q5">
+<p class="qno">Question 5 · Unit 5 (CO5)</p>
+<h2>Define Gradient, Divergence, and Curl with physical significance. Prove that ∇ · (r<sup>n</sup> r) = (n + 3)r<sup>n</sup> and ∇ × (r<sup>n</sup> r) = 0. Also state Green's, Stokes', and Gauss' Divergence Theorems and verify Green's Theorem for ∮<sub>C</sub> [(xy + y<sup>2</sup>)dx + x<sup>2</sup> dy] bounded by y = x and y = x<sup>2</sup>.</h2>
+
+<h3>Part A: Proofs of Vector Identities for r<sup>n</sup> r</h3>
+<div class="box">
+<p>Let <strong>r = x i + y j + z k</strong> so that <em>r<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup></em> and <strong>∂r/∂x = x/r, &nbsp;∂r/∂y = y/r, &nbsp;∂r/∂z = z/r</strong>.</p>
+<p><strong>1. Proof that ∇ · (r<sup>n</sup> r) = (n + 3)r<sup>n</sup>:</strong><br/>
+Since <em>r<sup>n</sup> r = (r<sup>n</sup> x)i + (r<sup>n</sup> y)j + (r<sup>n</sup> z)k</em>:<br/>
+<em>∂(r<sup>n</sup> x)/∂x = r<sup>n</sup>(1) + x · n r<sup>n−1</sup> (∂r/∂x) = r<sup>n</sup> + n r<sup>n−2</sup> x<sup>2</sup></em>.<br/>
+Summing over <em>x, y, z</em>:<br/>
+<strong>∇ · (r<sup>n</sup> r) = 3 r<sup>n</sup> + n r<sup>n−2</sup>(x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup>) = 3 r<sup>n</sup> + n r<sup>n−2</sup> r<sup>2</sup> = (n + 3) r<sup>n</sup></strong>.<br/>
+<em>Corollary:</em> <strong>r<sup>n</sup> r is solenoidal (∇ · (r<sup>n</sup> r) = 0) if and only if n = −3</strong> (i.e., the inverse-square field <strong>r / r<sup>3</sup></strong>).</p>
+<p><strong>2. Proof that ∇ × (r<sup>n</sup> r) = 0 (Irrotational for all n):</strong><br/>
+The i-component of <em>∇ × (r<sup>n</sup> r)</em> is:<br/>
+<em>∂(r<sup>n</sup> z)/∂y − ∂(r<sup>n</sup> y)/∂z = z · n r<sup>n−1</sup>(y/r) − y · n r<sup>n−1</sup>(z/r) = n r<sup>n−2</sup> yz − n r<sup>n−2</sup> yz = 0</em>.<br/>
+By symmetry, the j- and k-components are also 0. Hence <strong>∇ × (r<sup>n</sup> r) = 0</strong>.</p>
+</div>
+
+<h3>Part B: Verification of Green's Theorem in the Plane</h3>
+<div class="box">
+<p><strong>Problem:</strong> Verify Green's Theorem <strong>∮<sub>C</sub> (M dx + N dy) = ∬<sub>R</sub> (∂N/∂x − ∂M/∂y) dx dy</strong> for <em>M = xy + y<sup>2</sup></em> and <em>N = x<sup>2</sup></em>, where <em>C</em> is the closed curve bounded by <strong>y = x<sup>2</sup></strong> and <strong>y = x</strong> (intersecting at <strong>(0,0)</strong> and <strong>(1,1)</strong>).</p>
+<ol>
+<li><strong>1. Evaluation of Double Integral (RHS):</strong><br/>
+Here <em>∂N/∂x = 2x</em> and <em>∂M/∂y = x + 2y</em>, so <strong>∂N/∂x − ∂M/∂y = 2x − (x + 2y) = x − 2y</strong>.<br/>
+<strong>RHS = ∫<sub>x=0</sub><sup>1</sup> ∫<sub>y=x<sup>2</sup></sub><sup>x</sup> (x − 2y) dy dx = ∫<sub>0</sub><sup>1</sup> [ xy − y<sup>2</sup> ]<sub>x<sup>2</sup></sub><sup>x</sup> dx = ∫<sub>0</sub><sup>1</sup> (x<sup>4</sup> − x<sup>3</sup>) dx = [ x<sup>5</sup>/5 − x<sup>4</sup>/4 ]<sub>0</sub><sup>1</sup> = 1/5 − 1/4 = −1 / 20</strong>.</li>
+<li><strong>2. Evaluation of Closed Line Integral (LHS = I<sub>1</sub> + I<sub>2</sub>):</strong><br/>
+• <strong>Along C<sub>1</sub> (parabola y = x<sup>2</sup>, dy = 2x dx from x = 0 to x = 1):</strong><br/>
+<em>I<sub>1</sub> = ∫<sub>0</sub><sup>1</sup> [ (x<sup>3</sup> + x<sup>4</sup>)dx + x<sup>2</sup>(2x dx) ] = ∫<sub>0</sub><sup>1</sup> (3x<sup>3</sup> + x<sup>4</sup>) dx = 3/4 + 1/5 = <strong>19 / 20</strong></em>.<br/>
+• <strong>Along C<sub>2</sub> (line y = x, dy = dx from x = 1 to x = 0):</strong><br/>
+<em>I<sub>2</sub> = ∫<sub>1</sub><sup>0</sup> [ (x<sup>2</sup> + x<sup>2</sup>)dx + x<sup>2</sup> dx ] = ∫<sub>1</sub><sup>0</sup> 3x<sup>2</sup> dx = [ x<sup>3</sup> ]<sub>1</sub><sup>0</sup> = <strong>−1</strong></em>.<br/>
+• <strong>Total LHS = I<sub>1</sub> + I<sub>2</sub> = 19/20 − 1 = −1 / 20</strong>.<br/>
+Since <strong>LHS = RHS = −1/20</strong>, Green's Theorem is verified!</li>
+</ol>
+</div>
+</section>
+<div class="pager">
+<a class="btn" href="q4.html">← Previous question</a>
+<a class="btn" href="assignment.html">All questions</a>
+<span></span>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

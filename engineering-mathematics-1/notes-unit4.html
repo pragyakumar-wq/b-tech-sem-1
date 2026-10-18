@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 4 Notes | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="notes.html">Notes</a> › Unit 4</p>
+<section class="unit" id="u4">
+<p class="qno">Unit 4 · 9 hrs · Mapped to CO4</p>
+<h2>Integral Calculus</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>4.1</strong> Differentiation under the integral sign; Leibnitz's rule</li>
+<li><strong>4.2</strong> Double integral; Change the order of integration; Evaluation of double integration by changing it into polar co-ordinates</li>
+<li><strong>4.3</strong> Triple Integral; Evaluation of Triple integral by changing to Spherical Polar co-ordinates &amp; Cylindrical polar co-ordinates</li>
+<li><strong>4.4</strong> Beta; Gamma; Elliptic integral; Relation between Beta &amp; Gamma functions, General Properties and related problems</li>
+</ul>
+
+<h3>4.1 Differentiation Under the Integral Sign — Leibnitz's Rule (TSO 4a)</h3>
+<div class="box">
+<p><strong>1. Constant Limits of Integration [a, b]:</strong> Let <em>I(α) = ∫<sub>a</sub><sup>b</sup> f(x, α) dx</em>, where <em>f(x, α)</em> and <em>∂f/∂α</em> are continuous on <em>[a, b] × [α<sub>1</sub>, α<sub>2</sub>]</em>. Then:</p>
+<p><strong>dI / dα = d/dα [ ∫<sub>a</sub><sup>b</sup> f(x, α) dx ] = ∫<sub>a</sub><sup>b</sup> [ ∂f(x, α) / ∂α ] dx</strong></p>
+<p><strong>2. General Leibnitz's Rule (Variable Limits u(α) and v(α)):</strong> If <em>I(α) = ∫<sub>u(α)</sub><sup>v(α)</sup> f(x, α) dx</em>, then:</p>
+<p><strong>dI / dα = ∫<sub>u(α)</sub><sup>v(α)</sup> [ ∂f(x, α) / ∂α ] dx + f(v(α), α) · (dv / dα) − f(u(α), α) · (du / dα)</strong></p>
+</div>
+
+<h4>Solved Example 4.1: Evaluating a Definite Integral Using Leibnitz's Rule</h4>
+<p><strong>Problem:</strong> Using differentiation under the integral sign (Leibnitz's Rule), evaluate <strong>I(α) = ∫<sub>0</sub><sup>π</sup> log(1 + α cos x) dx</strong> for <strong>|α| &lt; 1</strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Differentiate <em>I(α)</em> with respect to the parameter <em>α</em> under the integral sign (since limits 0 and π are constants):<br/>
+<strong>dI / dα = ∫<sub>0</sub><sup>π</sup> (∂/∂α) [ log(1 + α cos x) ] dx = ∫<sub>0</sub><sup>π</sup> [ cos x / (1 + α cos x) ] dx</strong>.</li>
+<li>Rewrite the numerator as <em>(1/α)[ (1 + α cos x) − 1 ]</em>:<br/>
+<strong>dI / dα = (1/α) ∫<sub>0</sub><sup>π</sup> [ 1 − 1 / (1 + α cos x) ] dx = (1/α) [ π − π / √(1 − α<sup>2</sup>) ]</strong><br/>
+<em>(using the standard integral ∫<sub>0</sub><sup>π</sup> dx / (1 + α cos x) = π / √(1 − α<sup>2</sup>) for |α| &lt; 1).</em></li>
+<li>Integrate with respect to <em>α</em>:<br/>
+<em>I(α) = π ∫ [ 1/α − 1 / (α √(1 − α<sup>2</sup>)) ] dα = <strong>π log [ (1 + √(1 − α<sup>2</sup>)) / 2 ] + C</strong></em>.</li>
+<li>Find constant <em>C</em> using <strong>α = 0</strong>: <em>I(0) = ∫<sub>0</sub><sup>π</sup> log(1) dx = 0 ⇒ π log(1) + C = 0 ⇒ <strong>C = 0</strong></em>.<br/>
+Hence, <strong>∫<sub>0</sub><sup>π</sup> log(1 + α cos x) dx = π log [ (1 + √(1 − α<sup>2</sup>)) / 2 ]</strong>.</li>
+</ol>
+</div>
+
+<h3>4.2 Double Integrals, Change of Order &amp; Polar Coordinates (TSO 4b)</h3>
+<div class="table-wrap"><table><thead><tr><th>Integration Method</th><th>Formula &amp; Order of Integration</th><th>When to Use &amp; Geometric Meaning</th></tr></thead><tbody>
+<tr><td><strong>1. Vertical Strip (dy dx)</strong></td><td><strong>∬<sub>R</sub> f(x,y) dA = ∫<sub>x=a</sub><sup>x=b</sup> [ ∫<sub>y=φ<sub>1</sub>(x)</sub><sup>y=φ<sub>2</sub>(x)</sup> f(x,y) dy ] dx</strong></td><td>Integrate wrt <em>y</em> first (holding <em>x</em> fixed along a vertical strip from <em>y = φ<sub>1</sub>(x)</em> to <em>φ<sub>2</sub>(x)</em>), then integrate wrt <em>x</em> from <em>a</em> to <em>b</em>.</td></tr>
+<tr><td><strong>2. Horizontal Strip (dx dy)</strong></td><td><strong>∬<sub>R</sub> f(x,y) dA = ∫<sub>y=c</sub><sup>y=d</sup> [ ∫<sub>x=ψ<sub>1</sub>(y)</sub><sup>x=ψ<sub>2</sub>(y)</sup> f(x,y) dx ] dy</strong></td><td>Integrate wrt <em>x</em> first (holding <em>y</em> fixed along a horizontal strip), then integrate wrt <em>y</em> from <em>c</em> to <em>d</em>.</td></tr>
+<tr><td><strong>3. Change of Order of Integration</strong></td><td>Convert <strong>∫<sub>a</sub><sup>b</sup> ∫<sub>φ<sub>1</sub>(x)</sub><sup>φ<sub>2</sub>(x)</sup> f dy dx ⟶ ∫<sub>c</sub><sup>d</sup> ∫<sub>ψ<sub>1</sub>(y)</sub><sup>ψ<sub>2</sub>(y)</sup> f dx dy</strong></td><td>Essential when the inner integral has no elementary antiderivative (e.g., <strong>∫ e<sup>y<sup>2</sup></sup> dy</strong>, <strong>∫ (sin y / y) dy</strong>). Sketch the region <em>R</em> and switch strip direction!</td></tr>
+<tr><td><strong>4. Polar Coordinates (r, θ)</strong></td><td>Substitute <strong>x = r cos θ, y = r sin θ, x<sup>2</sup>+y<sup>2</sup> = r<sup>2</sup></strong>:<br/><strong>dA = dx dy = r dr dθ</strong><br/><strong>∬<sub>R</sub> f(x,y) dx dy = ∫<sub>θ<sub>1</sub></sub><sup>θ<sub>2</sub></sup> ∫<sub>r<sub>1</sub>(θ)</sub><sup>r<sub>2</sub>(θ)</sup> f(r cos θ, r sin θ) r dr dθ</strong></td><td>Used for circular regions, sectors, annuli, cardioids, or integrands containing <strong>(x<sup>2</sup> + y<sup>2</sup>)</strong>.</td></tr>
+<tr><td><strong>5. Area of a Plane Region R</strong></td><td>Cartesian: <strong>Area = ∬<sub>R</sub> dx dy</strong><br/>Polar: <strong>Area = ∬<sub>R</sub> r dr dθ</strong></td><td>Setting <em>f(x, y) = 1</em> in the double integral gives the area of region <em>R</em>.</td></tr>
+</tbody></table></div>
+
+<h4>Solved Example 4.2: Change of Order of Integration</h4>
+<p><strong>Problem:</strong> Evaluate by changing the order of integration: <strong>I = ∫<sub>0</sub><sup>1</sup> ∫<sub>x</sub><sup>1</sup> [ x / (x<sup>2</sup> + y<sup>2</sup>) ] dy dx</strong> (or <strong>I = ∫<sub>0</sub><sup>∞</sup> ∫<sub>x</sub><sup>∞</sup> (e<sup>−y</sup> / y) dy dx</strong>).</p>
+<div class="box">
+<p><strong>Solution (for I = ∫<sub>0</sub><sup>∞</sup> ∫<sub>x</sub><sup>∞</sup> (e<sup>−y</sup> / y) dy dx):</strong></p>
+<ol>
+<li><strong>Identify the Region of Integration R:</strong><br/>
+The given limits are <em>y = x</em> to <em>y = ∞</em> (vertical strip) and <em>x = 0</em> to <em>x = ∞</em>. This is the infinite wedge above the line <em>y = x</em> in the first quadrant.</li>
+<li><strong>Switch to a Horizontal Strip (dx dy):</strong><br/>
+For a fixed <em>y ∈ [0, ∞)</em>, <em>x</em> varies from the y-axis (<strong>x = 0</strong>) to the line (<strong>x = y</strong>), and then <em>y</em> varies from <strong>0 to ∞</strong>.</li>
+<li><strong>Evaluate the New Integral:</strong><br/>
+<strong>I = ∫<sub>y=0</sub><sup>∞</sup> [ ∫<sub>x=0</sub><sup>y</sup> (e<sup>−y</sup> / y) dx ] dy = ∫<sub>0</sub><sup>∞</sup> (e<sup>−y</sup> / y) [ x ]<sub>0</sub><sup>y</sup> dy = ∫<sub>0</sub><sup>∞</sup> (e<sup>−y</sup> / y) · y dy = ∫<sub>0</sub><sup>∞</sup> e<sup>−y</sup> dy = [ −e<sup>−y</sup> ]<sub>0</sub><sup>∞</sup> = 1</strong>.</li>
+</ol>
+</div>
+
+<h3>4.3 Triple Integrals &amp; Cylindrical / Spherical Polar Coordinates (TSO 4c)</h3>
+<p>For a 3D solid region <em>V</em>, the triple integral of <em>f(x, y, z)</em> is <strong>∭<sub>V</sub> f(x, y, z) dV</strong>. When <strong>f(x, y, z) = 1</strong>, the triple integral gives the <strong>Volume of the 3-D solid: V = ∭<sub>V</sub> dx dy dz</strong>.</p>
+
+<div class="table-wrap"><table><thead><tr><th>3D Coordinate System</th><th>Coordinate Transformation Equations</th><th>Jacobian |J| &amp; Volume Element dV</th><th>Best Suited Geometries</th></tr></thead><tbody>
+<tr><td><strong>1. Cartesian (x, y, z)</strong></td><td>x, y, z ∈ (−∞, ∞)</td><td><strong>|J| = 1</strong><br/><strong>dV = dx dy dz</strong></td><td>Rectangular boxes, tetrahedra:<br/><em>x/a + y/b + z/c ≤ 1</em> (V = abc / 6).</td></tr>
+<tr><td><strong>2. Cylindrical Polar (r, θ, z)</strong></td><td><strong>x = r cos θ, &nbsp;y = r sin θ, &nbsp;z = z</strong><br/><em>(r ≥ 0, &nbsp;0 ≤ θ ≤ 2π, &nbsp;z ∈ R)</em></td><td><strong>|J| = r</strong><br/><strong>dV = r dr dθ dz</strong></td><td>Circular cylinders (<em>x<sup>2</sup> + y<sup>2</sup> = a<sup>2</sup></em>), paraboloids (<em>z = x<sup>2</sup> + y<sup>2</sup></em>), cones.</td></tr>
+<tr><td><strong>3. Spherical Polar (r, θ, φ)</strong></td><td><strong>x = r sin θ cos φ, &nbsp;y = r sin θ sin φ, &nbsp;z = r cos θ</strong><br/><em>(r ≥ 0, &nbsp;0 ≤ θ ≤ π, &nbsp;0 ≤ φ ≤ 2π)</em><br/>where <em>x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = r<sup>2</sup></em></td><td><strong>|J| = r<sup>2</sup> sin θ</strong><br/><strong>dV = r<sup>2</sup> sin θ dr dθ dφ</strong></td><td>Spheres (<em>x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> ≤ a<sup>2</sup></em>), hemispherical shells, ice-cream cones.</td></tr>
+<tr><td><strong>4. Dirichlet's Integral</strong><br/>(Positive Octant x,y,z ≥ 0, x+y+z ≤ 1)</td><td><strong>∭<sub>V</sub> x<sup>l−1</sup> y<sup>m−1</sup> z<sup>n−1</sup> dx dy dz</strong></td><td><strong>= [ Γ(l) Γ(m) Γ(n) ] / Γ(l + m + n + 1)</strong></td><td>Instant formula for tetrahedra and ellipsoids <em>(x/a)<sup>2</sup>+(y/b)<sup>2</sup>+(z/c)<sup>2</sup> ≤ 1</em>.</td></tr>
+</tbody></table></div>
+
+<h4>Solved Example 4.3: Triple Integral in Spherical Polar Coordinates</h4>
+<p><strong>Problem:</strong> Evaluate <strong>∭<sub>V</sub> (x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup>) dx dy dz</strong> over the sphere <strong>x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> ≤ a<sup>2</sup></strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong> Convert to Spherical Polar Coordinates: <em>x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = r<sup>2</sup></em> and <em>dx dy dz = r<sup>2</sup> sin θ dr dθ dφ</em>.<br/>
+For the full sphere of radius <em>a</em>, the limits are: <strong>0 ≤ r ≤ a</strong>, &nbsp;<strong>0 ≤ θ ≤ π</strong>, &nbsp;<strong>0 ≤ φ ≤ 2π</strong>:</p>
+<p><strong>I = ∫<sub>φ=0</sub><sup>2π</sup> dφ · ∫<sub>θ=0</sub><sup>π</sup> sin θ dθ · ∫<sub>r=0</sub><sup>a</sup> r<sup>2</sup> · r<sup>2</sup> dr = [ 2π ] · [ −cos θ ]<sub>0</sub><sup>π</sup> · [ r<sup>5</sup> / 5 ]<sub>0</sub><sup>a</sup> = 2π · 2 · (a<sup>5</sup> / 5) = 4π a<sup>5</sup> / 5</strong>.</p>
+</div>
+
+<h3>4.4 Beta, Gamma &amp; Elliptic Integrals (TSO 4d)</h3>
+<div class="grid2">
+<div class="box">
+<h4>1. Gamma Function — Γ(n)</h4>
+<p>For <strong>n &gt; 0</strong>, Euler's Gamma function is defined by the improper integral:</p>
+<p><strong>Γ(n) = ∫<sub>0</sub><sup>∞</sup> e<sup>−x</sup> x<sup>n−1</sup> dx</strong></p>
+<ul>
+<li><strong>Recurrence Relation:</strong> <strong>Γ(n + 1) = n Γ(n)</strong></li>
+<li><strong>Positive Integer n:</strong> <strong>Γ(n + 1) = n!</strong> &nbsp;(and Γ(1) = 1)</li>
+<li><strong>Half-Integer Value:</strong> <strong>Γ(1/2) = √π</strong>, &nbsp;Γ(3/2) = (1/2)√π</li>
+<li><strong>Substitution Form:</strong> <strong>∫<sub>0</sub><sup>∞</sup> e<sup>−kx</sup> x<sup>n−1</sup> dx = Γ(n) / k<sup>n</sup></strong> (k &gt; 0)</li>
+</ul>
+</div>
+<div class="box">
+<h4>2. Beta Function — β(m, n)</h4>
+<p>For <strong>m &gt; 0, n &gt; 0</strong>, the Beta function is defined by:</p>
+<p><strong>β(m, n) = ∫<sub>0</sub><sup>1</sup> x<sup>m−1</sup> (1 − x)<sup>n−1</sup> dx</strong></p>
+<ul>
+<li><strong>Symmetry:</strong> <strong>β(m, n) = β(n, m)</strong></li>
+<li><strong>Infinite Limit Form:</strong> <strong>β(m, n) = ∫<sub>0</sub><sup>∞</sup> [ x<sup>m−1</sup> / (1 + x)<sup>m+n</sup> ] dx</strong></li>
+<li><strong>Trigonometric Form:</strong><br/>
+<strong>∫<sub>0</sub><sup>π/2</sup> sin<sup>p</sup> θ cos<sup>q</sup> θ dθ = (1/2) β( (p+1)/2 , (q+1)/2 )</strong></li>
+</ul>
+</div>
+</div>
+
+<div class="box">
+<h4>Key Relations Between Beta and Gamma Functions</h4>
+<ul>
+<li><strong>Fundamental Beta-Gamma Relation:</strong> <strong>β(m, n) = [ Γ(m) Γ(n) ] / Γ(m + n)</strong></li>
+<li><strong>Wallis / Sine-Cosine Formula:</strong> <strong>∫<sub>0</sub><sup>π/2</sup> sin<sup>p</sup> θ cos<sup>q</sup> θ dθ = [ Γ((p+1)/2) Γ((q+1)/2) ] / [ 2 Γ((p+q+2)/2) ]</strong></li>
+<li><strong>Euler's Reflection Formula:</strong> <strong>Γ(n) Γ(1 − n) = π / sin(nπ)</strong> &nbsp;(for 0 &lt; n &lt; 1)</li>
+<li><strong>Legendre's Duplication Formula:</strong> <strong>Γ(m) Γ(m + 1/2) = [ √π / 2<sup>2m−1</sup> ] Γ(2m)</strong></li>
+<li><strong>Elliptic Integrals (Overview):</strong> For modulus <em>0 &lt; k &lt; 1</em>:<br/>
+• <em>Complete Elliptic Integral of the First Kind:</em> <strong>K(k) = ∫<sub>0</sub><sup>π/2</sup> dθ / √(1 − k<sup>2</sup> sin<sup>2</sup> θ)</strong> (used for exact time period of a simple pendulum at large amplitudes).<br/>
+• <em>Complete Elliptic Integral of the Second Kind:</em> <strong>E(k) = ∫<sub>0</sub><sup>π/2</sup> √(1 − k<sup>2</sup> sin<sup>2</sup> θ) dθ</strong> (used to find the arc length of an ellipse).</li>
+</ul>
+</div>
+
+<h4>Solved Example 4.4: Evaluating Improper Integrals Using Beta &amp; Gamma Functions</h4>
+<p><strong>Problem:</strong> Evaluate (i) <strong>∫<sub>0</sub><sup>∞</sup> √x e<sup>−x<sup>3</sup></sup> dx</strong> and (ii) <strong>∫<sub>0</sub><sup>π/2</sup> √(tan θ) dθ</strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li><strong>Part (i):</strong> Put <strong>x<sup>3</sup> = t ⇒ x = t<sup>1/3</sup> ⇒ dx = (1/3) t<sup>−2/3</sup> dt</strong>.<br/>
+Then <strong>∫<sub>0</sub><sup>∞</sup> x<sup>1/2</sup> e<sup>−x<sup>3</sup></sup> dx = (1/3) ∫<sub>0</sub><sup>∞</sup> t<sup>1/6</sup> e<sup>−t</sup> t<sup>−2/3</sup> dt = (1/3) ∫<sub>0</sub><sup>∞</sup> e<sup>−t</sup> t<sup>−1/2</sup> dt = (1/3) ∫<sub>0</sub><sup>∞</sup> e<sup>−t</sup> t<sup>(1/2)−1</sup> dt = (1/3) Γ(1/2) = √π / 3</strong>.</li>
+<li><strong>Part (ii):</strong> Rewrite <em>√(tan θ) = sin<sup>1/2</sup> θ cos<sup>−1/2</sup> θ</em> (so <em>p = 1/2, q = −1/2</em>):<br/>
+<strong>∫<sub>0</sub><sup>π/2</sup> sin<sup>1/2</sup> θ cos<sup>−1/2</sup> θ dθ = [ Γ(3/4) Γ(1/4) ] / [ 2 Γ(1) ] = (1/2) · [ π / sin(π/4) ] = (1/2) · (π / (1/√2)) = π / √2</strong>.</li>
+</ol>
+</div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit4">Practice exam questions for Unit 4</a> <a class="btn" href="q4.html">View Assignment Q4 Solution →</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit3.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="notes-unit5.html">Next unit →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

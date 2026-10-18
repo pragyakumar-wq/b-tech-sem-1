@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Question 2 | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a class="active" href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="assignment.html">Assignment</a> › Question 2</p>
+<section id="q2">
+<p class="qno">Question 2 · Unit 2 (CO2)</p>
+<h2>State Leibnitz's Theorem. If y = (sin<sup>−1</sup> x)<sup>2</sup>, prove that (1 − x<sup>2</sup>)y<sub>n+2</sub> − (2n + 1)x y<sub>n+1</sub> − n<sup>2</sup> y<sub>n</sub> = 0 and find y<sub>n</sub>(0). Also state and compare Rolle's, Lagrange's, and Cauchy's Mean Value Theorems.</h2>
+
+<h3>Part A: Leibnitz's Theorem &amp; Derivation for y = (sin<sup>−1</sup> x)<sup>2</sup></h3>
+<div class="box">
+<p><strong>Leibnitz's Theorem Statement:</strong> If <em>u(x)</em> and <em>v(x)</em> possess derivatives up to the <em>n<sup>th</sup></em> order, then:</p>
+<p><strong>D<sup>n</sup>(uv) = u<sub>n</sub>v + <sup>n</sup>C<sub>1</sub> u<sub>n−1</sub>v<sub>1</sub> + <sup>n</sup>C<sub>2</sub> u<sub>n−2</sub>v<sub>2</sub> + … + u v<sub>n</sub></strong></p>
+<p><strong>Derivation for y = (sin<sup>−1</sup> x)<sup>2</sup>:</strong></p>
+<ol>
+<li>Differentiate wrt <em>x</em>: <em>y<sub>1</sub> = 2(sin<sup>−1</sup> x) / √(1 − x<sup>2</sup>)</em>.<br/>
+Squaring both sides: <strong>(1 − x<sup>2</sup>) y<sub>1</sub><sup>2</sup> = 4(sin<sup>−1</sup> x)<sup>2</sup> = 4y</strong>.</li>
+<li>Differentiate again wrt <em>x</em>: <em>(1 − x<sup>2</sup>)(2y<sub>1</sub>y<sub>2</sub>) − 2x y<sub>1</sub><sup>2</sup> = 4y<sub>1</sub></em>.<br/>
+Dividing by <em>2y<sub>1</sub></em> gives: <strong>(1 − x<sup>2</sup>)y<sub>2</sub> − x y<sub>1</sub> − 2 = 0</strong> &nbsp; … (Equation 1).</li>
+<li>Differentiate Equation 1 <em>n</em> times using <strong>Leibnitz's Theorem</strong>:<br/>
+<em>[ (1 − x<sup>2</sup>)y<sub>n+2</sub> + n(−2x)y<sub>n+1</sub> + (n(n−1)/2)(−2)y<sub>n</sub> ] − [ x y<sub>n+1</sub> + n(1)y<sub>n</sub> ] = 0</em><br/>
+Simplifying gives: <strong>(1 − x<sup>2</sup>)y<sub>n+2</sub> − (2n + 1)x y<sub>n+1</sub> − n<sup>2</sup> y<sub>n</sub> = 0</strong> &nbsp; … (Equation 2).</li>
+<li><strong>Finding y<sub>n</sub>(0):</strong> Substitute <strong>x = 0</strong> into the relations:<br/>
+• <em>y(0) = 0</em>, &nbsp;<em>y<sub>1</sub>(0) = 0</em>, &nbsp;<em>y<sub>2</sub>(0) = 2</em>.<br/>
+• From Equation 2 at <em>x = 0</em>: <strong>y<sub>n+2</sub>(0) = n<sup>2</sup> y<sub>n</sub>(0)</strong>.<br/>
+• If <strong>n is odd</strong>: since <em>y<sub>1</sub>(0) = 0</em>, we get <em>y<sub>3</sub>(0) = y<sub>5</sub>(0) = … = <strong>0</strong></em>.<br/>
+• If <strong>n is even</strong> (n = 2, 4, 6, …): <em>y<sub>2</sub>(0) = 2</em>, <em>y<sub>4</sub>(0) = 2<sup>2</sup> · 2</em>, <em>y<sub>6</sub>(0) = 4<sup>2</sup> · 2<sup>2</sup> · 2</em>, and in general:<br/>
+<strong>y<sub>n</sub>(0) = 2 · 2<sup>2</sup> · 4<sup>2</sup> · 6<sup>2</sup> … (n − 2)<sup>2</sup></strong>.</li>
+</ol>
+</div>
+
+<h3>Part B: Comparison of Rolle's, Lagrange's &amp; Cauchy's Mean Value Theorems</h3>
+<div class="table-wrap"><table><thead><tr><th>Feature</th><th>Rolle's Theorem</th><th>Lagrange's MVT</th><th>Cauchy's MVT</th></tr></thead><tbody>
+<tr><td><strong>Functions Involved</strong></td><td>Single function <em>f(x)</em> on <em>[a, b]</em></td><td>Single function <em>f(x)</em> on <em>[a, b]</em></td><td>Two functions <em>f(x), g(x)</em> on <em>[a, b]</em></td></tr>
+<tr><td><strong>Conditions</strong></td><td>Continuous on <em>[a, b]</em>, differentiable on <em>(a, b)</em>, and <strong>f(a) = f(b)</strong></td><td>Continuous on <em>[a, b]</em> and differentiable on <em>(a, b)</em></td><td>Both continuous on <em>[a, b]</em>, differentiable on <em>(a, b)</em>, and <strong>g'(x) ≠ 0</strong> on <em>(a, b)</em></td></tr>
+<tr><td><strong>Formula for c ∈ (a, b)</strong></td><td><strong>f'(c) = 0</strong></td><td><strong>f'(c) = [f(b) − f(a)] / (b − a)</strong></td><td><strong>f'(c) / g'(c) = [f(b) − f(a)] / [g(b) − g(a)]</strong></td></tr>
+<tr><td><strong>Special Case Relation</strong></td><td>Special case of LMVT when <em>f(a) = f(b)</em></td><td>Special case of CMVT when <em>g(x) = x</em></td><td>Most general first-order mean value theorem</td></tr>
+</tbody></table></div>
+</section>
+<div class="pager">
+<a class="btn" href="q1.html">← Previous question</a>
+<a class="btn" href="assignment.html">All questions</a>
+<a class="btn" href="q3.html">Next question →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Unit 5 Notes | Engineering Mathematics - I</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../script.js"></script>
+</head>
+<body class="subject-page">
+<header class="top">
+<h1>Engineering Mathematics - I</h1>
+<nav>
+<a href="../index.html"><span aria-hidden="true" class="nav-icon">🏫</span>All Subjects</a>
+<a href="index.html"><span aria-hidden="true" class="nav-icon">🏠</span>Math Home</a>
+<a href="assignment.html"><span aria-hidden="true" class="nav-icon">📝</span>Assignment</a>
+<a href="syllabus.html"><span aria-hidden="true" class="nav-icon">📑</span>Syllabus</a>
+<a class="active" href="notes.html"><span aria-hidden="true" class="nav-icon">📚</span>Notes</a>
+<a href="references.html"><span aria-hidden="true" class="nav-icon">🔗</span>References</a>
+<a href="exam.html"><span aria-hidden="true" class="nav-icon">❓</span>Exam Questions</a>
+</nav>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">Subjects</a> › <a href="index.html">Engineering Mathematics - I</a> › <a href="notes.html">Notes</a> › Unit 5</p>
+<section class="unit" id="u5">
+<p class="qno">Unit 5 · 8 hrs · Mapped to CO5</p>
+<h2>Vector Calculus</h2>
+<p><strong>Syllabus topics:</strong></p>
+<ul>
+<li><strong>5.1</strong> Scalar and vector valued functions; Concepts of gradient, divergence and curl and their geometrical and physical significance; tangent plane; directional derivative</li>
+<li><strong>5.2</strong> Line, surface and volume integrals - Statement of Green's, Stokes' and Gauss divergence theorems - verification and evaluation of vector integrals using them</li>
+</ul>
+
+<h3>5.1 Gradient, Divergence, Curl, Directional Derivative &amp; Tangent Plane (TSO 5a)</h3>
+<div class="box">
+<p><strong>Vector Differential Operator Del (∇):</strong> In 3D Cartesian coordinates with unit vectors <strong>i, j, k</strong>:</p>
+<p><strong>∇ = i (∂/∂x) + j (∂/∂y) + k (∂/∂z)</strong></p>
+<p>Let <strong>φ(x, y, z)</strong> be a differentiable <strong>scalar point function</strong> (e.g., temperature, electrostatic potential) and <strong>F(x, y, z) = F<sub>1</sub> i + F<sub>2</sub> j + F<sub>3</sub> k</strong> be a differentiable <strong>vector point function</strong> (e.g., velocity field, force field, electric/magnetic field).</p>
+</div>
+
+<div class="table-wrap"><table><thead><tr><th>Differential Operation</th><th>Mathematical Formula</th><th>Output Type</th><th>Geometrical &amp; Physical Significance</th></tr></thead><tbody>
+<tr><td><strong>1. Gradient of Scalar Field</strong><br/>grad φ = ∇φ</td><td><strong>∇φ = (∂φ/∂x)i + (∂φ/∂y)j + (∂φ/∂z)k</strong></td><td><strong>Vector</strong> Field</td><td>• Points in the <strong>direction of maximum rate of increase</strong> of <em>φ</em>.<br/>• Magnitude <strong>|∇φ|</strong> is the maximum rate of change.<br/>• Always perpendicular (<strong>normal</strong>) to the level surface <strong>φ(x, y, z) = c</strong>.</td></tr>
+<tr><td><strong>2. Directional Derivative (D.D.)</strong><br/>along vector <strong>a</strong></td><td><strong>D.D. = ∇φ · â = ∇φ · (a / |a|)</strong></td><td><strong>Scalar</strong></td><td>Component of <em>∇φ</em> in the direction of unit vector <strong>â = a / |a|</strong>; measures rate of change of <em>φ</em> along <strong>a</strong>.</td></tr>
+<tr><td><strong>3. Divergence of Vector Field</strong><br/>div F = ∇ · F</td><td><strong>∇ · F = ∂F<sub>1</sub>/∂x + ∂F<sub>2</sub>/∂y + ∂F<sub>3</sub>/∂z</strong></td><td><strong>Scalar</strong> Field</td><td>• Measures the net <strong>outward flux per unit volume</strong> from an infinitesimal point (source if ∇·F &gt; 0, sink if ∇·F &lt; 0).<br/>• If <strong>∇ · F = 0</strong> everywhere, <strong>F is called Solenoidal</strong> (incompressible fluid / magnetic field ∇·B = 0).</td></tr>
+<tr><td><strong>4. Curl of Vector Field</strong><br/>curl F = ∇ × F</td><td><strong>∇ × F = | i &nbsp; j &nbsp; k ; ∂/∂x &nbsp; ∂/∂y &nbsp; ∂/∂z ; F<sub>1</sub> &nbsp; F<sub>2</sub> &nbsp; F<sub>3</sub> |</strong></td><td><strong>Vector</strong> Field</td><td>• Measures local <strong>circulation / rotation (vorticity)</strong> per unit area; for a rigid body rotating with angular velocity <em>ω</em>, <strong>v = ω × r ⇒ ∇ × v = 2ω</strong>.<br/>• If <strong>∇ × F = 0</strong> everywhere, <strong>F is called Irrotational (Conservative)</strong> and <strong>F = ∇φ</strong> for a scalar potential <em>φ</em>.</td></tr>
+<tr><td><strong>5. Laplacian Operator</strong><br/>∇<sup>2</sup>φ = div(grad φ)</td><td><strong>∇<sup>2</sup>φ = ∂<sup>2</sup>φ/∂x<sup>2</sup> + ∂<sup>2</sup>φ/∂y<sup>2</sup> + ∂<sup>2</sup>φ/∂z<sup>2</sup></strong></td><td><strong>Scalar</strong> Field</td><td>If <strong>∇<sup>2</sup>φ = 0</strong>, <em>φ</em> satisfies <strong>Laplace's Equation</strong> and is called a <strong>Harmonic Function</strong>.</td></tr>
+</tbody></table></div>
+
+<h4>Tangent Plane, Normal Line &amp; Angle Between Two Surfaces</h4>
+<div class="box">
+<ul>
+<li><strong>Unit Normal Vector (n̂) to Surface φ(x, y, z) = c at P(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>):</strong> <strong>n̂ = ± ∇φ / |∇φ|</strong>.</li>
+<li><strong>Equation of Tangent Plane at P(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>):</strong> <strong>(x − x<sub>0</sub>)(∂φ/∂x)<sub>P</sub> + (y − y<sub>0</sub>)(∂φ/∂y)<sub>P</sub> + (z − z<sub>0</sub>)(∂φ/∂z)<sub>P</sub> = 0</strong>.</li>
+<li><strong>Equation of Normal Line at P(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>):</strong> <strong>(x − x<sub>0</sub>) / (∂φ/∂x)<sub>P</sub> = (y − y<sub>0</sub>) / (∂φ/∂y)<sub>P</sub> = (z − z<sub>0</sub>) / (∂φ/∂z)<sub>P</sub></strong>.</li>
+<li><strong>Angle θ between Two Surfaces φ<sub>1</sub> = c<sub>1</sub> and φ<sub>2</sub> = c<sub>2</sub> at intersection point P:</strong><br/>
+<strong>cos θ = (∇φ<sub>1</sub> · ∇φ<sub>2</sub>) / ( |∇φ<sub>1</sub>| |∇φ<sub>2</sub>| )</strong>. (Orthogonal surfaces if <strong>∇φ<sub>1</sub> · ∇φ<sub>2</sub> = 0</strong>).</li>
+<li><strong>Fundamental Vector Identities:</strong> For any scalar field <em>φ</em> and vector field <em>F</em>:<br/>
+1. <strong>curl(grad φ) = ∇ × (∇φ) = 0</strong> (Every gradient field is irrotational).<br/>
+2. <strong>div(curl F) = ∇ · (∇ × F) = 0</strong> (Every curl field is solenoidal).<br/>
+3. For position vector <strong>r = xi + yj + zk</strong> (r = |r|): <strong>∇ · r = 3</strong>, &nbsp;<strong>∇ × r = 0</strong>, &nbsp;<strong>∇(r<sup>n</sup>) = n r<sup>n−2</sup> r</strong>, &nbsp;<strong>∇ · (r<sup>n</sup> r) = (n + 3)r<sup>n</sup></strong> (so <em>r<sup>n</sup>r</em> is solenoidal when <strong>n = −3</strong>).</li>
+</ul>
+</div>
+
+<h4>Solved Example 5.1: Directional Derivative, Solenoidal &amp; Irrotational Vectors</h4>
+<p><strong>Problem:</strong> (a) Find the directional derivative of <strong>φ = x<sup>2</sup>yz + 4xz<sup>2</sup></strong> at <strong>(1, −2, −1)</strong> in the direction of <strong>2i − j − 2k</strong>.<br/>
+(b) Find constants <em>a, b, c</em> so that <strong>F = (x + 2y + az)i + (bx − 3y − z)j + (4x + cy + 2z)k</strong> is irrotational, and find its scalar potential <em>φ</em>.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li><strong>Part (a):</strong> <em>∇φ = (2xyz + 4z<sup>2</sup>)i + (x<sup>2</sup>z)j + (x<sup>2</sup>y + 8xz)k</em>.<br/>
+At <em>(1, −2, −1)</em>: <strong>∇φ = (4 + 4)i + (−1)j + (−2 − 8)k = 8i − j − 10k</strong>.<br/>
+Unit vector <strong>â = (2i − j − 2k) / √(4 + 1 + 4) = (2i − j − 2k) / 3</strong>.<br/>
+<strong>D.D. = ∇φ · â = [ 8(2) + (−1)(−1) + (−10)(−2) ] / 3 = (16 + 1 + 20) / 3 = 37 / 3</strong>.</li>
+<li><strong>Part (b):</strong> For <em>F</em> to be irrotational, <strong>∇ × F = 0</strong>:<br/>
+<em>∇ × F = i(c − (−1)) − j(4 − a) + k(b − 2) = (c + 1)i − (4 − a)j + (b − 2)k = 0</em>.<br/>
+Equating components to zero gives: <strong>a = 4, &nbsp;b = 2, &nbsp;c = −1</strong>.<br/>
+Then <em>F = (x + 2y + 4z)i + (2x − 3y − z)j + (4x − y + 2z)k = ∇φ</em>.<br/>
+Integrating partially and combining non-duplicate terms gives the scalar potential:<br/>
+<strong>φ(x, y, z) = x<sup>2</sup>/2 − 3y<sup>2</sup>/2 + z<sup>2</sup> + 2xy + 4xz − yz + C</strong>.</li>
+</ol>
+</div>
+
+<h3>5.2 Line, Surface &amp; Volume Integrals — Green's, Stokes' &amp; Gauss' Theorems (TSO 5b, 5c)</h3>
+<div class="box">
+<ul>
+<li><strong>Line Integral (Work Done / Circulation):</strong> Along a curve <em>C</em> with <em>d<strong>r</strong> = dx i + dy j + dz k</em>:<br/>
+<strong>W = ∫<sub>C</sub> F · dr = ∫<sub>C</sub> (F<sub>1</sub> dx + F<sub>2</sub> dy + F<sub>3</sub> dz)</strong>.<br/>
+If <em>F = ∇φ</em> is conservative (irrotational), the line integral is <strong>independent of path</strong>: <strong>∫<sub>A</sub><sup>B</sup> F · dr = φ(B) − φ(A)</strong>, and around any closed loop <strong>∮<sub>C</sub> F · dr = 0</strong>.</li>
+<li><strong>Surface Integral (Flux Across Surface S):</strong> If <em>n̂</em> is the unit outward normal to surface <em>S</em> (and projection on xy-plane has <em>dS = dx dy / |n̂ · k|</em>):<br/>
+<strong>Flux = ∬<sub>S</sub> F · n̂ dS = ∬<sub>S</sub> F · dS</strong>.</li>
+<li><strong>Volume Integral:</strong> Over a 3D region <em>V</em>: <strong>∭<sub>V</sub> (∇ · F) dV = ∭<sub>V</sub> (∂F<sub>1</sub>/∂x + ∂F<sub>2</sub>/∂y + ∂F<sub>3</sub>/∂z) dx dy dz</strong>.</li>
+</ul>
+</div>
+
+<h4>Master Comparison of Green's, Stokes', and Gauss' Divergence Theorems</h4>
+<div class="table-wrap"><table><thead><tr><th>Theorem</th><th>Mathematical Statement</th><th>Integral Conversion</th><th>Conditions &amp; Key Applications</th></tr></thead><tbody>
+<tr><td><strong>1. Green's Theorem in the Plane</strong></td><td><strong>∮<sub>C</sub> (M dx + N dy) = ∬<sub>R</sub> ( ∂N/∂x − ∂M/∂y ) dx dy</strong></td><td><strong>Closed Line Integral (1D) ⟷ Double Integral over Plane Region R (2D)</strong></td><td><em>C</em> is a simple closed curve bounding plane region <em>R</em> traversed counter-clockwise.<br/>• Area of plane region: <strong>Area = (1/2) ∮<sub>C</sub> (x dy − y dx)</strong>.</td></tr>
+<tr><td><strong>2. Stokes' Theorem (TSO 5b)</strong></td><td><strong>∮<sub>C</sub> F · dr = ∬<sub>S</sub> (∇ × F) · n̂ dS</strong></td><td><strong>Closed Line Integral in 3D (1D) ⟷ Surface Integral of Curl (2D)</strong></td><td><em>S</em> is an open, two-sided surface in 3D space bounded by closed curve <em>C</em>; orientation follows the right-hand rule.<br/>• Reduces to Green's theorem when <em>S</em> lies in the xy-plane.</td></tr>
+<tr><td><strong>3. Gauss' Divergence Theorem (TSO 5c)</strong></td><td><strong>∬<sub>S</sub> F · n̂ dS = ∭<sub>V</sub> (∇ · F) dV</strong></td><td><strong>Closed Surface Flux Integral (2D) ⟷ Volume Integral of Divergence (3D)</strong></td><td><em>S</em> is a closed surface enclosing 3D volume <em>V</em>, and <em>n̂</em> is the outward-pointing unit normal.<br/>• Since <em>∇ · r = 3</em>, <strong>∬<sub>S</sub> r · n̂ dS = 3V</strong>.</td></tr>
+</tbody></table></div>
+
+<h4>Solved Example 5.2: Evaluation Using Gauss' Divergence Theorem (TSO 5c)</h4>
+<p><strong>Problem:</strong> Apply Gauss' Divergence Theorem to evaluate the surface integral <strong>∬<sub>S</sub> F · n̂ dS</strong>, where <strong>F = 4xz i − y<sup>2</sup> j + yz k</strong> and <strong>S</strong> is the surface of the cube bounded by <strong>x = 0, x = 1, y = 0, y = 1, z = 0, z = 1</strong>.</p>
+<div class="box">
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Compute the divergence of <strong>F = 4xz i − y<sup>2</sup> j + yz k</strong>:<br/>
+<strong>∇ · F = ∂(4xz)/∂x + ∂(−y<sup>2</sup>)/∂y + ∂(yz)/∂z = 4z − 2y + y = 4z − y</strong>.</li>
+<li>By <strong>Gauss' Divergence Theorem</strong>, convert the closed surface integral over the 6 faces of the cube into a single volume integral over <em>0 ≤ x ≤ 1, 0 ≤ y ≤ 1, 0 ≤ z ≤ 1</em>:<br/>
+<strong>∬<sub>S</sub> F · n̂ dS = ∭<sub>V</sub> (∇ · F) dV = ∫<sub>x=0</sub><sup>1</sup> ∫<sub>y=0</sub><sup>1</sup> ∫<sub>z=0</sub><sup>1</sup> (4z − y) dz dy dx</strong>.</li>
+<li>Evaluate the inner integrals:<br/>
+• <em>∫<sub>z=0</sub><sup>1</sup> (4z − y) dz = [ 2z<sup>2</sup> − yz ]<sub>0</sub><sup>1</sup> = 2 − y</em>.<br/>
+• <em>∫<sub>y=0</sub><sup>1</sup> (2 − y) dy = [ 2y − y<sup>2</sup>/2 ]<sub>0</sub><sup>1</sup> = 2 − 1/2 = 3/2</em>.<br/>
+• <em>∫<sub>x=0</sub><sup>1</sup> (3/2) dx = <strong>3 / 2</strong></em>.</li>
+</ol>
+</div>
+
+<p style="margin-top:22px"><a class="btn" href="exam.html#unit5">Practice exam questions for Unit 5</a> <a class="btn" href="q5.html">View Assignment Q5 Solution →</a></p>
+</section>
+<div class="pager">
+<a class="btn" href="notes-unit4.html">← Previous unit</a>
+<a class="btn" href="notes.html">All units</a>
+<a class="btn" href="exam.html">Exam Questions →</a>
+</div>
+</main>
+<footer>
+<p>Name: ________ &nbsp;|&nbsp; Roll No: ________ &nbsp;|&nbsp; Subject: Engineering Mathematics - I (100102)</p>
+<p class="credit">Developed by Pragya Kumar M&amp;C</p>
+</footer>
+</body>
+</html>
